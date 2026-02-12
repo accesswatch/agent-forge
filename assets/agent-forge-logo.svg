@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 280" fill="none">
+  <defs>
+    <!-- Gradient for the fire/glow effect -->
+    <linearGradient id="fireGradient" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#D73A49"/>
+      <stop offset="40%" stop-color="#F97316"/>
+      <stop offset="100%" stop-color="#FBBF24"/>
+    </linearGradient>
+    <!-- Gradient for the anvil -->
+    <linearGradient id="anvilGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#6E7681"/>
+      <stop offset="100%" stop-color="#30363D"/>
+    </linearGradient>
+    <!-- Subtle glow filter -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <!-- Spark glow -->
+    <filter id="sparkGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- ===== ANVIL ICON ===== -->
+  <!-- Anvil base (wide bottom) -->
+  <rect x="60" y="195" width="160" height="28" rx="4" fill="url(#anvilGradient)" stroke="#484F58" stroke-width="1.5"/>
+  <!-- Anvil body (narrower middle) -->
+  <rect x="85" y="155" width="110" height="44" rx="3" fill="url(#anvilGradient)" stroke="#484F58" stroke-width="1.5"/>
+  <!-- Anvil face (working surface with horn) -->
+  <path d="M70 155 L210 155 L210 145 C210 139 206 135 200 135 L80 135 C74 135 70 139 70 145 Z" fill="#8B949E" stroke="#484F58" stroke-width="1.5"/>
+  <!-- Anvil horn (pointed extension to the left) -->
+  <path d="M70 145 L32 140 C28 139.5 28 150.5 32 150 L70 155 Z" fill="#8B949E" stroke="#484F58" stroke-width="1.5"/>
+
+  <!-- ===== FIRE / SPARKS ===== -->
+  <!-- Main flame behind anvil -->
+  <path d="M140 135 C140 105 115 85 125 55 C135 85 155 75 150 45 C165 70 175 80 170 105 C185 80 180 55 190 40 C195 65 185 90 180 110 C175 125 165 135 155 135 Z" 
+        fill="url(#fireGradient)" opacity="0.85" filter="url(#glow)"/>
+  <!-- Secondary smaller flame -->
+  <path d="M105 135 C105 118 95 108 100 88 C108 108 118 100 115 92 C122 105 125 115 120 130 Z" 
+        fill="url(#fireGradient)" opacity="0.6" filter="url(#glow)"/>
+
+  <!-- Sparks -->
+  <circle cx="108" cy="72" r="2.5" fill="#FBBF24" filter="url(#sparkGlow)"/>
+  <circle cx="175" cy="50" r="2" fill="#FBBF24" filter="url(#sparkGlow)"/>
+  <circle cx="195" cy="68" r="1.8" fill="#F97316" filter="url(#sparkGlow)"/>
+  <circle cx="92" cy="88" r="1.5" fill="#FBBF24" filter="url(#sparkGlow)"/>
+  <circle cx="200" cy="85" r="2" fill="#FBBF24" filter="url(#sparkGlow)"/>
+  <circle cx="130" cy="42" r="1.8" fill="#F97316" filter="url(#sparkGlow)"/>
+
+  <!-- ===== HAMMER (resting on anvil at angle) ===== -->
+  <!-- Hammer handle -->
+  <line x1="155" y1="132" x2="205" y2="72" stroke="#8B6914" stroke-width="6" stroke-linecap="round"/>
+  <!-- Hammer head -->
+  <rect x="192" y="52" width="32" height="18" rx="3" fill="#6E7681" stroke="#484F58" stroke-width="1.5" transform="rotate(-40, 208, 61)"/>
+
+  <!-- ===== TEXT ===== -->
+  <!-- "AGENT" text -->
+  <text x="280" y="135" font-family="'Segoe UI', system-ui, -apple-system, sans-serif" font-size="72" font-weight="800" letter-spacing="4" fill="#E6EDF3">AGENT</text>
+  <!-- "FORGE" text with fire gradient -->
+  <text x="280" y="205" font-family="'Segoe UI', system-ui, -apple-system, sans-serif" font-size="72" font-weight="800" letter-spacing="8" fill="url(#fireGradient)">FORGE</text>
+
+  <!-- Tagline -->
+  <text x="284" y="240" font-family="'Segoe UI', system-ui, -apple-system, sans-serif" font-size="16" font-weight="400" letter-spacing="3.5" fill="#8B949E" text-transform="uppercase">WHERE AI AGENTS ARE FORGED</text>
+
+  <!-- Decorative line under AGENT -->
+  <line x1="280" y1="150" x2="595" y2="150" stroke="#30363D" stroke-width="1.5"/>
+  <!-- Fire accent on the line -->
+  <line x1="280" y1="150" x2="360" y2="150" stroke="url(#fireGradient)" stroke-width="2"/>
+</svg>

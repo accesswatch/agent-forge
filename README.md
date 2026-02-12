@@ -1,6 +1,10 @@
 <div align="center">
 
-# 🔥 Agent Forge
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/agent-forge-logo.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/agent-forge-logo.svg">
+  <img src="assets/agent-forge-logo.svg" alt="Agent Forge — a glowing anvil with flames and sparks, accompanied by a hammer, representing the forging of AI agents for GitHub automation. Text reads 'Agent Forge: Where AI Agents Are Forged.'" width="600">
+</picture>
 
 ### *Where AI Agents Are Forged for GitHub Mastery*
 
