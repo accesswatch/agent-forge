@@ -1,0 +1,515 @@
+<h1 id="getting-started-your-first-hour-with-github-agents">Getting
+Started — Your First Hour with GitHub Agents</h1>
+<blockquote>
+<p><strong>You’re about to do something pretty cool.</strong></p>
+<p>By the end of this guide, you’ll have an AI assistant inside your
+code editor that talks to GitHub for you — finding your issues,
+reviewing code, tracking your team’s progress, and saving you hours of
+tab-switching every week.</p>
+<p>No prior GitHub expertise needed. We’ll walk through everything
+together.</p>
+</blockquote>
+<hr />
+<h2 id="before-we-begin">Before We Begin</h2>
+<p>Let’s make sure you have what you need. Don’t worry if some of these
+terms are unfamiliar — we’ll explain each one as we go.</p>
+<h3 id="what-you-need">What You Need</h3>
+<ol type="1">
+<li><p><strong>VS Code</strong> — a free code editor from Microsoft. If
+you’re reading this file in VS Code right now, you’re already set. If
+not, grab it from <a
+href="https://code.visualstudio.com">code.visualstudio.com</a>.</p></li>
+<li><p><strong>A GitHub account</strong> — GitHub is where developers
+store code, track bugs, and collaborate. If you don’t have an account
+yet, go to <a href="https://github.com">github.com</a> and sign up. It’s
+free.</p></li>
+<li><p><strong>GitHub Copilot</strong> — this is an AI coding assistant
+that runs inside VS Code. It has a chat window where you can type
+questions and commands. You’ll need a Copilot subscription (there’s a
+free tier for individual use).</p></li>
+</ol>
+<p>That’s the full list. No command-line tools, no API keys, no complex
+configuration.</p>
+<hr />
+<h2 id="step-1-install-the-extensions">Step 1: Install the
+Extensions</h2>
+<p>If you already have GitHub Copilot working in VS Code, skip to <a
+href="#step-2-sign-in-to-github">Step 2</a>.</p>
+<p>Open VS Code and let’s install two extensions:</p>
+<ol type="1">
+<li><p><strong>Open the Extensions panel</strong> — click the square
+icon on the left sidebar, or press <code>Ctrl+Shift+X</code> (on Mac:
+<code>Cmd+Shift+X</code>). A search bar appears at the top.</p></li>
+<li><p><strong>Search for “GitHub Copilot”</strong> — type it in the
+search bar. You’ll see two extensions:</p>
+<ul>
+<li><strong>GitHub Copilot</strong> — install this one first. Click the
+blue “Install” button.</li>
+<li><strong>GitHub Copilot Chat</strong> — install this one too. This
+gives you the chat window where you’ll talk to the agents.</li>
+</ul></li>
+<li><p><strong>Wait for them to finish installing.</strong> You’ll see a
+small spinning icon while they download. When it stops, you’re
+good.</p></li>
+</ol>
+<blockquote>
+<p><strong>What just happened?</strong> You added two tools to VS Code.
+“Copilot” helps you write code. “Copilot Chat” gives you a conversation
+window where you can ask questions — and where our agents live.</p>
+</blockquote>
+<hr />
+<h2 id="step-2-sign-in-to-github">Step 2: Sign In to GitHub</h2>
+<p>The agents need to talk to GitHub on your behalf — to read your
+issues, check your pull requests, and so on. For that, VS Code needs to
+know who you are on GitHub.</p>
+<ol type="1">
+<li><p><strong>Open the Command Palette</strong> — press
+<code>Ctrl+Shift+P</code> (on Mac: <code>Cmd+Shift+P</code>). A text box
+drops down from the top of VS Code.</p></li>
+<li><p><strong>Type “GitHub: Sign In”</strong> — as you type, you’ll see
+it appear in the list. Click on it.</p></li>
+<li><p><strong>A browser window opens</strong> — GitHub asks you to
+authorize VS Code. Click “Authorize” and follow the prompts. You might
+need to enter your GitHub password.</p></li>
+<li><p><strong>Come back to VS Code</strong> — once you authorize, VS
+Code will show your GitHub username in the bottom-left corner (click the
+little person icon to check). If you see your username, you’re signed
+in.</p></li>
+</ol>
+<blockquote>
+<p><strong>What just happened?</strong> VS Code now has permission to
+talk to GitHub as you. It can read your issues, your pull requests, your
+notifications — everything the agents need to help you.</p>
+</blockquote>
+<hr />
+<h2 id="step-3-open-this-workspace">Step 3: Open This Workspace</h2>
+<p>The agents are special files that live inside this project. VS Code
+discovers them automatically — but only if you have the right folder
+open.</p>
+<ol type="1">
+<li><p><strong>Open this folder in VS Code</strong> — go to File &gt;
+Open Folder (or <code>Ctrl+K Ctrl+O</code>) and navigate to the folder
+that contains the <code>.github</code> directory. That’s the folder
+you’re in right now if you can see this file.</p></li>
+<li><p><strong>Check that the agents are loaded</strong> — open Copilot
+Chat by pressing <code>Ctrl+Shift+I</code> (on Mac:
+<code>Cmd+Shift+I</code>). In the chat input box, type <code>@</code> —
+you should see a dropdown list that includes names like
+<code>@daily-briefing</code>, <code>@issue-tracker</code>,
+<code>@pr-review</code>. If you see those, the agents are
+ready.</p></li>
+</ol>
+<blockquote>
+<p><strong>Don’t see the agents?</strong> Make sure you opened the
+<em>folder</em> (not just a single file) that contains
+<code>.github/agents/</code>. Try File &gt; Open Folder and pick the
+right directory. If that doesn’t work, try reloading VS Code: press
+<code>Ctrl+Shift+P</code>, type “Developer: Reload Window”, and press
+Enter.</p>
+</blockquote>
+<hr />
+<h2 id="step-4-say-hello">Step 4: Say Hello</h2>
+<p>Let’s try the simplest thing first. In the Copilot Chat window:</p>
+<p><strong>Type this and press Enter:</strong></p>
+<pre><code>@issue-tracker how many open issues do I have?</code></pre>
+<p>Wait a few seconds. The agent will: 1. Check who you are on GitHub 2.
+Search for your open issues 3. Come back with a count and a summary</p>
+<p><strong>Did it work?</strong> If you see a number and maybe a table
+of issues — congratulations, everything is connected. The agent just
+talked to GitHub for you.</p>
+<p><strong>Did it say “no issues found”?</strong> That’s fine too! It
+means you don’t have any open issues right now. The connection is
+working.</p>
+<p><strong>Did it ask you to sign in?</strong> Go back to <a
+href="#step-2-sign-in-to-github">Step 2</a> and make sure you’re
+authenticated.</p>
+<hr />
+<h2 id="step-5-your-first-briefing">Step 5: Your First Briefing</h2>
+<p>Now let’s do something magical. This is the moment where everything
+clicks.</p>
+<p><strong>Type this in Copilot Chat:</strong></p>
+<pre><code>@daily-briefing morning briefing</code></pre>
+<p><strong>Then wait about 30 seconds.</strong> Here’s what’s happening
+behind the scenes:</p>
+<p>The Daily Briefing agent is waking up and fanning out across your
+GitHub world. It’s checking: - Every issue assigned to you, mentioning
+you, or created by you - Every pull request waiting for your review -
+Every PR you authored and its CI status - Recent releases across your
+repos - Active GitHub Discussions you’re part of - Accessibility changes
+in VS Code (if you track that) - Community reactions on everything</p>
+<p>It’s scoring all of these by urgency — who’s waiting on you, what’s
+deadline-bound, what the community cares about — and assembling them
+into a document.</p>
+<p>When it finishes, it saves two files in your workspace: -
+<strong><code>.github/reviews/briefings/briefing-{today's date}.md</code></strong>
+— a markdown file you can read and edit right here in VS Code -
+<strong><code>.github/reviews/briefings/briefing-{today's date}.html</code></strong>
+— an HTML file you can open in a browser (with full screen reader
+support)</p>
+<p><strong>Open the markdown file.</strong> You’ll see sections like: -
+<strong>Needs Your Action</strong> — things where someone is
+specifically waiting on you - <strong>Monitor &amp; Follow Up</strong> —
+things happening that you should know about - <strong>Recently
+Completed</strong> — your recent accomplishments -
+<strong>Guidance</strong> — the agent’s suggestions for what to focus
+on</p>
+<p><strong>This is your daily dashboard.</strong> You can check off
+items as you complete them throughout the day.</p>
+<blockquote>
+<p><strong>Feeling overwhelmed?</strong> Don’t worry — you don’t need to
+understand every section right away. The most important one is “Needs
+Your Action” at the top. Start there. Everything else can wait.</p>
+</blockquote>
+<hr />
+<h2 id="step-6-explore-one-issue">Step 6: Explore One Issue</h2>
+<p>Let’s go deeper. Pick an issue from your briefing (or any issue you
+know about) and ask the agent to show you the details.</p>
+<p><strong>Type something like:</strong></p>
+<pre><code>@issue-tracker deep dive into owner/repo#42</code></pre>
+<p>Replace <code>owner/repo#42</code> with a real issue. For example, if
+you have an issue number 42 in a repository called
+<code>my-project</code> owned by <code>my-username</code>, you’d
+type:</p>
+<pre><code>@issue-tracker deep dive into my-username/my-project#42</code></pre>
+<blockquote>
+<p><strong>Not sure what to type?</strong> If you’re inside a git
+repository, you can just use the issue number:</p>
+<pre><code>@issue-tracker show me issue #42</code></pre>
+<p>The agent is smart enough to figure out which repo you mean from the
+folder you have open.</p>
+</blockquote>
+<p>The agent will pull the full issue: description, every comment,
+reactions, linked pull requests, and any related discussions. It saves
+this as a workspace document too — a detailed file you can review
+offline.</p>
+<hr />
+<h2 id="step-7-try-a-slash-command">Step 7: Try a Slash Command</h2>
+<p>Slash commands are shortcuts. Instead of typing a full sentence to an
+agent, you type <code>/</code> followed by a command name, and the agent
+knows exactly what to do.</p>
+<p><strong>Try this:</strong></p>
+<pre><code>/my-issues</code></pre>
+<p>That’s it. Just <code>/my-issues</code> and press Enter. The Issue
+Tracker agent will search for all your open issues and show them sorted
+by priority.</p>
+<p><strong>Here are a few more to try:</strong></p>
+<table>
+<colgroup>
+<col style="width: 45%" />
+<col style="width: 54%" />
+</colgroup>
+<thead>
+<tr>
+<th>Type this</th>
+<th>What happens</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/my-prs</code></td>
+<td>Shows your open pull requests with review status and CI health</td>
+</tr>
+<tr>
+<td><code>/triage</code></td>
+<td>Creates a prioritized triage dashboard and saves it to your
+workspace</td>
+</tr>
+<tr>
+<td><code>/notifications</code></td>
+<td>Shows your unread GitHub notifications grouped by type</td>
+</tr>
+<tr>
+<td><code>/ci-status</code></td>
+<td>Shows CI/CD health across your repos — any failing builds?</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>See the <code>/</code> autocomplete?</strong> When you type
+<code>/</code> in the chat input, VS Code shows you all available
+commands in a dropdown. Browse through them — there are 28 in total, and
+you can explore them at your own pace.</p>
+</blockquote>
+<hr />
+<h2 id="step-8-leave-a-comment-without-opening-github">Step 8: Leave a
+Comment Without Opening GitHub</h2>
+<p>This is where it gets really fun. You can reply to issues and pull
+requests without ever opening your browser.</p>
+<p><strong>Type something like:</strong></p>
+<pre><code>@issue-tracker reply to owner/repo#42</code></pre>
+<p>The agent will: 1. Show you the recent conversation on that issue 2.
+Ask what you want to say 3. Draft a reply for you 4. Show you a preview
+of exactly what will be posted 5. Ask you to confirm:
+<strong>Post</strong>, <strong>Edit</strong>, or
+<strong>Cancel</strong></p>
+<p>Nothing gets posted until you say “Post.” You’re always in
+control.</p>
+<blockquote>
+<p><strong>Nervous about posting?</strong> Totally normal. The agents
+<em>always</em> preview before posting. They’ll show you exactly what
+will appear on GitHub, and they’ll wait for your explicit confirmation.
+Think of it like a “Send” button on an email — you get to review
+first.</p>
+</blockquote>
+<hr />
+<h2 id="step-9-react-to-something">Step 9: React to Something</h2>
+<p>Reactions are the lightest-weight way to participate on GitHub — a
+thumbs up, a heart, a rocket. They take two seconds and they let people
+know you’ve seen their work.</p>
+<p><strong>Try:</strong></p>
+<pre><code>/react thumbs up owner/repo#42</code></pre>
+<p>Or in natural language:</p>
+<pre><code>@issue-tracker like issue #42</code></pre>
+<p>The agent shows the current reactions, adds yours, and confirms.
+That’s it. Someone’s morning just got a little brighter.</p>
+<hr />
+<h2 id="step-10-make-it-yours">Step 10: Make It Yours</h2>
+<p>Now that you’ve seen what the agents can do, you can customize how
+they work for you.</p>
+<p><strong>Open <code>.github/agents/preferences.md</code></strong> in
+your editor. This file controls things like:</p>
+<ul>
+<li><strong>Your default merge strategy</strong> — squash, rebase, or
+merge commit?</li>
+<li><strong>Your team roster</strong> — names, GitHub handles, expertise
+areas, and timezones</li>
+<li><strong>Saved searches</strong> — name your favorite filters so you
+can run them with one command</li>
+<li><strong>Response templates</strong> — pre-written replies for common
+situations (“Thanks for reporting! Could you provide steps to
+reproduce?”)</li>
+<li><strong>Notification preferences</strong> — which repos matter most,
+which ones to mute</li>
+</ul>
+<p>You don’t need to change anything right now. The agents work fine
+with their defaults. But when you’re ready to make the system feel like
+<em>yours</em>, this is where you go.</p>
+<hr />
+<h2 id="what-to-do-tomorrow-morning">What to Do Tomorrow Morning</h2>
+<p>Here’s your new morning routine. It takes about 5 minutes:</p>
+<ol type="1">
+<li><strong>Open VS Code</strong> and Copilot Chat
+(<code>Ctrl+Shift+I</code>)</li>
+<li><strong>Type</strong>
+<code>@daily-briefing morning briefing</code></li>
+<li><strong>Open the briefing</strong> — scan “Needs Your Action”
+first</li>
+<li><strong>Work through the top items:</strong>
+<ul>
+<li>Need to review a PR? Type
+<code>@pr-review review owner/repo#123</code></li>
+<li>Need to reply to an issue? Type
+<code>/issue-reply owner/repo#42</code></li>
+<li>Want to triage your backlog? Type <code>/triage</code></li>
+</ul></li>
+<li><strong>Check things off</strong> in the briefing document as you
+complete them</li>
+</ol>
+<p>That’s it. By the end of your first week, this will feel as natural
+as checking email.</p>
+<hr />
+<h2 id="quick-reference-card">Quick Reference Card</h2>
+<p>Keep this handy until the commands become second nature.</p>
+<h3 id="the-agents">The Agents</h3>
+<table>
+<colgroup>
+<col style="width: 21%" />
+<col style="width: 39%" />
+<col style="width: 39%" />
+</colgroup>
+<thead>
+<tr>
+<th>Agent</th>
+<th>What to type</th>
+<th>What they do</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Daily Briefing</td>
+<td><code>@daily-briefing</code></td>
+<td>Your prioritized overview of everything happening</td>
+</tr>
+<tr>
+<td>Issue Tracker</td>
+<td><code>@issue-tracker</code></td>
+<td>Find, triage, reply to, and manage issues</td>
+</tr>
+<tr>
+<td>PR Review</td>
+<td><code>@pr-review</code></td>
+<td>Review code, leave comments, merge PRs</td>
+</tr>
+<tr>
+<td>Analytics</td>
+<td><code>@analytics</code></td>
+<td>Team metrics, velocity, bottlenecks</td>
+</tr>
+<tr>
+<td>A11y Tracker</td>
+<td><code>@insiders-a11y-tracker</code></td>
+<td>Accessibility change tracking</td>
+</tr>
+</tbody>
+</table>
+<h3 id="most-useful-commands-for-beginners">Most Useful Commands for
+Beginners</h3>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/my-issues</code></td>
+<td>“What issues need my attention?”</td>
+</tr>
+<tr>
+<td><code>/my-prs</code></td>
+<td>“What’s happening with my pull requests?”</td>
+</tr>
+<tr>
+<td><code>/triage</code></td>
+<td>“Help me prioritize my backlog”</td>
+</tr>
+<tr>
+<td><code>/review-pr owner/repo#N</code></td>
+<td>“Give me a full review of this PR”</td>
+</tr>
+<tr>
+<td><code>/issue-reply owner/repo#N</code></td>
+<td>“Help me reply to this issue”</td>
+</tr>
+<tr>
+<td><code>/react thumbs up owner/repo#N</code></td>
+<td>“I like this”</td>
+</tr>
+<tr>
+<td><code>/notifications</code></td>
+<td>“What notifications do I have?”</td>
+</tr>
+<tr>
+<td><code>/daily-briefing</code></td>
+<td>“Give me the full picture”</td>
+</tr>
+</tbody>
+</table>
+<h3 id="things-you-can-say-in-plain-english">Things You Can Say in Plain
+English</h3>
+<p>You don’t need to memorize commands. Try these:</p>
+<pre><code>@issue-tracker show me what needs my attention
+@issue-tracker what&#39;s the most urgent issue?
+@pr-review which PRs are waiting for my review?
+@pr-review explain what changed in auth.ts in PR #15
+@daily-briefing what happened since yesterday?
+@analytics how&#39;s the team doing this sprint?</code></pre>
+<p>The agents understand intent. If your phrasing isn’t perfect, they’ll
+figure out what you mean.</p>
+<hr />
+<h2 id="glossary">Glossary</h2>
+<p>If any of these terms are new to you, here’s a quick reference:</p>
+<table>
+<colgroup>
+<col style="width: 30%" />
+<col style="width: 70%" />
+</colgroup>
+<thead>
+<tr>
+<th>Term</th>
+<th>What it means</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Repository (repo)</strong></td>
+<td>A project folder on GitHub that holds code, issues, and history</td>
+</tr>
+<tr>
+<td><strong>Issue</strong></td>
+<td>A task, bug report, or feature request tracked on GitHub</td>
+</tr>
+<tr>
+<td><strong>Pull Request (PR)</strong></td>
+<td>A proposed code change that others can review before it’s
+merged</td>
+</tr>
+<tr>
+<td><strong>Merge</strong></td>
+<td>Combining a pull request’s changes into the main codebase</td>
+</tr>
+<tr>
+<td><strong>Branch</strong></td>
+<td>A parallel version of the code — like a draft you can edit without
+affecting the original</td>
+</tr>
+<tr>
+<td><strong>CI/CD</strong></td>
+<td>Automated tests and builds that run when you push code</td>
+</tr>
+<tr>
+<td><strong>Milestone</strong></td>
+<td>A collection of issues/PRs grouped toward a release or goal</td>
+</tr>
+<tr>
+<td><strong>Label</strong></td>
+<td>A tag on an issue or PR (like “bug”, “feature”, “P0”)</td>
+</tr>
+<tr>
+<td><strong>Reaction</strong></td>
+<td>An emoji response to an issue, PR, or comment (thumbs up, heart,
+rocket)</td>
+</tr>
+<tr>
+<td><strong>Triage</strong></td>
+<td>The process of reviewing issues and deciding what to do with each
+one</td>
+</tr>
+<tr>
+<td><strong>Diff</strong></td>
+<td>The difference between two versions of code — what was added,
+changed, or removed</td>
+</tr>
+<tr>
+<td><strong>Code review</strong></td>
+<td>Reading someone else’s code changes and giving feedback before
+they’re merged</td>
+</tr>
+<tr>
+<td><strong>Dependabot</strong></td>
+<td>GitHub’s automated tool that warns you about security issues in your
+dependencies</td>
+</tr>
+<tr>
+<td><strong>WCAG</strong></td>
+<td>Web Content Accessibility Guidelines — standards for making things
+accessible</td>
+</tr>
+<tr>
+<td><strong>Screen reader</strong></td>
+<td>Software that reads screen content aloud for users who are blind or
+have low vision</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="when-youre-ready-for-more">When You’re Ready for More</h2>
+<p>This guide got you started. When you’re comfortable with the basics,
+the <strong><a href="GUIDE.md">Complete Guide</a></strong> covers
+everything:</p>
+<ul>
+<li>All 5 agents in full detail</li>
+<li>All 28 slash commands</li>
+<li>Advanced workflows: release management, sprint reviews, branch
+cleanup, security monitoring</li>
+<li>Team analytics and bottleneck detection</li>
+<li>Workspace preferences and customization</li>
+<li>Screen reader accessibility features</li>
+<li>How the agents hand off to each other</li>
+</ul>
+<p>Take your time. There’s no rush. The agents will be here whenever
+you’re ready to explore the next thing.</p>
+<hr />
+<p><em>You just set up a personal GitHub command center inside your code
+editor. That’s not nothing. Go get a coffee — you earned it.</em></p>
