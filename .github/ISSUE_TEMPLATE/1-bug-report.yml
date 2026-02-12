@@ -1,0 +1,78 @@
+name: 🐛 Bug Report
+description: Report an issue with an agent or prompt
+title: '[Bug]: '
+labels: ['bug', 'needs-triage']
+body:
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Pre-flight checks
+      options:
+        - label: I have searched for existing issues
+          required: true
+        - label: I have checked the documentation
+          required: true
+
+  - type: dropdown
+    id: component
+    attributes:
+      label: Component
+      description: What component is experiencing the issue?
+      options:
+        - Agent Configuration
+        - Prompt Template
+        - Documentation
+        - GitHub Integration
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: agent-name
+    attributes:
+      label: Agent/Prompt Name
+      description: Which specific agent or prompt is affected?
+      placeholder: e.g., pr-review.agent.md, daily-briefing.prompt.md
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Bug Description
+      description: Clear description of what went wrong
+      placeholder: Describe the issue you encountered
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to Reproduce
+      description: Step-by-step instructions to reproduce the issue
+      placeholder: |
+        1. Configure agent with...
+        2. Run prompt with input...
+        3. Expected outcome vs actual outcome...
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Information about your setup
+      placeholder: |
+        - GitHub Copilot version:
+        - VS Code version:
+        - Repository type:
+        - Any custom preferences:
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional Context
+      description: Any additional information that might be helpful
+      placeholder: Screenshots, error messages, related issues...

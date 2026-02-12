@@ -1,0 +1,87 @@
+name: ✨ Feature Request
+description: Suggest a new agent, prompt, or enhancement
+title: '[Feature]: '
+labels: ['enhancement', 'needs-triage']
+body:
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Pre-flight checks
+      options:
+        - label: I have searched for existing feature requests
+          required: true
+        - label: I have checked if this could be addressed with existing agents/prompts
+          required: true
+
+  - type: dropdown
+    id: type
+    attributes:
+      label: Request Type
+      description: What kind of feature are you requesting?
+      options:
+        - New Agent
+        - New Prompt Template
+        - Agent Enhancement
+        - Prompt Enhancement
+        - Documentation Improvement
+        - Integration Feature
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: Feature Summary
+      description: Brief summary of what you'd like to see
+      placeholder: e.g., "Create an agent that automatically suggests code review improvements"
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem Statement
+      description: What problem would this feature solve?
+      placeholder: Describe the current workflow pain point or inefficiency
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed Solution
+      description: How would you like this feature to work?
+      placeholder: |
+        Detailed description of:
+        - How the agent/prompt would behave
+        - What inputs it would need
+        - What outputs it would provide
+        - Integration points with existing workflows
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives Considered
+      description: Have you considered any alternative approaches?
+      placeholder: Other ways to solve this problem or existing tools/agents that partially address it
+
+  - type: textarea
+    id: examples
+    attributes:
+      label: Usage Examples
+      description: Concrete examples of how this would be used
+      placeholder: |
+        Example scenarios:
+        - User types: "/analyze-commits"
+        - Agent responds with: commit analysis and suggestions
+        - Workflow integration: works with existing PR review process
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional Context
+      description: Any additional information that helps explain the request
+      placeholder: Related workflows, team needs, external tool integrations...

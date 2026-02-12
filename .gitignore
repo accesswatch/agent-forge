@@ -1,6 +1,15 @@
 # Exclude reviews folder (contains sensitive/private review data)
 .github/reviews/
 
+# Exclude actual preferences file (may contain sensitive team data)
+.github/agents/preferences.md
+
+# Announcement email (not part of the repo)
+announcement-email.md
+
+# Keep the example file for reference
+!.github/agents/preferences.example.md
+
 # OS generated files
 .DS_Store
 .DS_Store?
@@ -11,7 +20,8 @@ ehthumbs.db
 Thumbs.db
 
 # IDE and editor files
-.vscode/
+.vscode/settings.json
+.vscode/launch.json
 .idea/
 *.swp
 *.swo
@@ -26,3 +36,19 @@ yarn-error.log*
 # Temporary files
 *.tmp
 *.temp
+
+# Environment variables and secrets
+.env
+.env.local
+.env.*.local
+*.key
+*.pem
+
+# API keys and credentials
+config/secrets.yml
+config/credentials.yml
+*.credentials
+
+# Local configuration overrides
+local.config.*
+override.config.*

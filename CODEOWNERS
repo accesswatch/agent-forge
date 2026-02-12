@@ -1,0 +1,26 @@
+# Agent Forge — Code Ownership
+# https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+#
+# The owner below is automatically requested for review on all PRs.
+# This ensures every change to the forge is reviewed before merge.
+
+# Default owner for everything
+* @accesswatch
+
+# Agents — core behavior, handle with care
+.github/agents/ @accesswatch
+
+# Prompts — slash commands
+.github/prompts/ @accesswatch
+
+# Documentation — guides and references
+Documentation/ @accesswatch
+
+# AI integration guides
+ai-instructions/ @accesswatch
+
+# Repository configuration & templates
+.github/ISSUE_TEMPLATE/ @accesswatch
+.github/pull_request_template.md @accesswatch
+CONTRIBUTING.md @accesswatch
+SECURITY.md @accesswatch

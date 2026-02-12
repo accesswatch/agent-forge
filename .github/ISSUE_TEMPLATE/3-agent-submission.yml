@@ -1,0 +1,101 @@
+name: 🤖 Agent/Prompt Submission
+description: Submit a new agent or prompt for inclusion
+title: '[Submission]: '
+labels: ['submission', 'needs-review']
+body:
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Submission Checklist
+      options:
+        - label: My agent/prompt follows the established patterns
+          required: true
+        - label: I have tested this thoroughly
+          required: true
+        - label: I have included comprehensive documentation
+          required: true
+        - label: I have checked for conflicts with existing agents/prompts
+          required: true
+
+  - type: dropdown
+    id: type
+    attributes:
+      label: Submission Type
+      description: What are you submitting?
+      options:
+        - New Agent
+        - New Prompt Template
+        - Agent Update
+        - Prompt Update
+    validations:
+      required: true
+
+  - type: input
+    id: name
+    attributes:
+      label: Name
+      description: What is the name of your agent or prompt?
+      placeholder: e.g., security-review.agent.md
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What does your agent/prompt do?
+      placeholder: Comprehensive description of functionality and use cases
+    validations:
+      required: true
+
+  - type: textarea
+    id: usage
+    attributes:
+      label: Usage Examples
+      description: How would someone use this?
+      placeholder: |
+        Example invocations:
+        - @agent-name do X with Y
+        - Expected behavior and outputs
+        - Integration with existing workflows
+    validations:
+      required: true
+
+  - type: textarea
+    id: testing
+    attributes:
+      label: Testing Done
+      description: How have you tested this agent/prompt?
+      placeholder: |
+        Testing scenarios:
+        - Repository types tested
+        - Edge cases covered
+        - Integration testing with other agents
+    validations:
+      required: true
+
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Dependencies & Requirements
+      description: What tools, permissions, or setup does this require?
+      placeholder: |
+        Required:
+        - GitHub tools/permissions
+        - VS Code extensions
+        - Repository setup
+        - Team configuration
+
+  - type: input
+    id: pr
+    attributes:
+      label: Pull Request
+      description: Link to the PR with your submission (if ready)
+      placeholder: https://github.com/accesswatch/agent-forge/pull/123
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional Notes
+      description: Anything else reviewers should know?
+      placeholder: Design decisions, limitations, future enhancements...
