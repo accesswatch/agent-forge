@@ -159,7 +159,7 @@ Markdown documents MUST also follow screen reader-friendly patterns:
 1. **Heading hierarchy** — Strict `#` → `##` → `###` cascade. Never skip levels.
 2. **Descriptive link text** — `[PR #123: Fix login bug](url)` not `[#123](url)` or bare URLs.
 3. **Table headers** — Always include a header row. Keep tables under 7 columns for readability.
-4. **Status text alongside emoji** — `🔴 Action needed` not just `🔴`. Screen readers may not announce emoji consistently.
+4. **Status text is clear** — Use text labels like "Action needed" rather than relying on symbols alone. Screen readers may not announce special characters consistently.
 5. **Summary before detail** — Lead every section with a one-line summary. Use collapsible `<details>` blocks in markdown for lengthy content.
 6. **Action items are specific** — `- [ ] Respond to @alice on repo#42 — she asked about the migration timeline` not `- [ ] Respond to issue`.
 7. **Section count in headings** — `## Needs Your Action (3 items)` so screen reader users know section size before entering.
@@ -196,7 +196,7 @@ Monitor GitHub Discussions alongside issues and PRs:
 - Use #tool:mcp_github_github_search_issues with `type:discussions` qualifiers when available.
 - When listing activity, include discussions where the user is mentioned or participating.
 - Flag discussions that have converted to issues or reference issues the user owns.
-- Display discussions with a distinct signal: `💬 Discussion` to distinguish from issues and PRs.
+- Display discussions with a distinct signal: `Discussion` to distinguish from issues and PRs.
 
 ### Team & Collaborator Activity
 

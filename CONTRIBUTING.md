@@ -1,4 +1,4 @@
-# Contributing to Agent Forge 🔥
+# Contributing to Agent Forge
 
 Welcome, fellow forge worker! We're excited you're interested in contributing to Agent Forge. Whether you're submitting a new agent, refining a prompt, fixing a typo, or improving documentation — every contribution makes the forge stronger.
 
@@ -27,7 +27,7 @@ Be kind, be constructive, be welcoming. We're building tools that help developer
 Agent Forge uses a **fork-and-pull-request** workflow. The `main` branch is protected — no one pushes directly to it (not even the maintainer). Every change goes through a pull request.
 
 ```
-Fork → Branch → Commit → Push → Pull Request → Review → Merge 🎉
+Fork → Branch → Commit → Push → Pull Request → Review → Merge
 ```
 
 **Why?** Because the agents in this repo are used by real people in their daily workflows. A broken agent or malformed prompt can disrupt someone's morning. PRs with review keep the forge reliable.
@@ -97,9 +97,9 @@ Every PR must:
 
 | PR Size | Files Changed | Guidance |
 |---|---|---|
-| 🟢 Small | 1–3 files | Ideal — fast to review |
-| 🟡 Medium | 4–8 files | Acceptable for related changes |
-| 🔴 Large | 9+ files | Split into smaller PRs when possible |
+| Small | 1–3 files | Ideal — fast to review |
+| Medium | 4–8 files | Acceptable for related changes |
+| Large | 9+ files | Split into smaller PRs when possible |
 
 ### What Happens After You Submit
 
@@ -148,7 +148,7 @@ git commit -m "Docs: add Claude integration examples"
 
 ## What You Can Contribute
 
-### 🤖 New Agents
+### New Agents
 
 Create a new `.agent.md` file in `.github/agents/`:
 
@@ -158,7 +158,7 @@ Create a new `.agent.md` file in `.github/agents/`:
 4. Define clear handoff points to other agents
 5. Test with real GitHub data across multiple scenarios
 
-### ⚡ New Prompt Commands
+### New Prompt Commands
 
 Create a new `.prompt.md` file in `.github/prompts/`:
 
@@ -177,21 +177,21 @@ Create a new `.prompt.md` file in `.github/prompts/`:
 3. Use variable placeholders: `${input:variable:description}`
 4. Write clear, actionable instructions
 
-### 📚 Documentation Improvements
+### Documentation Improvements
 
 - Fix typos, clarify instructions, add examples
 - Improve the Getting Started guide or Complete Guide
 - Add new integration guides in `ai-instructions/`
 - Translate documentation (open an issue first to coordinate)
 
-### 🐛 Bug Fixes
+### Bug Fixes
 
 - Agent not behaving as documented
 - Prompt template formatting issues
 - Broken links or incorrect references
 - YAML frontmatter errors
 
-### 💡 Feature Enhancements
+### Feature Enhancements
 
 - Improve existing agent capabilities
 - Add new slash commands for common workflows
@@ -275,7 +275,7 @@ Every contributor is appreciated. We recognize contributions through:
 - **Release notes** — your contributions are credited in releases
 - **Agent credits** — new agents include an attribution comment
 
-Your first merged PR? Welcome to the forge. 🔥
+Your first merged PR? Welcome to the forge.
 
 ---
 
@@ -289,4 +289,4 @@ Your first merged PR? Welcome to the forge. 🔥
 
 ---
 
-*Thank you for helping make Agent Forge better for everyone. Every contribution — from a one-line typo fix to a whole new agent — makes the forge stronger. Let's build something great together.* 🔥
+*Thank you for helping make Agent Forge better for everyone. Every contribution — from a one-line typo fix to a whole new agent — makes the forge stronger. Let's build something great together.*
