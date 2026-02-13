@@ -8,8 +8,20 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+*No unreleased changes.*
+
+---
+
+## [v1.1.0] - 2026-02-13
+
 ### Added
 
+- **Line-Numbered Diff Display** -- PR Review agent now shows every diff with dual line numbers (old file / new file), making it trivial to reference any line in a review. Users can say "comment on L42" or "explain L40-L60" to interact with code directly from the diff output.
+- **Change Map** -- Each file in a review includes a hunk-by-hunk summary table showing old/new line ranges and developer intent, giving reviewers a bird's-eye view of what changed and why before diving into the code.
+- **Annotated Diff Format** -- Diffs use a clean `Old | New | code` column layout with `+`/`-` markers, at least 5 lines of surrounding context per hunk, and `...` dividers between non-adjacent changed regions.
+- **Inline Intent Annotations** -- Complex changes get blockquote explanations between diff hunks, inferred from commit messages and code context, so reviewers understand *why* something changed, not just *what* changed.
+- **Interactive L-Number Prompts** -- After every diff display, an action menu appears: comment, explain, suggest fix, or view before/after -- all by referencing line numbers from the output.
+- **Before/After Snapshots with Line Numbers** -- Collapsible before/after code comparisons include line numbers on every line and a "Lines to watch" callout highlighting the most review-worthy sections.
 - **Cross-repo search by default** -- All agents now search every repo the user has access to when no specific repo is mentioned. No configuration required; it works out of the box via the GitHub Search API with the authenticated user's token.
 - **Repository Discovery & Scope system** -- New `repos` configuration block in `preferences.md` with five discovery modes: `all` (default), `starred`, `owned`, `configured`, `workspace`. Users can precisely control which repos agents scan.
 - **Per-repo tracking overrides** -- Each repo can be configured with granular tracking toggles for issues, pull requests, discussions, releases, security alerts, and CI status. Supports label filters (`labels.include` / `labels.exclude`), path filters, and assignee filters.
@@ -58,9 +70,17 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - **Hardcoded repo references** -- Replaced all hardcoded `repo:microsoft/vscode` search queries with configurable defaults that fall back to `microsoft/vscode` when no preferences are set.
 - **`accesswatch` assumptions** -- Ensured no agent assumes the user is working on a specific project. Owner credits (Jeff Bishop / accesswatch) preserved as repository metadata, not operational assumptions.
 
+### Changed (PR Review Agent)
+
+- **Step 6 redesigned** -- Replaced the basic "Generate Before/After Snapshots" step with a comprehensive "Line-Numbered Diff Display" system containing 5 substeps (6a-6e).
+- **Step 7 templates updated** -- Both markdown and HTML review document templates now include Change Map tables, line-numbered code blocks, annotated diffs with dual line numbers, intent annotations, and "Lines to watch" callouts.
+- **Step 8b (Single-Line Comment)** -- Now accepts `L42` format from the numbered diff output; previews show 5 surrounding numbered lines with a `<-- your comment here` indicator.
+- **Step 8c (Multi-Line Range Comment)** -- Now accepts `L42-L50` format; previews show the full selected range from the numbered diff.
+- **Core Capabilities list** -- Expanded from 15 to 17 items with dedicated entries for Line-Numbered Diff Display and Before/After Snapshots.
+
 ---
 
-## [v3.0.0] - 2026-02-11
+## [v1.0.0] - 2026-02-11
 
 ### Added
 
@@ -87,4 +107,4 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ---
 
-*For the complete feature reference, see the [Full Guide](Documentation/GUIDE.md).*
+*For the complete feature reference, see the [Full Guide](GUIDE.md).*
