@@ -77,6 +77,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - **Step 8b (Single-Line Comment)** -- Now accepts `L42` format from the numbered diff output; previews show 5 surrounding numbered lines with a `<-- your comment here` indicator.
 - **Step 8c (Multi-Line Range Comment)** -- Now accepts `L42-L50` format; previews show the full selected range from the numbered diff.
 - **Core Capabilities list** -- Expanded from 15 to 17 items with dedicated entries for Line-Numbered Diff Display and Before/After Snapshots.
+- **Prompt files updated** -- `review-pr.prompt.md`, `pr-comment.prompt.md`, `pr-report.prompt.md`, `explain-code.prompt.md`, and `address-comments.prompt.md` updated with Change Map generation, L-number format, line-numbered code previews, and synchronized before/after references.
+- **Documentation updated** -- `GUIDE.md` PR Review section rewritten with line-numbered diff description, PR Commenting section updated with L-number format examples, Code Understanding section updated with synchronized before/after examples. `README.md` capabilities table updated.
 
 ---
 

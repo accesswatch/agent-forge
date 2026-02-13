@@ -80,7 +80,7 @@ Here's what they cover:
 | What You Need | What the Agents Do for You |
 |---------------|---------------------------|
 | **A morning overview** | Sweep every repo you touch and build a prioritized briefing with issues, PRs, releases, CI health, security alerts, and community reactions |
-| **Code review** | Pull the full diff, show before/after snapshots, assess risk, check CI results, flag security concerns, and let you leave comments right from chat |
+| **Code review** | Pull the full diff with line-numbered annotations, show before/after snapshots, assess risk, check CI results, flag security concerns, and comment on any line using L-numbers -- right from chat |
 | **Issue management** | Smart triage with priority scoring, saved searches, response templates, batch replies, and project board integration |
 | **Team insights** | Velocity trends, review turnaround times, bottleneck detection, code churn hotspots, and workload balancing |
 | **Release planning** | Auto-categorized release notes, readiness checklists, changelog generation, and post-release workflows |
@@ -94,7 +94,23 @@ And here's the best part: **there's nothing to install beyond what you probably 
 
 ## What's New
 
-### v3: Your Editor Just Became Your GitHub Command Center
+### v1.1: Line-Numbered Diffs and Interactive Code Referencing
+
+PR reviews just got a major upgrade. Every diff now shows **dual line numbers** (old file and new file), making it effortless to reference any line when leaving comments, asking for explanations, or suggesting fixes.
+
+**Line-Numbered Diff Display**
+- Every diff shows old and new line numbers side-by-side
+- A **Change Map** table gives you a bird's-eye view of what changed and why
+- **Intent annotations** between diff hunks explain the developer's reasoning
+- **Before/after snapshots** include line numbers and "Lines to watch" callouts
+
+**Interactive L-Number Commands**
+- After every diff, an action menu appears with L-number shortcuts
+- Say "comment on L42" or "explain L40-L60" to interact with specific lines
+- The commenting system accepts L-number format with numbered code previews
+- Code explanations show synchronized before/after with line references
+
+### v1.0: Your Editor Just Became Your GitHub Command Center
 
 If you've been using an earlier version of these agents, here's everything that's new. If you're just getting started, don't worry about this section -- it's all included in the guide ahead.
 
@@ -352,14 +368,14 @@ But it also does things. You can reply to issues, create new ones, close stale o
 
 ### PR Review
 
-This is your code review companion. When you point it at a pull request, it pulls the complete picture: the full diff, every comment thread, which CI checks passed or failed, whether any security-sensitive files were changed, what release milestone the PR belongs to, and community reactions.
+This is your code review companion. When you point it at a pull request, it pulls the complete picture: the full diff with **dual line numbers** on every line, a **Change Map** summarizing each changed region, every comment thread, which CI checks passed or failed, whether any security-sensitive files were changed, what release milestone the PR belongs to, and community reactions.
 
-Then it builds a structured review document with risk assessment, before/after code snapshots, and a checklist you can work through systematically. When you're ready, you can leave comments -- single-line, multi-line, or even code suggestions that the PR author can apply with one click. And when you're done reviewing, you can approve, request changes, or merge -- all from chat.
+Then it builds a structured review document with risk assessment, line-numbered before/after snapshots with "Lines to watch" callouts, and a checklist you can work through systematically. When you're ready, just reference any line number from the diff -- say "comment on L42" or "explain L40-L60" -- to leave feedback, ask questions, or suggest fixes. And when you're done reviewing, you can approve, request changes, or merge -- all from chat.
 
 **When to reach for it:**
 - "Review this PR for me"
 - "Show me PRs waiting for my review"
-- "Leave a comment on line 42"
+- "Comment on L42" or "Comment on L40-L60"
 - "Explain what this code does"
 - "Merge this PR"
 
@@ -370,11 +386,11 @@ Then it builds a structured review document with risk assessment, before/after c
 @pr-review show PRs waiting for my review
 @pr-review my open PRs -- which are ready to merge?
 @pr-review comment on owner/repo#15
-@pr-review comment on line 42 of auth.ts in PR #15
-@pr-review comment on lines 40-60 of auth.ts in PR #15
-@pr-review suggest a fix for line 42 of auth.ts in PR #15
+@pr-review comment on L42 of auth.ts in PR #15
+@pr-review comment on L40-L60 of auth.ts in PR #15
+@pr-review suggest a fix for L42 of auth.ts in PR #15
 @pr-review reply to @alice's comment on PR #15
-@pr-review explain lines 40-60 in auth.ts on PR #15
+@pr-review explain L40-L60 in auth.ts on PR #15
 @pr-review explain the handleAuth function in PR #15
 @pr-review what changed in utils.ts in PR #15
 @pr-review merge owner/repo#15
@@ -388,10 +404,11 @@ Then it builds a structured review document with risk assessment, before/after c
 - **Full asset pull in one sweep** -- metadata, diff, files, comments, commits, reactions
 - **File classification** -- Feature / Bug Fix / Refactor / Tests / Config / Docs
 - **Risk assessment** per file -- High / Medium / Low with explanations
-- **Before/after snapshots** -- side-by-side code comparison for changed files
+- **Before/after snapshots** -- side-by-side code comparison for changed files with line numbers and "Lines to watch" callouts
+- **Line-numbered diffs** -- every diff shows dual old/new line numbers with a Change Map, intent annotations, and interactive L-number prompts
 - **Dual-format review documents** with checklists you can work through
-- **Full commenting system** -- general comments, single-line, multi-line range, code suggestion blocks, reply to threads, batch comments
-- **Code understanding** -- explain specific lines, functions, or file changes in plain language
+- **Full commenting system** -- reference any L-number from the diff to comment, explain, or suggest fixes. General comments, single-line (L42), multi-line range (L42-L50), code suggestion blocks, reply to threads, batch comments
+- **Code understanding** -- explain specific lines (L42), functions, or file changes in plain language with synchronized before/after comparisons
 - **Reactions** -- add emoji reactions to PRs and individual comments
 - **PR management** -- merge (squash/rebase/merge commit), edit title/description, labels, request/dismiss reviewers, draft/ready toggle, close/reopen
 - **CI check results** -- which checks passed, which failed, with links to logs
@@ -403,7 +420,7 @@ Then it builds a structured review document with risk assessment, before/after c
 **What's in a review document:**
 - Overview table with PR metadata, reactions, and release context
 - Changed files summary with risk levels
-- File-by-file analysis with before/after code, diffs, and collapsible sections
+- File-by-file analysis with Change Map tables, line-numbered before/after code, annotated diffs with dual line numbers, intent annotations, "Lines to watch" callouts, and collapsible sections
 - Developer discussion thread with reactions
 - Related GitHub Discussions
 - Commit story (chronological commit messages)
@@ -622,32 +639,34 @@ Let's walk through each one.
 
 ### PR Commenting & Code Review
 
-You can leave comments at every level -- from general PR discussion down to specific line ranges with code suggestions.
+You can leave comments at every level -- from general PR discussion down to specific line ranges with code suggestions. Reference any line from the numbered diff output using L-number format.
 
 | What You Want to Do | How to Do It |
 |-------------------|-------------|
 | **Leave a general comment** | `@pr-review comment on owner/repo#15: "Looks great overall, just a few nits"` |
-| **Comment on a specific line** | `@pr-review comment on line 42 of auth.ts in PR #15: "This needs null checking"` |
-| **Comment on a range of lines** | `@pr-review comment on lines 40-60 of auth.ts in PR #15: "This block should be extracted"` |
-| **Suggest a code fix** | `@pr-review suggest a fix for line 42 of auth.ts in PR #15` -- the PR author gets a one-click "Apply suggestion" button |
+| **Comment on a specific line** | `@pr-review comment on L42 of auth.ts in PR #15: "This needs null checking"` |
+| **Comment on a range of lines** | `@pr-review comment on L40-L60 of auth.ts in PR #15: "This block should be extracted"` |
+| **Suggest a code fix** | `@pr-review suggest a fix for L42 of auth.ts in PR #15` -- the PR author gets a one-click "Apply suggestion" button |
 | **Reply to a comment thread** | `@pr-review reply to @alice's comment on PR #15: "Good point, I'll fix that"` |
 | **Post all your notes as comments** | After generating a review document and adding notes, the agent can post them all at once |
 | **Submit a formal review** | `@pr-review approve owner/repo#15` or `@pr-review request changes on #15` |
+
+**How line numbers work:** When the agent shows a diff, every line gets a number. You see both the old file's line number and the new file's line number side by side. To interact, just reference the new-file line number with the "L" prefix -- `L42` for a single line, `L42-L50` for a range. The agent shows you a preview with surrounding numbered context before posting.
 
 **About code suggestions:** These use GitHub's built-in `suggestion` syntax, so the PR author sees an "Apply suggestion" button right on the comment. One click and your fix is committed. No back-and-forth needed.
 
 ### Code Understanding
 
-Before you critique code, it helps to understand it. The agent can explain any part of a PR diff in plain language.
+Before you critique code, it helps to understand it. The agent can explain any part of a PR diff in plain language -- and every explanation uses line numbers so you can reference exactly what you're looking at.
 
 | What You Want to Do | How to Do It |
 |-------------------|-------------|
-| **Understand specific lines** | `/explain-code lines 40-60 in auth.ts on PR #15` |
+| **Understand specific lines** | `/explain-code L40-L60 in auth.ts on PR #15` |
 | **Understand a function** | `/explain-code the handleAuth function in PR #15` |
 | **Understand what changed in a file** | `/explain-code what changed in utils.ts in PR #15` |
 | **Compare before and after** | `@pr-review compare the old and new handleAuth in PR #15` |
 
-After explaining, the agent offers to comment on those lines, suggest a change, or show more context. It's a natural flow: understand first, then respond.
+When lines were modified, the agent shows a synchronized before/after comparison with line numbers aligned so you can see exactly what moved, what was added, and what was removed. After explaining, it offers to comment on those lines, suggest a change, or show the full Change Map -- all using L-number references.
 
 ### Issue Interactions
 

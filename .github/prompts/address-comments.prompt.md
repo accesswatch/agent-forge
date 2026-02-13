@@ -51,9 +51,9 @@ ${input:pr:PR reference -- e.g. owner/repo#123 or a GitHub PR URL}
    - **Show me the code context first**
 
 9. For each comment being addressed:
-   a. Show the original review comment with code context and any reactions.
+   a. Show the original review comment with the **line-numbered code context** from the annotated diff (including surrounding lines, dual line numbers, and intent annotations if available).
    b. If the user has the code locally, suggest the fix using workspace file context from #tool:readFile.
-   c. Draft a reply to the reviewer explaining what was done.
+   c. Draft a reply to the reviewer explaining what was done, referencing specific L-numbers (e.g., "Fixed the null check at L42").
    d. Mark as addressed in the tracking list.
 
 10. After all comments are addressed, offer:

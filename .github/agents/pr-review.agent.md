@@ -927,26 +927,49 @@ If the user has annotated the workspace review document with notes:
 When the user asks to understand specific code in the PR:
 
 #### 9a: Explain Specific Lines
-1. Identify the file and line(s) from the user's request.
+1. Identify the file and line(s) from the user's request. Accept L-number format (e.g., "explain L42" or "explain L40-L60") -- these reference the new-file line numbers from the annotated diff output.
 2. Fetch the full file content from the PR's head branch using #tool:mcp_github_github_get_file_contents.
-3. Show the requested code with surrounding context (~10 lines above and below).
-4. Provide a clear explanation:
+3. Show the requested code with **line numbers** and ~10 lines of surrounding context:
+   ```
+   32 |   const config = loadConfig();
+   33 |   const timeout = config.timeout ?? 5000;
+   ...
+   40 |   function handleAuth(req: Request): AuthResult {
+   41 |     const token = req.headers.authorization;   <-- start
+   42 |     if (!token) {
+   43 |       throw new AuthError('Missing header');    <-- end
+   44 |     }
+   ...
+   50 |   }
+   ```
+4. If these lines were **modified in the PR**, show a synchronized before/after:
+   ```
+   BEFORE (main, L41-L43):           AFTER (feature branch, L41-L44):
+   41 | if (!token) return null;       41 | if (!token) {
+   42 | const decoded = validate(t);    42 |   throw new AuthError('Missing');
+   43 | return decoded;                 43 | }
+                                      44 | const decoded = validate(token);
+   ```
+5. Provide a clear explanation:
    - **What this code does** -- line-by-line or block-level explanation in plain language
    - **Why it's here** -- infer purpose from the PR description, commit messages, and surrounding code
-   - **What changed** -- if these lines were modified, explain the before vs. after
+   - **What changed** -- before vs. after with specific line references ("L42 changed from a silent return to a thrown error")
    - **Side effects** -- any downstream impact, state mutations, or external calls
    - **Potential concerns** -- edge cases, error paths, or risks
-5. Offer follow-ups: _"Want me to comment on these lines, or see more context?"_
+6. Offer follow-ups using L-number format: _"Want me to comment on L42, suggest a fix for L41-L44, or see more context?"_
 
 #### 9b: Explain a Function or Block
 1. If the user says "explain the handleAuth function" or "what does the try/catch block do", search the diff for matching code.
-2. Show the full function/block from the PR's head branch.
+2. Show the full function/block from the PR's head branch **with line numbers on every line**.
 3. Explain at a higher level: purpose, inputs, outputs, error handling, and how it fits into the broader change.
+4. If the function was modified, show the annotated diff (Step 6b format) for the changed sections within it.
+5. Offer: _"Want me to comment on any of these lines, or see the full Change Map for this file?"_
 
 #### 9c: Compare Before/After for Understanding
 1. Fetch both base and head versions of the file.
-2. Show the specific section before and after.
-3. Explain what changed and why, referencing commit messages for intent.
+2. Show the specific section using the synchronized before/after format with line numbers (see 9a step 4).
+3. Explain what changed and why, referencing commit messages for intent and specific L-numbers for precision.
+4. Offer: _"Want me to comment on any of these changes, or see the full annotated diff?"_
 
 ### Step 10: Reactions
 

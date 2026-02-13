@@ -34,7 +34,7 @@ Type a question in plain English. Get back organized, prioritized, actionable an
 | Capability | Description |
 |---|---|
 | **Morning Briefings** | Sweeps every repo you have access to -- issues, PRs, releases, CI, security alerts, community reactions -- and builds a prioritized dashboard |
-| **Code Reviews** | Full diff analysis with risk assessment, before/after snapshots, CI results, and inline commenting |
+| **Code Reviews** | Line-numbered diffs with Change Maps, risk assessment, before/after snapshots, CI results, interactive L-number commenting, and full review documents |
 | **Issue Triage** | Cross-repo priority scoring with community sentiment, release awareness, batch replies, and saved searches |
 | **Team Analytics** | Velocity trends, review turnaround, bottleneck detection, code hotspots, and workload balancing across all repos |
 | **Release Management** | Auto-categorized release notes, readiness checklists, and complete release workflows |
