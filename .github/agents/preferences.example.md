@@ -102,7 +102,7 @@ templates:
     We appreciate the suggestion! If circumstances change or you'd like to discuss further, please feel free to reopen this issue or start a discussion.
     
   welcome: |
-    🎉 Welcome to the project! Thanks for your first contribution.
+    Welcome to the project! Thanks for your first contribution.
     
     A maintainer will review this shortly. If you have questions while you wait, feel free to ask here or in our discussions.
     
@@ -112,12 +112,12 @@ templates:
     Closing for now to keep our issue tracker manageable. Feel free to reopen if this is still relevant — just provide the requested details.
     
   security-ack: |
-    Thanks for the security report! 🔒
+    Thanks for the security report!
     
     We've received your report and will investigate promptly. For security issues, please email security@company.com instead of posting publicly.
     
   good-first-issue: |
-    This looks like a great first contribution opportunity! 🚀
+    This looks like a great first contribution opportunity!
     
     Added the `good first issue` label. New contributors: check our [contributing guide](../CONTRIBUTING.md) to get started.
 ```

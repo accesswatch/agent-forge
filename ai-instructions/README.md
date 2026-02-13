@@ -4,19 +4,19 @@ This directory contains guides for integrating the GitHub agents and prompts wit
 
 ## Available Integrations
 
-### 🤖 [GitHub Copilot Integration](copilot-integration.md)
+### [GitHub Copilot Integration](copilot-integration.md)
 - **Native support** - Agents work directly with Copilot
 - **Workspace detection** - Automatic configuration loading
 - **@agent syntax** - Direct agent invocation
 - **VS Code integration** - Seamless workflow integration
 
-### 🎨 [Claude AI Instructions](claude-instructions.md)  
+### [Claude AI Instructions](claude-instructions.md)  
 - **Context setup** - How to provide agent context to Claude
 - **Prompt adaptation** - Converting templates for Claude use
 - **Workflow patterns** - Common usage scenarios
 - **Variable substitution** - Adapting dynamic prompts
 
-### 💬 [ChatGPT/OpenAI Integration](openai-integration.md)
+### [ChatGPT/OpenAI Integration](openai-integration.md)
 - **Custom instructions** - Setting up agent behavior
 - **Prompt engineering** - Optimizing for GPT models
 - **API integration** - Programmatic usage patterns
@@ -80,7 +80,7 @@ The `preferences.md` file provides:
 | **Real-time Data** | ✓ Yes | ✗ Provided by user | ✗ API required |
 | **GitHub Integration** | ✓ Direct | ✗ Copy/paste | ✓ API possible |
 | **Customization** | ✓ preferences.md | ✓ Conversation | ✓ System prompts |
-| **Learning Curve** | � Low | 🟡 Medium | 🟡 Medium |
+| **Learning Curve** | Low | Medium | Medium |
 
 ## Migration Between Platforms
 
@@ -145,4 +145,4 @@ Help improve AI integration:
 - **Agent Problems** - Review agent documentation in `.github/agents/`
 - **Contribution Ideas** - Open a discussion or issue
 
-Choose your platform and start enhancing your GitHub workflow! 🚀
+Choose your platform and start enhancing your GitHub workflow!

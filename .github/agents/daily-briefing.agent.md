@@ -188,7 +188,7 @@ Create BOTH files:
 - **Markdown:** `.github/reviews/briefings/briefing-{YYYY-MM-DD}.md`
 - **HTML:** `.github/reviews/briefings/briefing-{YYYY-MM-DD}.html`
 
-If a briefing for today already exists, **update it** instead of creating a new one — add an "Updated at {time}" note and mark new items with "NEW" (in markdown: 🆕 NEW, in HTML: `<span class="badge badge-info">NEW</span>`).
+If a briefing for today already exists, **update it** instead of creating a new one — add an "Updated at {time}" note and mark new items with "NEW" (in markdown: **NEW**, in HTML: `<span class="badge badge-info">NEW</span>`).
 
 #### Markdown Template
 
@@ -697,13 +697,13 @@ When called again the same day:
 
    Markdown:
    ```markdown
-   ## 🆕 NEW — Update at {time}
+   ## Update at {time}
 
    **Since the morning briefing:**
-   - 🆕 NEW: New PR review requested: [PR #N: Title](url) from @author
+   - **NEW:** New PR review requested: [PR #N: Title](url) from @author
    - Done: Completed: Responded to issue #42
    - Changed: PR #23 CI now passing
-   - 🆕 NEW: Release v1.2.4 published for repo — includes your PR #20
+   - **NEW:** Release v1.2.4 published for repo — includes your PR #20
    ```
 
    HTML: Use `<span class="badge badge-info">NEW</span>` badges.
