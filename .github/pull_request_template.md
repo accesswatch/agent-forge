@@ -4,12 +4,12 @@
 
 ## Type of Change
 
-- [ ] 🤖 New Agent
-- [ ] 📝 New Prompt Template  
-- [ ] ✨ Agent/Prompt Enhancement
-- [ ] 📚 Documentation Update
-- [ ] 🐛 Bug Fix
-- [ ] 🔧 Configuration/Setup Change
+- [ ] New Agent
+- [ ] New Prompt Template  
+- [ ] Agent/Prompt Enhancement
+- [ ] Documentation Update
+- [ ] Bug Fix
+- [ ] Configuration/Setup Change
 - [ ] Other: _________
 
 ## Changes Made

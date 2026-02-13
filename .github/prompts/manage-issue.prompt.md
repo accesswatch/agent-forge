@@ -1,15 +1,15 @@
 ---
 name: manage-issue
-description: "Manage an issue — edit, label, assign, close, reopen, lock, set milestone, or transfer"
+description: "Manage an issue -- edit, label, assign, close, reopen, lock, set milestone, or transfer"
 agent: issue-tracker
 tools:
   - github/*
   - ask_questions
 ---
 
-Manage a GitHub issue — edit, label, assign, close, or perform any administrative action.
+Manage a GitHub issue -- edit, label, assign, close, or perform any administrative action.
 
-${input:action:What to do — e.g. 'close owner/repo#42 as completed', 'add bug label to #42', 'assign @alice to #42', 'set milestone v2.0 on #42'}
+${input:action:What to do -- e.g. 'close owner/repo#42 as completed', 'add bug label to #42', 'assign @alice to #42', 'set milestone v2.0 on #42'}
 
 ## Steps
 

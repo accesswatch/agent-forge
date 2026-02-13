@@ -75,11 +75,11 @@ The `preferences.md` file provides:
 
 | Feature | GitHub Copilot | Claude AI | ChatGPT/OpenAI |
 |---------|----------------|-----------|----------------|
-| **Native Support** | ✓ Full | ✗ Manual | ✗ Manual |
-| **Workspace Context** | ✓ Automatic | ✗ Manual | ✗ Manual |
-| **Real-time Data** | ✓ Yes | ✗ Provided by user | ✗ API required |
-| **GitHub Integration** | ✓ Direct | ✗ Copy/paste | ✓ API possible |
-| **Customization** | ✓ preferences.md | ✓ Conversation | ✓ System prompts |
+| **Native Support** | Full | Manual | Manual |
+| **Workspace Context** | Automatic | Manual | Manual |
+| **Real-time Data** | Yes | Provided by user | API required |
+| **GitHub Integration** | Direct | Copy/paste | API possible |
+| **Customization** | preferences.md | Conversation | System prompts |
 | **Learning Curve** | Low | Medium | Medium |
 
 ## Migration Between Platforms

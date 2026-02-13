@@ -1,4 +1,4 @@
-name: 🐛 Bug Report
+name: Bug Report
 description: Report an issue with an agent or prompt
 title: '[Bug]: '
 labels: ['bug', 'needs-triage']

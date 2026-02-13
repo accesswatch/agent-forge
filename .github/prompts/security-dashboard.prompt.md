@@ -1,6 +1,6 @@
 ---
 name: security-dashboard
-description: "Security overview — Dependabot alerts, security advisories, dependency update PRs, and vulnerability status across your repos"
+description: "Security overview -- Dependabot alerts, security advisories, dependency update PRs, and vulnerability status across your repos"
 agent: daily-briefing
 tools:
   - github/*
@@ -11,12 +11,12 @@ tools:
 
 Generate a security dashboard showing Dependabot alerts, security advisories, and dependency update PRs across your repos.
 
-${input:scope:Optional: specific repo, severity filter (e.g. 'critical only'), or 'just dependabot'}
+${input:scope:Optional: specific repo, 'org:orgname', severity filter (e.g. 'critical only'), or 'just dependabot'}
 
 ## Steps
 
 1. Get the authenticated user with #tool:mcp_github_github_get_me.
-2. Identify target repos (from input, workspace, or security preferences in `.github/agents/preferences.md`).
+2. Load repo scope from `.github/agents/preferences.md` if present. Identify target repos (from input, workspace, preferences, or ALL accessible repos by default).
 3. For each repo, collect:
    - Open Dependabot alerts by severity (critical, high, medium, low)
    - Security advisories affecting the repo

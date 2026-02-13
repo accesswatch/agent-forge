@@ -1,6 +1,6 @@
 ---
 name: ci-status
-description: "CI/CD health dashboard — workflow runs, failures, flaky tests, and long-running jobs across your repos"
+description: "CI/CD health dashboard -- workflow runs, failures, flaky tests, and long-running jobs across your repos"
 agent: daily-briefing
 tools:
   - github/*
@@ -11,12 +11,12 @@ tools:
 
 Generate a CI/CD health dashboard showing workflow status, failures, and health across your repos.
 
-${input:scope:Optional: specific repo, workflow name, or 'just failures'}
+${input:scope:Optional: specific repo, 'org:orgname', workflow name, or 'just failures'}
 
 ## Steps
 
 1. Get the authenticated user with #tool:mcp_github_github_get_me.
-2. Identify target repos (from input, workspace, or CI preferences in `.github/agents/preferences.md`).
+2. Load repo scope from `.github/agents/preferences.md` if present. Identify target repos (from input, workspace, preferences, or ALL accessible repos by default).
 3. For each repo, check recent workflow runs:
    - Identify failing workflows with failure details and links to logs
    - Flag long-running jobs exceeding threshold (default 30 min, configurable in preferences)

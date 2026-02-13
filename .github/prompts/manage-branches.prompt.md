@@ -1,13 +1,13 @@
 ---
 name: manage-branches
-description: "Branch management — list branches with activity, detect stale branches, compare ahead/behind, delete merged branches, show protection rules"
+description: "Branch management -- list branches with activity, detect stale branches, compare ahead/behind, delete merged branches, show protection rules"
 agent: pr-review
 tools:
   - github/*
   - ask_questions
 ---
 
-Manage branches in a repository — list, compare, clean up stale branches, and check protection rules.
+Manage branches in a repository -- list, compare, clean up stale branches, and check protection rules.
 
 ${input:action:Optional: 'list', 'stale', 'compare branch-a branch-b', 'cleanup', 'protection', or specific repo}
 
@@ -47,17 +47,17 @@ ${input:action:Optional: 'list', 'stale', 'compare branch-a branch-b', 'cleanup'
 Branches in owner/repo (15 total)
 
 Active (8):
-  main (default, protected) — latest: 2h ago
-  feature/auth-redesign — 3 commits ahead, 0 behind — latest: 1 day ago
-  fix/login-timeout — 1 commit ahead, 5 behind — latest: 3 days ago
+  main (default, protected) -- latest: 2h ago
+  feature/auth-redesign -- 3 commits ahead, 0 behind -- latest: 1 day ago
+  fix/login-timeout -- 1 commit ahead, 5 behind -- latest: 3 days ago
 
-Stale (5 — no activity in 30+ days):
-  old/experiment — merged, safe to delete — last: 45 days ago
-  feature/abandoned — NOT merged, 12 commits ahead — last: 60 days ago
+Stale (5 -- no activity in 30+ days):
+  old/experiment -- merged, safe to delete -- last: 45 days ago
+  feature/abandoned -- NOT merged, 12 commits ahead -- last: 60 days ago
 
 Protected (2):
-  main — requires 2 reviews, CI must pass
-  release/v2 — requires 1 review
+  main -- requires 2 reviews, CI must pass
+  release/v2 -- requires 1 review
 ```
 
 After listing: _"Want to clean up the merged stale branches? Or compare two branches?"_

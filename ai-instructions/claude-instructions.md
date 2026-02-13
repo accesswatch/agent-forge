@@ -83,9 +83,9 @@ Use these templates from `.github/prompts/` by copying the content and replacing
 
 ### Variables Format
 Replace `${input:variable:description}` with actual values:
-- `${input:scope:morning/afternoon/weekly}` → `morning` 
-- `${input:repo:repository name}` → `microsoft/vscode`
-- `${input:pr_number:PR number}` → `#1234`
+- `${input:scope:morning/afternoon/weekly}` --> `morning` 
+- `${input:repo:repository name}` --> `microsoft/vscode`
+- `${input:pr_number:PR number}` --> `#1234`
 
 ### Example Template Usage
 

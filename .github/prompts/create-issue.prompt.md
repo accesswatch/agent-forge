@@ -1,6 +1,6 @@
 ---
 name: create-issue
-description: "Create a new GitHub issue with smart drafting — describe the problem and get a well-structured issue"
+description: "Create a new GitHub issue with smart drafting -- describe the problem and get a well-structured issue"
 agent: issue-tracker
 tools:
   - github/*
@@ -11,20 +11,20 @@ tools:
 
 Create a new GitHub issue with smart formatting and metadata.
 
-${input:description:Describe the issue — e.g. 'bug: login timeout after 30 seconds on the auth page' or 'feature: add dark mode to settings panel'}
+${input:description:Describe the issue -- e.g. 'bug: login timeout after 30 seconds on the auth page' or 'feature: add dark mode to settings panel'}
 
 ## Steps
 
 1. Get the authenticated user with #tool:mcp_github_github_get_me.
 2. Determine the target repo:
-   - If specified in the description (e.g., "in owner/repo") → use that
-   - Otherwise → use the workspace repo
-   - If ambiguous → ask with #tool:ask_questions
+   - If specified in the description (e.g., "in owner/repo") --> use that
+   - Otherwise --> use the workspace repo
+   - If ambiguous --> ask with #tool:ask_questions
 3. Parse the description to determine issue type:
-   - **Bug** — keywords: "bug", "broken", "error", "crash", "fix", "doesn't work"
-   - **Feature** — keywords: "feature", "add", "new", "enhance", "request"
-   - **Task** — keywords: "task", "todo", "chore", "update", "refactor"
-   - **Question** — keywords: "question", "how", "help", "why"
+   - **Bug** -- keywords: "bug", "broken", "error", "crash", "fix", "doesn't work"
+   - **Feature** -- keywords: "feature", "add", "new", "enhance", "request"
+   - **Task** -- keywords: "task", "todo", "chore", "update", "refactor"
+   - **Question** -- keywords: "question", "how", "help", "why"
 4. Check for available issue templates in the repo:
    - If templates exist and match the type, pre-fill the template
    - If no templates, use a smart default structure

@@ -6,6 +6,150 @@ This file shows examples of all available configuration options. You can copy se
 
 ---
 
+## Repository Discovery & Scope
+
+Control which repos the agents scan and how broadly they search.
+
+```yaml
+repos:
+  # How agents discover repos when no specific repo is mentioned.
+  # Options: all | starred | owned | configured | workspace
+  #   all        -- Search ALL repos the user has access to (public, private, org member).
+  #                 This is the default. Agents use the GitHub Search API with
+  #                 the authenticated user's token, which automatically covers
+  #                 every repo they can read.
+  #   starred    -- Only repos the user has starred.
+  #   owned      -- Only repos the user owns (excludes org repos they're a member of).
+  #   configured -- Only repos explicitly listed below in 'include'.
+  #   workspace  -- Only the repo detected from the current workspace directory.
+  discovery: all
+
+  # Repos to ALWAYS include in every search, regardless of discovery mode.
+  # These are your "pinned" repos -- they always show up in briefings,
+  # issue sweeps, PR queues, and accessibility tracking.
+  include:
+    - owner/core-api
+    - owner/frontend-app
+    - owner/mobile-app
+
+  # Repos to NEVER include, even if discovery would find them.
+  # Great for archiving noisy forks, sandbox repos, or legacy projects.
+  exclude:
+    - owner/archived-legacy
+    - owner/fork-of-something
+    - owner/experimental-sandbox
+
+  # Per-repo overrides -- fine-grained control over what each agent
+  # tracks for specific repos. These override the global defaults.
+  overrides:
+    "owner/core-api":
+      track:
+        issues: true
+        pull_requests: true
+        discussions: true
+        releases: true
+        security: true
+        ci: true
+      labels:
+        priority: ["P0", "P1", "critical"]
+        include: []              # only show items with these labels (empty = all)
+        exclude: ["wontfix"]     # hide items with these labels
+      paths:                     # only trigger reviews/alerts for changes in these paths
+        - "src/**"
+        - "lib/**"
+      assignees: []              # filter to specific assignees (empty = all)
+
+    "owner/docs-site":
+      track:
+        issues: true
+        pull_requests: true
+        discussions: false       # no discussions for docs repo
+        releases: false
+        security: false
+        ci: false
+      labels:
+        include: ["content", "bug", "typo"]
+        exclude: []
+
+    "microsoft/vscode":
+      track:
+        issues: true             # accessibility tracking
+        pull_requests: false     # don't track PRs in vscode
+        discussions: false
+        releases: true           # track stable/insiders releases
+        security: false
+        ci: false
+      labels:
+        include: ["accessibility"]
+
+  # Default tracking settings applied to all repos not listed in 'overrides'.
+  defaults:
+    track:
+      issues: true
+      pull_requests: true
+      discussions: true
+      releases: true
+      security: true
+      ci: true
+    labels:
+      include: []                # empty = show all labels
+      exclude: ["wontfix", "duplicate"]
+    paths: []                    # empty = all paths
+    assignees: []                # empty = all assignees
+```
+
+---
+
+## Accessibility Tracking
+
+Configure which repos and labels the accessibility tracker monitors.
+`microsoft/vscode` is tracked by default. Add your own repos to extend coverage.
+
+```yaml
+accessibility_tracking:
+  # Enable/disable the accessibility section in daily briefings
+  enabled: true
+
+  # Repos to track for accessibility improvements.
+  # Each repo can define its own labels and channels.
+  repos:
+    - repo: microsoft/vscode
+      labels:
+        accessibility: "accessibility"        # main a11y label
+        insiders: "insiders-released"         # insiders channel label
+      channels:
+        insiders: true                        # track Insiders builds
+        stable: true                          # track Stable releases
+      use_milestones: true                    # use milestone-based filtering
+
+    - repo: owner/my-web-app
+      labels:
+        accessibility: "a11y"                 # your repo's a11y label name
+        insiders: ""                          # no insiders concept -- leave empty
+      channels:
+        insiders: false
+        stable: true                          # just track closed a11y issues
+      use_milestones: false                   # use date-based filtering instead
+
+    - repo: owner/design-system
+      labels:
+        accessibility: "accessibility"
+        insiders: ""
+      channels:
+        insiders: false
+        stable: true
+      use_milestones: false
+
+  # WCAG cross-referencing in reports
+  wcag_references: true                       # map fixes to WCAG criteria
+  aria_patterns: true                         # map fixes to ARIA design patterns
+
+  # How many recent items to show in daily briefing a11y section
+  briefing_limit: 10
+```
+
+---
+
 ## Merge Strategy
 
 ```yaml
@@ -48,10 +192,10 @@ reviewers:
 ```yaml
 labels:
   priority:
-    - P0          # critical — drop everything
-    - P1          # high — this sprint  
-    - P2          # medium — next sprint
-    - P3          # low — backlog
+    - P0          # critical -- drop everything
+    - P1          # high -- this sprint  
+    - P2          # medium -- next sprint
+    - P3          # low -- backlog
   type:
     - bug
     - feature
@@ -109,7 +253,7 @@ templates:
   stale-closing: |
     This issue has been inactive for 30+ days with no response to requests for information.
     
-    Closing for now to keep our issue tracker manageable. Feel free to reopen if this is still relevant — just provide the requested details.
+    Closing for now to keep our issue tracker manageable. Feel free to reopen if this is still relevant -- just provide the requested details.
     
   security-ack: |
     Thanks for the security report!
@@ -244,6 +388,80 @@ notifications:
   muted_events:
     - subscribed      # auto-subscribed threads
     - labeled         # label changes
+```
+
+---
+
+## Briefing Preferences
+
+Control what appears in daily briefings and how sections are organized.
+
+```yaml
+briefing:
+  # Which sections to include in the daily briefing.
+  # Set to false to disable a section entirely.
+  sections:
+    action_needed: true          # issues/PRs waiting on you
+    releases: true               # recent and upcoming releases
+    discussions: true            # GitHub Discussions activity
+    ci_cd: true                  # CI/CD health dashboard
+    security: true               # security alerts and advisories
+    projects: true               # project board status
+    monitor: true                # items to keep an eye on
+    accessibility: true          # accessibility tracking section
+    completed: true              # recently completed work
+    guidance: true               # patterns and recommendations
+
+  # Maximum items per section (0 = no limit)
+  max_items_per_section: 15
+
+  # Include cross-repo related items in briefings.
+  # When true, the briefing also surfaces related issues/PRs from
+  # repos you don't directly own but have access to.
+  cross_repo_related: true
+
+  # Auto-detect related items across repos by matching:
+  related_matching:
+    - keywords                   # match by issue/PR title keywords
+    - labels                     # match by shared label names
+    - mentions                   # match by @username mentions
+    - linked                     # match by explicit cross-repo links
+
+  # Render format: which formats to auto-generate
+  formats:
+    markdown: true
+    html: true
+```
+
+---
+
+## Search & Discovery Preferences
+
+Control how agents search and discover content across GitHub.
+
+```yaml
+search:
+  # Default time window when no date range is specified
+  default_window: 30d           # 7d | 14d | 30d | 60d | 90d
+
+  # Maximum results to fetch per search query before paginating
+  page_size: 10
+
+  # Auto-broaden search when 0 results found
+  auto_broaden: true
+
+  # Auto-narrow search when >50 results found
+  auto_narrow: true
+
+  # Cross-repo search: also search repos that are related to
+  # items found in your primary repos (e.g., dependencies, forks)
+  follow_references: true
+
+  # Organization-wide search: search across entire orgs you belong to
+  org_search: true
+  orgs:                          # leave empty to auto-detect from user membership
+    - my-company
+    - my-oss-org
 ```
 
 ---

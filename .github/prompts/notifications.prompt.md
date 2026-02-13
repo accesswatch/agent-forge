@@ -1,6 +1,6 @@
 ---
 name: notifications
-description: "Manage GitHub notifications — list unread, mark as read/done, unsubscribe, smart filtering by @mentions, review requests, and CI failures"
+description: "Manage GitHub notifications across all repos -- list unread, mark as read/done, unsubscribe, smart filtering by @mentions, review requests, and CI failures"
 agent: daily-briefing
 tools:
   - github/*
@@ -9,7 +9,9 @@ tools:
 
 Manage your GitHub notifications from the editor. List, filter, and act on notifications without opening a browser.
 
-${input:action:Optional: 'unread', 'review requests', 'mentions', 'mark all read', or specific repo/thread}
+Notifications are inherently cross-repo. Respect priority and mute settings from `.github/agents/preferences.md` if present.
+
+${input:action:Optional: 'unread', 'review requests', 'mentions', 'mark all read', specific repo, or 'org:orgname'}
 
 ## Capabilities
 
@@ -33,9 +35,9 @@ ${input:action:Optional: 'unread', 'review requests', 'mentions', 'mark all read
 | Action | How |
 |--------|-----|
 | **Mark as read** | `mark #3 as read` or `mark all from repo as read` |
-| **Mark as done** | `done with #3` — marks as done in GitHub |
-| **Unsubscribe** | `unsubscribe from #3` — stop notifications for that thread |
-| **Mark all read** | `mark all read` — clears all unread notifications |
+| **Mark as done** | `done with #3` -- marks as done in GitHub |
+| **Unsubscribe** | `unsubscribe from #3` -- stop notifications for that thread |
+| **Mark all read** | `mark all read` -- clears all unread notifications |
 | **Open in context** | Click through to the related issue/PR for full context |
 
 ### Display Format
@@ -44,15 +46,15 @@ ${input:action:Optional: 'unread', 'review requests', 'mentions', 'mark all read
 Unread Notifications (15 total)
 
 Priority (5):
-  1. [review-requested] owner/repo — PR #42: Fix auth timeout (@alice requested your review, 2h ago)
-  2. [mention] owner/repo — Issue #15: API breaking change (@bob mentioned you, 4h ago)
-  3. [ci-failure] owner/repo — Build failed on main (30min ago)
+  1. [review-requested] owner/repo -- PR #42: Fix auth timeout (@alice requested your review, 2h ago)
+  2. [mention] owner/repo -- Issue #15: API breaking change (@bob mentioned you, 4h ago)
+  3. [ci-failure] owner/repo -- Build failed on main (30min ago)
 
 Normal (8):
-  4. [comment] owner/repo — Issue #30: New feature proposal (3 new comments, 1h ago)
+  4. [comment] owner/repo -- Issue #30: New feature proposal (3 new comments, 1h ago)
   ...
 
-Muted (2 — hidden by preferences):
+Muted (2 -- hidden by preferences):
   Show muted? (y/n)
 ```
 

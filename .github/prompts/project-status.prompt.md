@@ -1,6 +1,6 @@
 ---
 name: project-status
-description: "GitHub Projects overview — item counts per column, blocked items, stale items, sprint progress, and team assignments"
+description: "GitHub Projects overview -- item counts per column, blocked items, stale items, sprint progress, and team assignments"
 agent: issue-tracker
 tools:
   - github/*
@@ -9,14 +9,15 @@ tools:
   - ask_questions
 ---
 
-Show the status of a GitHub Project board — items per column, blocked items, stale items, and team workload.
+Show the status of a GitHub Project board -- items per column, blocked items, stale items, and team workload.
 
-${input:details:Optional: project number, org/repo name, or 'my items'}
+${input:details:Optional: project number, org/repo name, 'org:orgname', or 'my items'}
 
 ## Steps
 
 1. Get the authenticated user with #tool:mcp_github_github_get_me.
-2. Identify the target project:
+2. Load repo scope from `.github/agents/preferences.md` if present.
+3. Identify the target project:
    - If a project number is given, use it directly
    - If a repo is given, list available projects for that repo/org
    - If "my items" is specified, show the user's items across all active projects
@@ -30,8 +31,8 @@ ${input:details:Optional: project number, org/repo name, or 'my items'}
    |--------|-------|-----------|---------|-----------------|
    | To Do | {N} | @alice (3), @bob (2) | 5 days | 1 |
    | In Progress | {N} | @charlie (2), @dana (1) | 3 days | 0 |
-   | In Review | {N} | — | 2 days | 0 |
-   | Done | {N} | — | — | — |
+   | In Review | {N} | -- | 2 days | 0 |
+   | Done | {N} | -- | -- | -- |
 
 5. Flag attention items:
    - **Blocked:** Items marked as blocked or with a "blocked" label

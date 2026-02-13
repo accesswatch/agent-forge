@@ -10,12 +10,12 @@ GitHub Copilot automatically recognizes agents in `.github/agents/` directories 
 ### File Structure for Copilot
 ```
 .github/
-├── agents/
-│   ├── preferences.md          # Copilot reads this for context
-│   ├── shared-instructions.md   # Common behavior rules
-│   └── *.agent.md               # Individual agents
-└── prompts/
-    └── *.prompt.md              # Prompt templates
++-- agents/
+|   +-- preferences.md          # Copilot reads this for context
+|   +-- shared-instructions.md   # Common behavior rules
+|   +-- *.agent.md               # Individual agents
++-- prompts/
+    +-- *.prompt.md              # Prompt templates
 ```
 
 ## Usage Patterns
@@ -208,4 +208,4 @@ Monitor agent effectiveness through:
 - [VS Code GitHub Integration](https://code.visualstudio.com/docs/editor/github)
 - [GitHub CLI](https://cli.github.com/)
 
-Enjoy your enhanced GitHub workflow with Copilot! 🚀
+Enjoy your enhanced GitHub workflow with Copilot!

@@ -1,6 +1,6 @@
 ---
 name: merge-pr
-description: "Merge a pull request — checks readiness, picks merge strategy, and handles post-merge cleanup"
+description: "Merge a pull request -- checks readiness, picks merge strategy, and handles post-merge cleanup"
 agent: pr-review
 tools:
   - github/*
@@ -9,7 +9,7 @@ tools:
 
 Merge a pull request after checking readiness.
 
-${input:pr:PR reference — e.g. owner/repo#123 or a GitHub PR URL}
+${input:pr:PR reference -- e.g. owner/repo#123 or a GitHub PR URL}
 
 ## Steps
 
@@ -31,7 +31,7 @@ ${input:pr:PR reference — e.g. owner/repo#123 or a GitHub PR URL}
    Want me to help resolve any of these?
    ```
 5. **If ready**, present merge options via #tool:ask_questions:
-   - **Squash and merge** (recommended — clean history, single commit)
+   - **Squash and merge** (recommended -- clean history, single commit)
    - **Create a merge commit** (preserves all commits)
    - **Rebase and merge** (linear history, replays commits)
 6. Show the default merge commit message and offer to customize:
@@ -45,9 +45,9 @@ ${input:pr:PR reference — e.g. owner/repo#123 or a GitHub PR URL}
 8. Confirm with #tool:ask_questions: **Merge** (recommended), **Edit message**, **Cancel**.
 9. Merge the PR.
 10. Offer post-merge actions:
-    - **Delete source branch** — clean up the merged branch
-    - **Close linked issues** — if the PR fixes issues, offer to close them
-    - **Update briefing** — note the merge in today's briefing
+    - **Delete source branch** -- clean up the merged branch
+    - **Close linked issues** -- if the PR fixes issues, offer to close them
+    - **Update briefing** -- note the merge in today's briefing
 11. Confirm with link to the merged PR.
 
 **Safety:** Always show what will happen and get explicit confirmation. Never auto-merge.

@@ -10,11 +10,11 @@ Use these levels when flagging issues in code reviews:
 
 | Level | Label | Meaning | Merge? |
 |-------|-------|---------|--------|
-| **Critical** | `CRITICAL` | Bug, security flaw, data loss risk, broken logic. Must be fixed. | Block — do not merge |
-| **Important** | `IMPORTANT` | Significant improvement needed — missing edge case, poor error handling, naming confusion. Should be fixed. | Prefer fix before merge |
-| **Suggestion** | `SUGGESTION` | Nice-to-have improvement — readability, minor optimization, style preference. Author decides. | OK to merge as-is |
-| **Nitpick** | `NIT` | Purely cosmetic or trivial — typo, whitespace, minor naming. Don't block for these. | OK to merge as-is |
-| **Praise** | `PRAISE` | Something well done — clever solution, good test coverage, clean architecture. Always include at least one. | OK to merge |
+| **Critical** | `CRITICAL` | Bug, security flaw, data loss risk, broken logic. Must be fixed. | Block -- do not merge |
+| **Important** | `IMPORTANT` | Significant improvement needed -- missing edge case, poor error handling, naming confusion. Should be fixed. | Prefer fix before merge |
+| **Suggestion** | `SUGGESTION` | Nice-to-have improvement -- readability, minor optimization, style preference. Author decides. | OK to merge as-is |
+| **Nitpick** | `NIT` | Purely cosmetic or trivial -- typo, whitespace, minor naming. Don't block for these. | OK to merge as-is |
+| **Praise** | `PRAISE` | Something well done -- clever solution, good test coverage, clean architecture. Always include at least one. | OK to merge |
 
 **Format review comments as:**
 ```
@@ -36,9 +36,9 @@ When reviewing a PR, consider community reactions as a signal:
 
 | Sentiment | Reactions | Review Implication |
 |-----------|-----------|-------------------|
-| **Popular** | 5+ positive reactions on PR description | Community endorses this change — prioritize review, look for quick approval path |
-| **Controversial** | Mixed positive and negative reactions | Extra scrutiny needed — check discussions for concerns raised |
-| **Quiet** | 0-1 reactions | Normal review — follow standard checklist |
+| **Popular** | 5+ positive reactions on PR description | Community endorses this change -- prioritize review, look for quick approval path |
+| **Controversial** | Mixed positive and negative reactions | Extra scrutiny needed -- check discussions for concerns raised |
+| **Quiet** | 0-1 reactions | Normal review -- follow standard checklist |
 
 **When writing review comments:**
 - If the PR has high community interest, note it: _"This PR has significant community interest (N reactions). Prioritizing a thorough but timely review."_
@@ -53,8 +53,8 @@ When a PR is targeted for an upcoming release:
 | Context | Review Guidance |
 |---------|----------------|
 | **Release-bound** (PR in release milestone) | Focus on blocking issues only. Defer SUGGESTION and NIT items to follow-up. Note the release deadline. |
-| **Post-release** (no milestone pressure) | Full review depth — all priority levels apply. |
-| **Hotfix** (targets a release/hotfix branch) | Maximum scrutiny on scope — ensure minimal changes. Flag any feature creep. |
+| **Post-release** (no milestone pressure) | Full review depth -- all priority levels apply. |
+| **Hotfix** (targets a release/hotfix branch) | Maximum scrutiny on scope -- ensure minimal changes. Flag any feature creep. |
 
 ---
 
@@ -144,10 +144,10 @@ When a PR is targeted for an upcoming release:
 ## Review Etiquette
 
 - **Be kind, be specific.** "This might cause a null reference on line 42 when X is empty" > "This is wrong."
-- **Explain the why.** Don't just say what to change — explain what risk or problem you're preventing.
+- **Explain the why.** Don't just say what to change -- explain what risk or problem you're preventing.
 - **Suggest, don't demand** (when it's a SUGGESTION). "Consider using X here for readability" > "Use X."
 - **Acknowledge good work.** At least one PRAISE comment per review.
-- **Ask questions when unsure.** "I'm not sure I follow this approach — could you explain the reasoning?" is always valid.
+- **Ask questions when unsure.** "I'm not sure I follow this approach -- could you explain the reasoning?" is always valid.
 - **Separate blocking from non-blocking.** Use the priority levels consistently so the author knows what must change vs. what's optional.
 - **Acknowledge community input.** If community members have reacted or commented, reference their input when relevant.
 - **Be mindful of release timelines.** If a PR is release-bound, clearly separate blocking issues from nice-to-haves.

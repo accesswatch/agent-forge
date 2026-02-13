@@ -1,6 +1,6 @@
 # Contributing to Agent Forge
 
-Welcome, fellow forge worker! We're excited you're interested in contributing to Agent Forge. Whether you're submitting a new agent, refining a prompt, fixing a typo, or improving documentation — every contribution makes the forge stronger.
+Welcome, fellow forge worker! We're excited you're interested in contributing to Agent Forge. Whether you're submitting a new agent, refining a prompt, fixing a typo, or improving documentation -- every contribution makes the forge stronger.
 
 ## Table of Contents
 
@@ -18,16 +18,16 @@ Welcome, fellow forge worker! We're excited you're interested in contributing to
 
 ## Code of Conduct
 
-Be kind, be constructive, be welcoming. We're building tools that help developers work better — that starts with treating each other well. Harassment, disrespect, and exclusionary behavior have no place here.
+Be kind, be constructive, be welcoming. We're building tools that help developers work better -- that starts with treating each other well. Harassment, disrespect, and exclusionary behavior have no place here.
 
 ---
 
 ## How Contributions Work
 
-Agent Forge uses a **fork-and-pull-request** workflow. The `main` branch is protected — no one pushes directly to it (not even the maintainer). Every change goes through a pull request.
+Agent Forge uses a **fork-and-pull-request** workflow. The `main` branch is protected -- no one pushes directly to it (not even the maintainer). Every change goes through a pull request.
 
 ```
-Fork → Branch → Commit → Push → Pull Request → Review → Merge
+Fork --> Branch --> Commit --> Push --> Pull Request --> Review --> Merge
 ```
 
 **Why?** Because the agents in this repo are used by real people in their daily workflows. A broken agent or malformed prompt can disrupt someone's morning. PRs with review keep the forge reliable.
@@ -87,8 +87,8 @@ git checkout -b agent/my-new-agent
 Every PR must:
 
 1. **Target the `main` branch**
-2. **Use our [PR template](.github/pull_request_template.md)** — it loads automatically
-3. **Have a clear, descriptive title** — e.g., "Add: code-formatter agent for automated style enforcement"
+2. **Use our [PR template](.github/pull_request_template.md)** -- it loads automatically
+3. **Have a clear, descriptive title** -- e.g., "Add: code-formatter agent for automated style enforcement"
 4. **Include a description** explaining what, why, and how to test
 5. **Pass all status checks** before merge
 6. **Receive at least one approving review**
@@ -97,15 +97,15 @@ Every PR must:
 
 | PR Size | Files Changed | Guidance |
 |---|---|---|
-| Small | 1–3 files | Ideal — fast to review |
-| Medium | 4–8 files | Acceptable for related changes |
+| Small | 1--3 files | Ideal -- fast to review |
+| Medium | 4--8 files | Acceptable for related changes |
 | Large | 9+ files | Split into smaller PRs when possible |
 
 ### What Happens After You Submit
 
 1. A maintainer will be automatically assigned via CODEOWNERS
 2. Automated checks run (if configured)
-3. A reviewer will provide feedback — usually within **48 hours**
+3. A reviewer will provide feedback -- usually within **48 hours**
 4. Address any requested changes by pushing to the same branch
 5. Once approved, a maintainer merges your PR
 6. Your branch is automatically deleted after merge
@@ -232,7 +232,7 @@ All generated HTML must include:
 
 - Write from the user's perspective ("You can..." not "The system...")
 - Include real examples, not placeholders
-- Keep language approachable — not everyone is a GitHub power user
+- Keep language approachable -- not everyone is a GitHub power user
 - Test all code snippets and commands
 
 ---
@@ -271,9 +271,9 @@ When a reviewer requests changes:
 
 Every contributor is appreciated. We recognize contributions through:
 
-- **GitHub contributors list** — automatically tracked
-- **Release notes** — your contributions are credited in releases
-- **Agent credits** — new agents include an attribution comment
+- **GitHub contributors list** -- automatically tracked
+- **Release notes** -- your contributions are credited in releases
+- **Agent credits** -- new agents include an attribution comment
 
 Your first merged PR? Welcome to the forge.
 
@@ -289,4 +289,4 @@ Your first merged PR? Welcome to the forge.
 
 ---
 
-*Thank you for helping make Agent Forge better for everyone. Every contribution — from a one-line typo fix to a whole new agent — makes the forge stronger. Let's build something great together.*
+*Thank you for helping make Agent Forge better for everyone. Every contribution -- from a one-line typo fix to a whole new agent -- makes the forge stronger. Let's build something great together.*

@@ -15,7 +15,7 @@ tools:
 
 Generate a comprehensive PR review document and save it to the workspace in both markdown and HTML formats for offline review.
 
-${input:pr:PR reference — e.g. owner/repo#123 or a GitHub PR URL}
+${input:pr:PR reference -- e.g. owner/repo#123 or a GitHub PR URL}
 
 ## Steps
 
@@ -24,7 +24,7 @@ ${input:pr:PR reference — e.g. owner/repo#123 or a GitHub PR URL}
    - Metadata, files, diff, review comments, commits
    - Before/after content for key changed files
    - Reactions on PR description and comments
-   - Release context — milestone, release branch targeting
+   - Release context -- milestone, release branch targeting
    - Related GitHub Discussions
 3. Analyze changes: classify each file (Feature / Bug Fix / Refactor / Tests / Config), assess risk (High / Medium / Low), note community reactions, and detect patterns.
 4. Check if `.github/reviews/prs/{repo}-pr-{number}.md` and `.html` already exist:
@@ -38,6 +38,6 @@ ${input:pr:PR reference — e.g. owner/repo#123 or a GitHub PR URL}
    - Review checklist (code quality, architecture, security, tests, docs, accessibility)
    - Verdict and recommendations with release context
    - "My Notes" section for user annotations
-6. Confirm: _"PR review documents saved to `{md-path}` and `{html-path}`. Open them, check off items, add your notes — then tell me if you want to post comments or submit a review."_
+6. Confirm: _"PR review documents saved to `{md-path}` and `{html-path}`. Open them, check off items, add your notes -- then tell me if you want to post comments or submit a review."_
 
 **Tip:** After annotating the documents, use `/pr-comment` to turn your notes into actual PR comments.

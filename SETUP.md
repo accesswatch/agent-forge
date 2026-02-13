@@ -14,19 +14,80 @@ Ensure your workspace has this structure:
 
 ```
 your-workspace/
-├── .github/
-│   ├── agents/
-│   │   ├── preferences.md         # Your configuration
-│   │   ├── shared-instructions.md  # Core agent behavior
-│   │   └── *.agent.md              # Individual agents
-│   └── prompts/
-│       └── *.prompt.md             # Prompt templates
-└── your-project-files...
++-- .github/
+|   +-- agents/
+|   |   +-- preferences.md         # Your configuration
+|   |   +-- shared-instructions.md  # Core agent behavior
+|   |   +-- *.agent.md              # Individual agents
+|   +-- prompts/
+|       +-- *.prompt.md             # Prompt templates
++-- your-project-files...
 ```
 
 ## Configuration
 
-### 1. Customize Preferences
+### 1. Repository Discovery & Scope (Most Important)
+
+Control which repos the agents scan. By default, agents search ALL repos you have access to.
+
+```yaml
+repos:
+  # How agents discover repos. Options: all | starred | owned | configured | workspace
+  discovery: all  # Default -- searches everything you can access
+
+  # Optional: only scan these repos
+  include:
+    - my-org/main-app
+    - my-org/api-service
+
+  # Optional: never scan these repos
+  exclude:
+    - my-org/archived-project
+
+  # Optional: per-repo overrides for granular control
+  overrides:
+    my-org/main-app:
+      track:
+        issues: true
+        pull_requests: true
+        discussions: true
+        releases: true
+        security: true
+        ci: true
+      labels:
+        include: ["P0", "P1", "bug"]
+      paths:
+        - "src/**"
+
+  # Defaults for repos without explicit overrides
+  defaults:
+    track:
+      issues: true
+      pull_requests: true
+      discussions: false
+      releases: true
+      security: true
+      ci: true
+```
+
+### 2. Accessibility Tracking
+
+Track accessibility changes across repos (VS Code is tracked by default):
+
+```yaml
+accessibility_tracking:
+  repos:
+    - repo: microsoft/vscode
+      labels: ["bug", "feature-request"]
+      channels: ["insiders", "stable"]
+    - repo: my-org/my-app
+      labels: ["a11y", "accessibility"]
+  wcag_references: true
+  aria_patterns: true
+  briefing_limit: 10
+```
+
+### 3. Customize Preferences
 
 Edit `.github/agents/preferences.md` to match your workflow:
 
@@ -47,7 +108,7 @@ team:
     timezone: America/New_York
 ```
 
-### 2. Update Team Roster
+### 4. Update Team Roster
 
 Add your team members to enable smart reviewer suggestions:
 
@@ -63,7 +124,7 @@ team:
     timezone: America/Los_Angeles
 ```
 
-### 3. Configure Default Reviewers
+### 5. Configure Default Reviewers
 
 Set up path-based reviewer suggestions:
 
@@ -78,7 +139,7 @@ reviewers:
       - bob
 ```
 
-### 4. Set Up Response Templates
+### 6. Set Up Response Templates
 
 Customize response templates for common scenarios:
 
@@ -96,25 +157,36 @@ templates:
 ### Daily Briefing Agent
 
 ```
-@daily-briefing generate morning briefing
+@daily-briefing generate morning briefing          # All repos by default
 @daily-briefing afternoon update
 @daily-briefing weekly summary
+@daily-briefing just PRs for org:my-org            # Scope to an org
 ```
 
 ### PR Review Agent
 
 ```
-@pr-review analyze #123
-@pr-review quick review of microsoft/vscode#45678
+@pr-review analyze #123                            # Workspace repo
+@pr-review my open PRs                             # Cross-repo by default
+@pr-review review owner/repo#45678                 # Specific repo
 @pr-review detailed review focusing on security
 ```
 
 ### Issue Tracker Agent
 
 ```
-@issue-tracker triage new issues
-@issue-tracker my issues needing attention
-@issue-tracker search critical bugs
+@issue-tracker my issues needing attention          # All repos by default
+@issue-tracker triage new issues for my-org/app     # Specific repo
+@issue-tracker search critical bugs org:my-org      # Org-wide
+@issue-tracker show issues labeled P0               # Cross-repo label search
+```
+
+### Accessibility Tracker Agent
+
+```
+@insiders-a11y-tracker what's new in accessibility  # All tracked repos
+@insiders-a11y-tracker track a11y in owner/my-app   # Add a repo
+@insiders-a11y-tracker WCAG coverage this month
 ```
 
 ## AI Model Integration
@@ -207,4 +279,4 @@ ci:
 - **Issues**: Create an issue if something isn't working
 - **Discussions**: Use GitHub Discussions for questions
 
-Enjoy your enhanced GitHub workflow! 🚀
+Enjoy your enhanced GitHub workflow!

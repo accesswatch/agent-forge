@@ -1,6 +1,6 @@
 ---
 name: release-prep
-description: "Complete release preparation workflow — milestone check, open PRs review, release notes, changelog, and readiness checklist"
+description: "Complete release preparation workflow -- milestone check, open PRs review, release notes, changelog, and readiness checklist"
 agent: daily-briefing
 tools:
   - github/*

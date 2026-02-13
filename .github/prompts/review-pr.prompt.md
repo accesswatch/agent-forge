@@ -15,7 +15,7 @@ tools:
 
 Perform a comprehensive code review of the specified pull request and save review documents to the workspace in both markdown and HTML formats.
 
-${input:pr:PR reference — e.g. owner/repo#123 or a GitHub PR URL}
+${input:pr:PR reference -- e.g. owner/repo#123 or a GitHub PR URL}
 
 ## Steps
 
@@ -27,7 +27,7 @@ ${input:pr:PR reference — e.g. owner/repo#123 or a GitHub PR URL}
    - Review comments via #tool:mcp_github_github_pull_request_read (method: `get_review_comments`)
    - Commits via #tool:mcp_github_github_list_commits
    - Reactions on the PR description and comments
-   - Release context — check if targeting a release branch or in a milestone
+   - Release context -- check if targeting a release branch or in a milestone
    - Related GitHub Discussions
 3. For key changed files (not config/lock files), fetch before/after content via #tool:mcp_github_github_get_file_contents for both base and head branches.
 4. Classify each file change (Feature / Bug Fix / Refactor / Tests / Config / Docs) and assess risk (High / Medium / Low).

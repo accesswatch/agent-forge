@@ -1,6 +1,6 @@
 ---
 name: sprint-review
-description: "End-of-sprint summary — completed items, carryover, velocity trends, blockers, team contributions, and retrospective insights"
+description: "End-of-sprint summary across all repos -- completed items, carryover, velocity trends, blockers, team contributions, and retrospective insights"
 agent: analytics
 tools:
   - github/*
@@ -11,12 +11,13 @@ tools:
 
 Generate an end-of-sprint review summary with completed work, carryover items, velocity metrics, and team contributions. Save both markdown and HTML versions.
 
-${input:details:Optional: sprint/milestone name, date range, or repo}
+${input:details:Optional: sprint/milestone name, date range, repo, or 'org:orgname'}
 
 ## Steps
 
 1. Get the authenticated user with #tool:mcp_github_github_get_me.
-2. Identify the sprint scope:
+2. Load repo scope from `.github/agents/preferences.md` if present. By default, aggregate across ALL accessible repos.
+3. Identify the sprint scope:
    - If a milestone is specified, use it as the sprint boundary
    - If a date range is given, use those dates
    - Default: last 2 weeks

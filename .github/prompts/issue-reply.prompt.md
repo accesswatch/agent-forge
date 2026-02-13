@@ -9,12 +9,12 @@ tools:
 
 Help the user reply to a GitHub issue with full context awareness.
 
-${input:issue:Issue reference — e.g. owner/repo#123 or a GitHub issue URL}
+${input:issue:Issue reference -- e.g. owner/repo#123 or a GitHub issue URL}
 
 ## Steps
 
 1. Parse the issue reference to extract owner, repo, and issue number.
-2. Fetch the issue with #tool:mcp_github_github_issue_read — pull title, body, labels, assignees, reactions, and **all** comments.
+2. Fetch the issue with #tool:mcp_github_github_issue_read -- pull title, body, labels, assignees, reactions, and **all** comments.
 3. Check for related GitHub Discussions that provide additional context.
 4. Display a concise summary:
    - Issue title and current status

@@ -1,6 +1,6 @@
 ---
 name: pr-author-checklist
-description: "PR self-review checklist for authors — CI status, reviewer suggestions, description quality check, and pre-submit verification"
+description: "PR self-review checklist for authors -- CI status, reviewer suggestions, description quality check, and pre-submit verification"
 agent: pr-review
 tools:
   - github/*

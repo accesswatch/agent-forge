@@ -1,4 +1,4 @@
-name: ✨ Feature Request
+name: Feature Request
 description: Suggest a new agent, prompt, or enhancement
 title: '[Feature]: '
 labels: ['enhancement', 'needs-triage']

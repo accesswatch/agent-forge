@@ -6,8 +6,8 @@ We provide security updates for the following versions:
 
 | Version | Supported          |
 | ------- | ------------------ |
-| Latest  | :white_check_mark: |
-| < Latest| :x:                |
+| Latest  | Yes |
+| < Latest| No                 |
 
 ## Reporting a Vulnerability
 
@@ -44,13 +44,13 @@ Instead:
 
 #### Preferences.md Security
 ```yaml
-# ✅ SAFE: Public GitHub usernames
+# SAFE: Public GitHub usernames
 team:
   - name: Alice Johnson
     github: alice-dev
     expertise: ["backend"]
 
-# ❌ UNSAFE: Never include
+# UNSAFE: Never include
 # api_token: ghp_xxxxxxxxxxxx
 # email: alice@company-internal.com
 # private_repo_access: secret-project
@@ -108,24 +108,24 @@ security:
 
 ### Common Security Issues
 
-#### ❌ What NOT to Include in Agent Files
+#### What NOT to Include in Agent Files
 
 ```yaml
 # These should NEVER appear in agent files:
 api_keys:
-  github: "ghp_xxxxxxxxxxxx"  # ❌ API tokens
-  slack: "xoxb-xxxxxxxxxxxxx"   # ❌ Bot tokens
+  github: "ghp_xxxxxxxxxxxx"  # DO NOT include API tokens
+    slack: "xoxb-xxxxxxxxxxxxx"   # DO NOT include Bot tokens
 
 credentials:
-  database_url: "postgresql://user:pass@host/db"  # ❌ Connection strings
-  aws_secret: "AKIA..."        # ❌ AWS credentials
+  database_url: "postgresql://user:pass@host/db"  # DO NOT include Connection strings
+  aws_secret: "AKIA..."        # DO NOT include AWS credentials
 
 internal:
-  server_ips: ["10.0.1.5"]     # ❌ Internal infrastructure
-  employee_emails: [...]        # ❌ Internal contact info
+  server_ips: ["10.0.1.5"]     # DO NOT include Internal infrastructure
+  employee_emails: [...]        # DO NOT include Internal contact info
 ```
 
-#### ✅ Safe Alternatives
+#### Safe Alternatives
 
 ```yaml
 # Use public information and environment references:

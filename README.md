@@ -3,7 +3,7 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/agent-forge-logo.svg">
   <source media="(prefers-color-scheme: light)" srcset="assets/agent-forge-logo.svg">
-  <img src="assets/agent-forge-logo.svg" alt="Agent Forge — a glowing anvil with flames and sparks, accompanied by a hammer, representing the forging of AI agents for GitHub automation. Text reads 'Agent Forge: Where AI Agents Are Forged.'" width="600">
+  <img src="assets/agent-forge-logo.svg" alt="Agent Forge -- a glowing anvil with flames and sparks, accompanied by a hammer, representing the forging of AI agents for GitHub automation. Text reads 'Agent Forge: Where AI Agents Are Forged.'" width="600">
 </picture>
 
 ### *Where AI Agents Are Forged for GitHub Mastery*
@@ -25,7 +25,7 @@ A curated collection of GitHub Copilot agents and prompt templates that turn you
 
 ## What Is Agent Forge?
 
-**Agent Forge** is a collection of **5 specialized AI agents** and **28 prompt commands** that live inside VS Code's Copilot Chat. They interact with GitHub on your behalf — finding issues, reviewing code, tracking team progress, managing releases, and monitoring accessibility — all without leaving your editor.
+**Agent Forge** is a collection of **5 specialized AI agents** and **28 prompt commands** that live inside VS Code's Copilot Chat. They interact with GitHub on your behalf -- finding issues, reviewing code, tracking team progress, managing releases, and monitoring accessibility -- all without leaving your editor.
 
 Type a question in plain English. Get back organized, prioritized, actionable answers.
 
@@ -33,24 +33,25 @@ Type a question in plain English. Get back organized, prioritized, actionable an
 
 | Capability | Description |
 |---|---|
-| **Morning Briefings** | Sweeps every repo you touch — issues, PRs, releases, CI, security alerts, community reactions — and builds a prioritized dashboard |
+| **Morning Briefings** | Sweeps every repo you have access to -- issues, PRs, releases, CI, security alerts, community reactions -- and builds a prioritized dashboard |
 | **Code Reviews** | Full diff analysis with risk assessment, before/after snapshots, CI results, and inline commenting |
-| **Issue Triage** | Priority scoring with community sentiment, release awareness, batch replies, and saved searches |
-| **Team Analytics** | Velocity trends, review turnaround, bottleneck detection, code hotspots, and workload balancing |
+| **Issue Triage** | Cross-repo priority scoring with community sentiment, release awareness, batch replies, and saved searches |
+| **Team Analytics** | Velocity trends, review turnaround, bottleneck detection, code hotspots, and workload balancing across all repos |
 | **Release Management** | Auto-categorized release notes, readiness checklists, and complete release workflows |
-| **Accessibility Tracking** | WCAG/ARIA cross-referenced change monitoring with assistive technology impact analysis |
+| **Accessibility Tracking** | WCAG/ARIA cross-referenced change monitoring across any configured repos (VS Code by default) |
 | **Security Monitoring** | Dependabot alerts, security advisories, and dependency tracking across all repos |
-| **Full GitHub Interaction** | Comment, react, merge, close, label, assign, transfer — without opening your browser |
+| **Full GitHub Interaction** | Comment, react, merge, close, label, assign, transfer -- without opening your browser |
+| **Cross-Repo by Default** | All agents search every repo you can access by default, with flexible per-repo configuration |
 
 ## Agents
 
 | Agent | Invoke With | Description |
 |---|---|---|
-| **Daily Briefing** | `@daily-briefing` | Prioritized overview of everything happening across all repos |
-| **Issue Tracker** | `@issue-tracker` | Find, triage, reply to, and manage issues with smart search |
+| **Daily Briefing** | `@daily-briefing` | Prioritized overview of everything happening across all your repos |
+| **Issue Tracker** | `@issue-tracker` | Find, triage, reply to, and manage issues across all repos with smart search |
 | **PR Review** | `@pr-review` | Full code reviews with risk assessment, comments, and merge |
-| **Analytics** | `@analytics` | Team metrics, velocity, bottlenecks, and workload insights |
-| **A11y Tracker** | `@insiders-a11y-tracker` | Accessibility change tracking with WCAG cross-references |
+| **Analytics** | `@analytics` | Team metrics, velocity, bottlenecks, and workload insights across all repos |
+| **Accessibility Tracker** | `@insiders-a11y-tracker` | Accessibility change tracking with WCAG cross-references across configured repos |
 
 ## Quick Start
 
@@ -75,8 +76,8 @@ Type `/` in Copilot Chat and pick from the full menu:
 | Command | Description |
 |---|---|
 | `/daily-briefing` | Generate your prioritized daily briefing |
-| `/my-issues` | Your open issues, sorted by priority |
-| `/my-prs` | Your PRs with review status and CI health |
+| `/my-issues` | Your open issues across all repos, sorted by priority |
+| `/my-prs` | Your PRs across all repos with review status and CI health |
 | `/review-pr` | Full code review with dual-format documents |
 | `/pr-report` | Save or update a PR review as workspace docs |
 | `/pr-comment` | Line-specific PR comments |
@@ -91,8 +92,8 @@ Type `/` in Copilot Chat and pick from the full menu:
 | `/refine-issue` | Add acceptance criteria with community context |
 | `/address-comments` | Work through PR review comments systematically |
 | `/a11y-update` | Accessibility updates with WCAG cross-refs |
-| `/team-dashboard` | Team activity and bottleneck overview |
-| `/my-stats` | Your personal metrics with team comparison |
+| `/team-dashboard` | Team activity and bottleneck overview across all repos |
+| `/my-stats` | Your personal metrics across all repos with team comparison |
 | `/draft-release` | Auto-categorized release notes |
 | `/ci-status` | CI/CD health dashboard |
 | `/security-dashboard` | Dependabot alerts and security advisories |
@@ -109,34 +110,34 @@ Type `/` in Copilot Chat and pick from the full menu:
 
 ```
 agent-forge/
-├── .github/
-│   ├── agents/                    # The 5 AI agents + shared config
-│   │   ├── daily-briefing.agent.md
-│   │   ├── issue-tracker.agent.md
-│   │   ├── pr-review.agent.md
-│   │   ├── analytics.agent.md
-│   │   ├── insiders-a11y-tracker.agent.md
-│   │   ├── shared-instructions.md
-│   │   ├── code-review-standards.md
-│   │   └── preferences.example.md  # Copy to preferences.md and customize
-│   ├── prompts/                   # 28 slash command templates
-│   ├── ISSUE_TEMPLATE/            # Issue templates for contributions
-│   └── pull_request_template.md   # PR template
-├── Documentation/
-│   ├── GETTING-STARTED.md         # Your first hour with the agents
-│   ├── GETTING-STARTED.html
-│   ├── GUIDE.md                   # The complete reference guide
-│   └── guide.html
-├── ai-instructions/               # Integration guides for AI platforms
-│   ├── copilot-integration.md
-│   ├── claude-instructions.md
-│   └── openai-integration.md
-├── CONTRIBUTING.md                # How to contribute (PR workflow)
-├── SETUP.md                       # Setup and configuration
-├── SECURITY.md                    # Security policy
-├── LICENSE                        # MIT License
-├── CODEOWNERS                     # Code ownership rules
-└── README.md
++-- .github/
+|   +-- agents/                    # The 5 AI agents + shared config
+|   |   +-- daily-briefing.agent.md
+|   |   +-- issue-tracker.agent.md
+|   |   +-- pr-review.agent.md
+|   |   +-- analytics.agent.md
+|   |   +-- insiders-a11y-tracker.agent.md
+|   |   +-- shared-instructions.md
+|   |   +-- code-review-standards.md
+|   |   +-- preferences.example.md  # Copy to preferences.md and customize
+|   +-- prompts/                   # 28 slash command templates
+|   +-- ISSUE_TEMPLATE/            # Issue templates for contributions
+|   +-- pull_request_template.md   # PR template
++-- Documentation/
+|   +-- GETTING-STARTED.md         # Your first hour with the agents
+|   +-- GETTING-STARTED.html
+|   +-- GUIDE.md                   # The complete reference guide
+|   +-- guide.html
++-- ai-instructions/               # Integration guides for AI platforms
+|   +-- copilot-integration.md
+|   +-- claude-instructions.md
+|   +-- openai-integration.md
++-- CONTRIBUTING.md                # How to contribute (PR workflow)
++-- SETUP.md                       # Setup and configuration
++-- SECURITY.md                    # Security policy
++-- LICENSE                        # MIT License
++-- CODEOWNERS                     # Code ownership rules
++-- README.md
 ```
 
 ## Why Agent Forge?
@@ -160,7 +161,7 @@ agent-forge/
 - `@daily-briefing morning briefing`
 - Everything in one document
 - Prioritized and actionable
-- Reply, review, merge — from chat
+- Reply, review, merge -- from chat
 - Zero browser tabs required
 
 </td>
@@ -169,7 +170,7 @@ agent-forge/
 
 ## Accessibility
 
-Every document the agents generate comes in **dual format** — Markdown for editing in VS Code and HTML optimized for screen readers with:
+Every document the agents generate comes in **dual format** -- Markdown for editing in VS Code and HTML optimized for screen readers with:
 
 - Skip links and ARIA landmarks
 - Proper heading hierarchy (never skipped)
@@ -183,9 +184,9 @@ Every document the agents generate comes in **dual format** — Markdown for edi
 
 Agent Forge is built for GitHub Copilot, but the agents and prompts can be adapted for other AI platforms. See the [ai-instructions](ai-instructions/) folder for integration guides:
 
-- **GitHub Copilot** — Native, zero-config support
-- **Claude AI** — Context-based integration
-- **ChatGPT / OpenAI** — Custom instructions and API patterns
+- **GitHub Copilot** -- Native, zero-config support
+- **Claude AI** -- Context-based integration
+- **ChatGPT / OpenAI** -- Custom instructions and API patterns
 
 ## Contributing
 
@@ -199,7 +200,7 @@ We welcome contributions! Agent Forge uses a **fork-and-pull-request workflow** 
 
 > **Direct pushes to `main` are not allowed.** All changes must go through a pull request with at least one approval.
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for the full guide — branch naming conventions, commit standards, PR requirements, and what makes a great agent submission.
+See [CONTRIBUTING.md](CONTRIBUTING.md) for the full guide -- branch naming conventions, commit standards, PR requirements, and what makes a great agent submission.
 
 ## Security
 
@@ -207,7 +208,7 @@ Found a vulnerability? **Please don't open a public issue.** Email jeff@jeffbish
 
 ## License
 
-[MIT](LICENSE) — Use it, fork it, customize it, make it yours.
+[MIT](LICENSE) -- Use it, fork it, customize it, make it yours.
 
 ---
 

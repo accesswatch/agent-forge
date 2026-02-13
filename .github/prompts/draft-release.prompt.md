@@ -1,6 +1,6 @@
 ---
 name: draft-release
-description: "Draft release notes from merged PRs since last release — auto-categorized as Features, Bug Fixes, Breaking Changes, with changelog and readiness checklist"
+description: "Draft release notes from merged PRs since last release -- auto-categorized as Features, Bug Fixes, Breaking Changes, with changelog and readiness checklist"
 agent: daily-briefing
 tools:
   - github/*
@@ -21,13 +21,13 @@ ${input:details:Optional: repo name, target version (e.g. 'v2.1.0'), or 'compare
 3. Fetch the latest release with #tool:mcp_github_github_list_releases.
 4. Find all merged PRs since the last release tag using #tool:mcp_github_github_search_pull_requests with `is:merged merged:>{last_release_date}`.
 5. Auto-categorize each PR:
-   - **Breaking Changes** — PRs with `breaking-change` label or "BREAKING" in title/description
-   - **Features** — PRs with `feature` or `enhancement` label, or new functionality
-   - **Bug Fixes** — PRs with `bug` or `fix` label
-   - **Performance** — PRs with `performance` label
-   - **Documentation** — PRs touching only docs
-   - **Dependencies** — Dependabot/Renovate PRs
-   - **Other** — everything else
+   - **Breaking Changes** -- PRs with `breaking-change` label or "BREAKING" in title/description
+   - **Features** -- PRs with `feature` or `enhancement` label, or new functionality
+   - **Bug Fixes** -- PRs with `bug` or `fix` label
+   - **Performance** -- PRs with `performance` label
+   - **Documentation** -- PRs touching only docs
+   - **Dependencies** -- Dependabot/Renovate PRs
+   - **Other** -- everything else
 6. Generate a release readiness checklist:
    - Open milestone items (not yet merged)
    - Failing CI on the release branch

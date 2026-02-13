@@ -1,4 +1,4 @@
-name: 🤖 Agent/Prompt Submission
+name: Agent/Prompt Submission
 description: Submit a new agent or prompt for inclusion
 title: '[Submission]: '
 labels: ['submission', 'needs-review']

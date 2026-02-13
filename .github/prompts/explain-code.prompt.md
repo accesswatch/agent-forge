@@ -1,6 +1,6 @@
 ---
 name: explain-code
-description: "Understand specific lines, functions, or blocks of code in a PR diff — plain language explanations with context"
+description: "Understand specific lines, functions, or blocks of code in a PR diff -- plain language explanations with context"
 agent: pr-review
 tools:
   - github/*
@@ -10,9 +10,9 @@ tools:
   - ask_questions
 ---
 
-Explain specific code in a pull request — what it does, why it's there, and what changed.
+Explain specific code in a pull request -- what it does, why it's there, and what changed.
 
-${input:target:What to explain — e.g. 'lines 40-60 in auth.ts on PR #15', 'the handleAuth function in PR owner/repo#15', 'what changed in utils.ts'}
+${input:target:What to explain -- e.g. 'lines 40-60 in auth.ts on PR #15', 'the handleAuth function in PR owner/repo#15', 'what changed in utils.ts'}
 
 ## Steps
 
@@ -23,11 +23,11 @@ ${input:target:What to explain — e.g. 'lines 40-60 in auth.ts on PR #15', 'the
    - Also fetch the base branch version to show what changed.
    - Display the target lines with ~10 lines of surrounding context, with line numbers.
    - Explain:
-     - **What this code does** — line-by-line plain language breakdown
-     - **Why it's here** — purpose inferred from PR description, commit messages, and surrounding code
-     - **What changed** — before vs. after if these lines were modified
-     - **Side effects** — downstream impacts, state mutations, API calls, error paths
-     - **Potential concerns** — edge cases, missing error handling, performance implications
+     - **What this code does** -- line-by-line plain language breakdown
+     - **Why it's here** -- purpose inferred from PR description, commit messages, and surrounding code
+     - **What changed** -- before vs. after if these lines were modified
+     - **Side effects** -- downstream impacts, state mutations, API calls, error paths
+     - **Potential concerns** -- edge cases, missing error handling, performance implications
 
 4. **If a function/class is specified** (e.g., "the handleAuth function"):
    - Search the PR diff for the function definition.

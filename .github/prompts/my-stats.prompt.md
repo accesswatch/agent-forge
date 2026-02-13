@@ -1,6 +1,6 @@
 ---
 name: my-stats
-description: "Your personal GitHub metrics — PRs authored/reviewed, issues closed, review turnaround, cycle time, and comparison vs. team averages"
+description: "Your personal GitHub metrics across all repos -- PRs authored/reviewed, issues closed, review turnaround, cycle time, and comparison vs. team averages"
 agent: analytics
 tools:
   - github/*
@@ -11,13 +11,13 @@ tools:
 
 Generate a personal contribution and review metrics report for the authenticated user. Save both markdown and HTML versions.
 
-${input:scope:Optional: date range (e.g. 'this month', 'last quarter'), specific repo, or focus area (e.g. 'reviews', 'velocity')}
+${input:scope:Optional: date range (e.g. 'this month', 'last quarter'), specific repo, 'org:orgname', or focus area (e.g. 'reviews', 'velocity')}
 
 ## Steps
 
 1. Get the authenticated user with #tool:mcp_github_github_get_me.
-2. Collect personal metrics for the period:
-   - PRs authored, merged, and avg cycle time (open → merge)
+2. Load repo scope from `.github/agents/preferences.md` if present. By default, aggregate metrics across ALL accessible repos.
+   - PRs authored, merged, and avg cycle time (open --> merge)
    - PRs reviewed and avg review turnaround
    - Issues opened and closed
    - Commit count

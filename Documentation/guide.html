@@ -1,27 +1,27 @@
-<h1 id="github-agents-the-complete-guide">GitHub Agents — The Complete
+<h1 id="github-agents-the-complete-guide">GitHub Agents -- The Complete
 Guide</h1>
 <blockquote>
-<p><strong>Welcome back. You’re in the right place.</strong></p>
+<p><strong>Welcome back. You're in the right place.</strong></p>
 <p>If you followed the <a href="GETTING-STARTED.md">Getting Started
-guide</a>, you already know the basics — you’ve run a briefing, explored
+guide</a>, you already know the basics -- you've run a briefing, explored
 an issue, tried a slash command, and maybe even left a comment without
 opening your browser.</p>
-<p>This guide goes deeper. Much deeper. But don’t worry — we’ll take it
+<p>This guide goes deeper. Much deeper. But don't worry -- we'll take it
 one section at a time, at whatever pace feels right. Think of this as a
-reference you’ll keep coming back to as you discover new things you want
+reference you'll keep coming back to as you discover new things you want
 to do.</p>
 <p><strong>New here?</strong> Start with the <a
-href="GETTING-STARTED.md">Getting Started guide</a> first. It’ll walk
+href="GETTING-STARTED.md">Getting Started guide</a> first. It'll walk
 you through setup and your first few commands. Then come back here when
-you’re ready for more.</p>
+you're ready for more.</p>
 </blockquote>
 <hr />
 <h2 id="table-of-contents">Table of Contents</h2>
-<p>Don’t feel like you need to read this top to bottom. Jump to whatever
-catches your eye — every section is self-contained.</p>
+<p>Don't feel like you need to read this top to bottom. Jump to whatever
+catches your eye -- every section is self-contained.</p>
 <ul>
 <li><a href="#what-is-this">What Is This?</a></li>
-<li><a href="#whats-new">What’s New</a></li>
+<li><a href="#whats-new">What's New</a></li>
 <li><a href="#quick-start">Quick Start (2 minutes)</a></li>
 <li><a href="#setup--prerequisites">Setup &amp; Prerequisites</a></li>
 <li><a href="#the-agents">The Agents</a>
@@ -86,23 +86,23 @@ Cross-Referencing</a></li>
 </ul>
 <hr />
 <h2 id="what-is-this">What Is This?</h2>
-<p>Let’s paint the picture.</p>
-<p>Right now, when you want to know what’s happening on GitHub, you open
+<p>Let's paint the picture.</p>
+<p>Right now, when you want to know what's happening on GitHub, you open
 a browser. You check your notifications. You click into an issue. You
 read the comments. You switch to a PR. You look at the diff. You go back
 to your notifications. You open another tab for CI results. Another for
 the project board. Another for Dependabot alerts.</p>
-<p>That’s a lot of tabs. A lot of context-switching. A lot of mental
+<p>That's a lot of tabs. A lot of context-switching. A lot of mental
 overhead just to figure out what to work on.</p>
 <p><strong>These agents change all of that.</strong></p>
-<p>They live right inside VS Code’s Copilot Chat — the same window where
+<p>They live right inside VS Code's Copilot Chat -- the same window where
 you might ask Copilot to help you write code. You type a question in
 plain English, and they go talk to GitHub for you. They come back with
 organized, prioritized, thoughtful answers. And when they produce
-something substantial — a daily briefing, a code review, a triage
-dashboard — they save it as a real file in your workspace that you can
+something substantial -- a daily briefing, a code review, a triage
+dashboard -- they save it as a real file in your workspace that you can
 edit, annotate, and check off throughout the day.</p>
-<p>Here’s what they cover:</p>
+<p>Here's what they cover:</p>
 <table>
 <colgroup>
 <col style="width: 35%" />
@@ -159,28 +159,28 @@ onboarding, and 28 slash commands</td>
 </tr>
 </tbody>
 </table>
-<p>And here’s the best part: <strong>there’s nothing to install beyond
+<p>And here's the best part: <strong>there's nothing to install beyond
 what you probably already have.</strong> If GitHub Copilot is working in
-your VS Code, you’re ready to go. No extra extensions, no CLI tools, no
+your VS Code, you're ready to go. No extra extensions, no CLI tools, no
 API keys.</p>
 <hr />
-<h2 id="whats-new">What’s New</h2>
+<h2 id="whats-new">What's New</h2>
 <h3 id="v3-your-editor-just-became-your-github-command-center">v3: Your
 Editor Just Became Your GitHub Command Center</h3>
-<p>If you’ve been using an earlier version of these agents, here’s
-everything that’s new. If you’re just getting started, don’t worry about
-this section — it’s all included in the guide ahead.</p>
+<p>If you've been using an earlier version of these agents, here's
+everything that's new. If you're just getting started, don't worry about
+this section -- it's all included in the guide ahead.</p>
 <p><strong>A whole new agent: Analytics &amp; Insights</strong> - Team
-velocity, review turnaround times, issue resolution metrics - See who’s
+velocity, review turnaround times, issue resolution metrics - See who's
 overloaded, which PRs are stuck, and which files keep changing -
-Personal stats with team comparison — see how your week stacks up - New
+Personal stats with team comparison -- see how your week stacks up - New
 commands: <code>/team-dashboard</code> and <code>/my-stats</code></p>
-<p><strong>Workspace Preferences — teach the agents about your
+<p><strong>Workspace Preferences -- teach the agents about your
 team</strong> - A single file
 (<code>.github/agents/preferences.md</code>) that every agent reads -
 Set your merge strategy, default reviewers, response templates, saved
 searches - Add your team roster with expertise areas and timezones -
-Configure notification priorities — what to surface, what to mute</p>
+Configure notification priorities -- what to surface, what to mute</p>
 <p><strong>Release management from start to finish</strong> -
 <code>/draft-release</code> builds release notes automatically from
 merged PRs - <code>/release-prep</code> walks you through the entire
@@ -195,15 +195,15 @@ reviews flag changes to security-sensitive files -
 <code>/security-dashboard</code> gives you the full picture in one
 view</p>
 <p><strong>Multi-step workflow guides</strong> -
-<code>/release-prep</code> — complete release preparation, step by step
-- <code>/sprint-review</code> — end-of-sprint summary with velocity and
-retrospective prompts - <code>/onboard-repo</code> — first-time scan of
-a new repository - <code>/pr-author-checklist</code> — self-review
+<code>/release-prep</code> -- complete release preparation, step by step
+- <code>/sprint-review</code> -- end-of-sprint summary with velocity and
+retrospective prompts - <code>/onboard-repo</code> -- first-time scan of
+a new repository - <code>/pr-author-checklist</code> -- self-review
 before you request reviews</p>
 <p><strong>Notification management</strong> -
 <code>/notifications</code> lets you list, filter, mark as read, and
-unsubscribe — all from the editor</p>
-<p><strong>Branch management</strong> - <code>/manage-branches</code> —
+unsubscribe -- all from the editor</p>
+<p><strong>Branch management</strong> - <code>/manage-branches</code> --
 list, compare, clean up stale branches, check protection rules</p>
 <p><strong>Project board integration</strong> - Daily briefings now show
 sprint progress from GitHub Projects - Issues show their project board
@@ -216,35 +216,35 @@ common situations:
 <code>@issue-tracker reply to #42 with template needs-info</code></p>
 <h3 id="dual-output-markdown-html">Dual Output: Markdown + HTML</h3>
 <p>Every workspace document the agents create comes in <strong>two
-formats</strong>: - <strong><code>.md</code></strong> — for editing in
+formats</strong>: - <strong><code>.md</code></strong> -- for editing in
 VS Code, quick scanning, and checking off items -
-<strong><code>.html</code></strong> — optimized for screen readers,
+<strong><code>.html</code></strong> -- optimized for screen readers,
 browser viewing, and sharing with your team</p>
-<p>The HTML versions aren’t an afterthought. They have skip links, ARIA
+<p>The HTML versions aren't an afterthought. They have skip links, ARIA
 landmarks, proper heading hierarchy, accessible tables, interactive
 checklists, and automatic light/dark mode support.</p>
 <h3 id="screen-reader-optimized-documents">Screen Reader Optimized
 Documents</h3>
 <p>All generated HTML follows strict accessibility patterns: - Skip link
 as the first focusable element - Landmark roles for every section -
-Descriptive link text (never bare URLs or “click here”) - Tables with
+Descriptive link text (never bare URLs or "click here") - Tables with
 captions, header scopes, and row headers - Status communicated through
 text labels, not just emoji or color - Interactive checkboxes with
 proper labels - <code>prefers-reduced-motion</code> and
 <code>prefers-color-scheme</code> media queries</p>
 <h3 id="reactions-community-sentiment">Reactions &amp; Community
 Sentiment</h3>
-<p>Every issue and PR now includes reaction data — thumbs up, hearts,
+<p>Every issue and PR now includes reaction data -- thumbs up, hearts,
 rockets, and more. Items with 5+ positive reactions are flagged as
 community favorites, helping you prioritize what people actually care
 about.</p>
 <h3 id="release-awareness">Release Awareness</h3>
-<p>PRs and issues now include release context — which milestone they
-belong to, which release they shipped in, and whether they’re still
+<p>PRs and issues now include release context -- which milestone they
+belong to, which release they shipped in, and whether they're still
 unreleased. Release-bound items get a priority boost in triage.</p>
 <h3 id="github-discussions">GitHub Discussions</h3>
-<p>Agents now monitor GitHub Discussions alongside issues and PRs —
-discussions you’re part of, discussions linked to your issues, and
+<p>Agents now monitor GitHub Discussions alongside issues and PRs --
+discussions you're part of, discussions linked to your issues, and
 high-activity threads that might need your attention.</p>
 <h3 id="wcag-aria-cross-referencing">WCAG &amp; ARIA
 Cross-Referencing</h3>
@@ -252,7 +252,7 @@ Cross-Referencing</h3>
 success criteria it addresses, identifies the ARIA design patterns
 involved, and notes which assistive technologies benefit.</p>
 <h3 id="full-github-interaction">Full GitHub Interaction</h3>
-<p>You can now do everything from Copilot Chat — PR comments (general,
+<p>You can now do everything from Copilot Chat -- PR comments (general,
 single-line, multi-line, code suggestions), issue replies, reactions,
 issue creation, PR merging, label management, and more. Nothing requires
 opening a browser.</p>
@@ -263,28 +263,28 @@ tracker at your own projects with custom label filters.</p>
 <hr />
 <h2 id="quick-start">Quick Start</h2>
 <p>If you want to see the whole system come alive in about two minutes,
-here’s how.</p>
+here's how.</p>
 <ol type="1">
-<li><p><strong>Open Copilot Chat</strong> — press
+<li><p><strong>Open Copilot Chat</strong> -- press
 <code>Ctrl+Shift+I</code> (or <code>Cmd+Shift+I</code> on Mac)</p></li>
 <li><p><strong>Type this and press Enter:</strong></p>
 <pre><code>@daily-briefing morning briefing</code></pre></li>
 <li><p><strong>Wait about 30 seconds.</strong> The agent is reaching out
-across all your repos — collecting issues, PRs, releases, CI status,
-security alerts, discussions, and community reactions. It’s scoring
+across all your repos -- collecting issues, PRs, releases, CI status,
+security alerts, discussions, and community reactions. It's scoring
 everything by urgency and assembling it into a document.</p></li>
 <li><p><strong>Open the file it created:</strong></p>
 <ul>
-<li><code>.github/reviews/briefings/briefing-{today's date}.md</code> —
+<li><code>.github/reviews/briefings/briefing-{today's date}.md</code> --
 a markdown file you can edit right in VS Code</li>
 <li><code>.github/reviews/briefings/briefing-{today's date}.html</code>
-— an HTML file you can open in your browser (with full screen reader
+-- an HTML file you can open in your browser (with full screen reader
 support)</li>
 </ul></li>
 </ol>
-<p>That’s it. You now have a prioritized picture of your entire GitHub
+<p>That's it. You now have a prioritized picture of your entire GitHub
 world. The rest of this guide shows you everything else the agents can
-do — and there’s a lot.</p>
+do -- and there's a lot.</p>
 <blockquote>
 <p><strong>Want a gentler introduction?</strong> The <a
 href="GETTING-STARTED.md">Getting Started guide</a> walks you through
@@ -293,8 +293,8 @@ about what you already know.</p>
 </blockquote>
 <hr />
 <h2 id="setup-prerequisites">Setup &amp; Prerequisites</h2>
-<p>Good news: if Copilot Chat is already working in your VS Code, you’re
-probably done. Let’s just make sure everything is in place.</p>
+<p>Good news: if Copilot Chat is already working in your VS Code, you're
+probably done. Let's just make sure everything is in place.</p>
 <h3 id="requirements">Requirements</h3>
 <table>
 <colgroup>
@@ -310,25 +310,25 @@ probably done. Let’s just make sure everything is in place.</p>
 <tbody>
 <tr>
 <td>VS Code (or VS Code Insiders)</td>
-<td>If you’re reading this file in VS Code, you’re good</td>
+<td>If you're reading this file in VS Code, you're good</td>
 </tr>
 <tr>
 <td>GitHub Copilot extension</td>
-<td><code>Ctrl+Shift+X</code> → search “GitHub Copilot” → should say
-“Installed”</td>
+<td><code>Ctrl+Shift+X</code> --> search "GitHub Copilot" --> should say
+"Installed"</td>
 </tr>
 <tr>
 <td>GitHub Copilot Chat extension</td>
-<td>Same search → “GitHub Copilot Chat” → should say “Installed”</td>
+<td>Same search --> "GitHub Copilot Chat" --> should say "Installed"</td>
 </tr>
 <tr>
 <td>Signed in to GitHub</td>
-<td>Click the Accounts icon (bottom-left of VS Code) → should show your
+<td>Click the Accounts icon (bottom-left of VS Code) --> should show your
 GitHub username</td>
 </tr>
 <tr>
 <td>Agent files in <code>.github/agents/</code></td>
-<td>This repo already has them — that’s where this guide lives</td>
+<td>This repo already has them -- that's where this guide lives</td>
 </tr>
 <tr>
 <td>Prompt files in <code>.github/prompts/</code></td>
@@ -337,13 +337,13 @@ GitHub username</td>
 </tbody>
 </table>
 <h3 id="first-time-setup">First-Time Setup</h3>
-<p>If anything above isn’t checked off yet:</p>
+<p>If anything above isn't checked off yet:</p>
 <ol type="1">
 <li><strong>Sign in to GitHub in VS Code:</strong>
 <ul>
-<li>Press <code>Ctrl+Shift+P</code> → type “GitHub: Sign In” → follow
+<li>Press <code>Ctrl+Shift+P</code> --> type "GitHub: Sign In" --> follow
 the browser auth flow</li>
-<li>Or click the Accounts icon in the bottom-left corner → Sign in with
+<li>Or click the Accounts icon in the bottom-left corner --> Sign in with
 GitHub</li>
 </ul></li>
 <li><strong>Verify everything works:</strong>
@@ -351,14 +351,14 @@ GitHub</li>
 <li>Open Copilot Chat (<code>Ctrl+Shift+I</code>)</li>
 <li>Type:
 <code>@issue-tracker how many open issues do I have?</code></li>
-<li>If it responds with a number (even zero), you’re all set</li>
+<li>If it responds with a number (even zero), you're all set</li>
 </ul></li>
-<li><strong>If the agents don’t appear in chat:</strong>
+<li><strong>If the agents don't appear in chat:</strong>
 <ul>
 <li>Make sure the <code>.github/agents/</code> folder is in your
 currently open workspace</li>
-<li>Try reloading VS Code: <code>Ctrl+Shift+P</code> → “Developer:
-Reload Window”</li>
+<li>Try reloading VS Code: <code>Ctrl+Shift+P</code> --> "Developer:
+Reload Window"</li>
 </ul></li>
 </ol>
 <blockquote>
@@ -370,11 +370,11 @@ walkthrough with screenshots and troubleshooting for every step.</p>
 <h2 id="the-agents">The Agents</h2>
 <p>You have five agents, each with its own specialty. You talk to them
 by typing <code>@agent-name</code> in Copilot Chat, followed by what you
-need. They understand plain English — no special syntax required.</p>
-<p>Let’s meet each one.</p>
+need. They understand plain English -- no special syntax required.</p>
+<p>Let's meet each one.</p>
 <h3 id="daily-briefing">Daily Briefing</h3>
 <p>Think of this agent as your morning assistant. You sit down, you ask
-for a briefing, and it sweeps across every repo you’re involved with. It
+for a briefing, and it sweeps across every repo you're involved with. It
 checks your issues, your PRs, recent releases, CI health, security
 alerts, accessibility changes, GitHub Discussions, and community
 reactions. Then it scores everything by urgency and builds you a single,
@@ -382,9 +382,9 @@ organized document.</p>
 <p><strong>The result?</strong> You know exactly what needs your
 attention, what can wait, and what happened while you were away. No
 clicking through tabs, no scrolling through notification emails.</p>
-<p><strong>When to reach for it:</strong> - Start of your day — “What
-happened overnight?” - After a break — “What changed since this
-morning?” - End of the week — “Give me a weekly summary”</p>
+<p><strong>When to reach for it:</strong> - Start of your day -- "What
+happened overnight?" - After a break -- "What changed since this
+morning?" - End of the week -- "Give me a weekly summary"</p>
 <p><strong>Here are some ways to talk to it:</strong></p>
 <pre><code>@daily-briefing morning briefing
 @daily-briefing what changed since this morning
@@ -396,13 +396,13 @@ morning?” - End of the week — “Give me a weekly summary”</p>
 file at <code>.github/reviews/briefings/briefing-YYYY-MM-DD.html</code>
 - Sections for: Needs Action, Releases &amp; Deployments, Active
 Discussions, Monitor, Accessibility Updates, Recently Completed,
-Dashboard, and Guidance - Every item is priority-scored — the most
+Dashboard, and Guidance - Every item is priority-scored -- the most
 urgent things appear first - Community reactions and sentiment are
 included so you can see what people care about - Action items have
 checkboxes you can tick off throughout the day - Run it again later and
 it updates the same document with NEW markers instead of creating a
 duplicate</p>
-<p><strong>Here’s a quick reference for how it responds to different
+<p><strong>Here's a quick reference for how it responds to different
 requests:</strong></p>
 <table>
 <colgroup>
@@ -417,43 +417,43 @@ requests:</strong></p>
 </thead>
 <tbody>
 <tr>
-<td>“morning briefing”</td>
+<td>"morning briefing"</td>
 <td>Full briefing covering the last 24 hours, saved as both markdown and
 HTML</td>
 </tr>
 <tr>
-<td>“afternoon update”</td>
-<td>Updates today’s existing briefing with anything new</td>
+<td>"afternoon update"</td>
+<td>Updates today's existing briefing with anything new</td>
 </tr>
 <tr>
-<td>“weekly”</td>
+<td>"weekly"</td>
 <td>Extended report with reflection prompts, patterns, and community
 pulse</td>
 </tr>
 <tr>
-<td>“just PRs”</td>
-<td>Only PR data — no issues or accessibility updates</td>
+<td>"just PRs"</td>
+<td>Only PR data -- no issues or accessibility updates</td>
 </tr>
 <tr>
-<td>“quick”</td>
+<td>"quick"</td>
 <td>A short summary in chat, no document saved</td>
 </tr>
 </tbody>
 </table>
 <hr />
 <h3 id="issue-tracker">Issue Tracker</h3>
-<p>This is your go-to agent for anything issue-related. It doesn’t just
-list your issues — it thinks about them. It scores them by urgency,
+<p>This is your go-to agent for anything issue-related. It doesn't just
+list your issues -- it thinks about them. It scores them by urgency,
 flags community favorites (the ones with lots of thumbs-up reactions),
 links related PRs, surfaces discussions you might be missing, and checks
-what’s tied to upcoming releases.</p>
+what's tied to upcoming releases.</p>
 <p>But it also does things. You can reply to issues, create new ones,
 close stale ones, add labels, assign people, set milestones, and even
-batch-respond to questions — all from the chat window.</p>
-<p><strong>When to reach for it:</strong> - “What issues need my
-attention?” - “Show me the full story on this specific issue” - “Help me
-triage my backlog” - “Reply to this issue for me” - “Create a new bug
-report” - “Close this as completed”</p>
+batch-respond to questions -- all from the chat window.</p>
+<p><strong>When to reach for it:</strong> - "What issues need my
+attention?" - "Show me the full story on this specific issue" - "Help me
+triage my backlog" - "Reply to this issue for me" - "Create a new bug
+report" - "Close this as completed"</p>
 <p><strong>Here are some ways to talk to it:</strong></p>
 <pre><code>@issue-tracker show my open issues
 @issue-tracker triage everything assigned to me
@@ -468,27 +468,27 @@ report” - “Close this as completed”</p>
 @issue-tracker set milestone v2.0 on #42
 @issue-tracker transfer #42 to owner/other-repo</code></pre>
 <p><strong>Everything it can do:</strong> - <strong>Smart
-search</strong> that understands natural language dates (“last week”,
-“since Monday”) - <strong>Priority scoring</strong> that weighs
+search</strong> that understands natural language dates ("last week",
+"since Monday") - <strong>Priority scoring</strong> that weighs
 reactions, release deadlines, and discussion activity -
-<strong>Auto-recovery</strong> — if a search returns nothing, it
+<strong>Auto-recovery</strong> -- if a search returns nothing, it
 automatically broadens and tries again - <strong>Dual-format
 documents</strong> for individual issues and triage dashboards -
-<strong>Full comment system</strong> — new comments, replies to specific
+<strong>Full comment system</strong> -- new comments, replies to specific
 existing comments, batch replies - <strong>Issue creation</strong> with
 smart templates for bugs, features, tasks, and questions -
-<strong>Reactions</strong> — add emoji reactions to issues and comments
-using natural language - <strong>Issue management</strong> — edit,
+<strong>Reactions</strong> -- add emoji reactions to issues and comments
+using natural language - <strong>Issue management</strong> -- edit,
 label, assign, close/reopen, lock/unlock, transfer, set milestones -
-<strong>Saved searches</strong> — define named filters in your
+<strong>Saved searches</strong> -- define named filters in your
 preferences and use them with one command - <strong>Response
-templates</strong> — pre-written replies for common situations, posted
-with one command - <strong>Project board awareness</strong> — shows
+templates</strong> -- pre-written replies for common situations, posted
+with one command - <strong>Project board awareness</strong> -- shows
 which column an issue is in on your project board - <strong>Community
-pulse</strong> — reactions and sentiment for every issue -
-<strong>Release awareness</strong> — flags issues tied to upcoming
-releases - <strong>Discussion linking</strong> — surfaces related GitHub
-Discussions - <strong>Cross-referencing</strong> — automatically finds
+pulse</strong> -- reactions and sentiment for every issue -
+<strong>Release awareness</strong> -- flags issues tied to upcoming
+releases - <strong>Discussion linking</strong> -- surfaces related GitHub
+Discussions - <strong>Cross-referencing</strong> -- automatically finds
 linked PRs, discussions, and mentions</p>
 <p><strong>The attention signals it shows you:</strong></p>
 <table>
@@ -506,7 +506,7 @@ linked PRs, discussions, and mentions</p>
 <tr>
 <td>Action needed</td>
 <td>Someone <span class="citation"
-data-cites="mentioned">@mentioned</span> you and you haven’t responded
+data-cites="mentioned">@mentioned</span> you and you haven't responded
 yet</td>
 </tr>
 <tr>
@@ -515,7 +515,7 @@ yet</td>
 </tr>
 <tr>
 <td>Popular</td>
-<td>5+ positive reactions from the community — people care about this
+<td>5+ positive reactions from the community -- people care about this
 one</td>
 </tr>
 <tr>
@@ -524,7 +524,7 @@ one</td>
 </tr>
 <tr>
 <td>Discussion</td>
-<td>There’s a related GitHub Discussion with more context</td>
+<td>There's a related GitHub Discussion with more context</td>
 </tr>
 <tr>
 <td>Quiet</td>
@@ -553,17 +553,17 @@ files were changed, what release milestone the PR belongs to, and
 community reactions.</p>
 <p>Then it builds a structured review document with risk assessment,
 before/after code snapshots, and a checklist you can work through
-systematically. When you’re ready, you can leave comments — single-line,
+systematically. When you're ready, you can leave comments -- single-line,
 multi-line, or even code suggestions that the PR author can apply with
-one click. And when you’re done reviewing, you can approve, request
-changes, or merge — all from chat.</p>
-<p><strong>When to reach for it:</strong> - “Review this PR for me” -
-“Show me PRs waiting for my review” - “Leave a comment on line 42” -
-“Explain what this code does” - “Merge this PR”</p>
+one click. And when you're done reviewing, you can approve, request
+changes, or merge -- all from chat.</p>
+<p><strong>When to reach for it:</strong> - "Review this PR for me" -
+"Show me PRs waiting for my review" - "Leave a comment on line 42" -
+"Explain what this code does" - "Merge this PR"</p>
 <p><strong>Here are some ways to talk to it:</strong></p>
 <pre><code>@pr-review review microsoft/vscode#54321
 @pr-review show PRs waiting for my review
-@pr-review my open PRs — which are ready to merge?
+@pr-review my open PRs -- which are ready to merge?
 @pr-review comment on owner/repo#15
 @pr-review comment on line 42 of auth.ts in PR #15
 @pr-review comment on lines 40-60 of auth.ts in PR #15
@@ -578,50 +578,50 @@ changes, or merge — all from chat.</p>
 @pr-review thumbs up PR owner/repo#15
 @pr-review approve owner/repo#15</code></pre>
 <p><strong>Everything it can do:</strong> - <strong>Full asset pull in
-one sweep</strong> — metadata, diff, files, comments, commits, reactions
-- <strong>File classification</strong> — Feature / Bug Fix / Refactor /
-Tests / Config / Docs - <strong>Risk assessment</strong> per file — High
+one sweep</strong> -- metadata, diff, files, comments, commits, reactions
+- <strong>File classification</strong> -- Feature / Bug Fix / Refactor /
+Tests / Config / Docs - <strong>Risk assessment</strong> per file -- High
 / Medium / Low with explanations - <strong>Before/after
-snapshots</strong> — side-by-side code comparison for changed files -
+snapshots</strong> -- side-by-side code comparison for changed files -
 <strong>Dual-format review documents</strong> with checklists you can
-work through - <strong>Full commenting system</strong> — general
+work through - <strong>Full commenting system</strong> -- general
 comments, single-line, multi-line range, code suggestion blocks, reply
-to threads, batch comments - <strong>Code understanding</strong> —
+to threads, batch comments - <strong>Code understanding</strong> --
 explain specific lines, functions, or file changes in plain language -
-<strong>Reactions</strong> — add emoji reactions to PRs and individual
-comments - <strong>PR management</strong> — merge (squash/rebase/merge
+<strong>Reactions</strong> -- add emoji reactions to PRs and individual
+comments - <strong>PR management</strong> -- merge (squash/rebase/merge
 commit), edit title/description, labels, request/dismiss reviewers,
-draft/ready toggle, close/reopen - <strong>CI check results</strong> —
+draft/ready toggle, close/reopen - <strong>CI check results</strong> --
 which checks passed, which failed, with links to logs - <strong>Security
-awareness</strong> — flags when auth, crypto, or permissions files are
-modified - <strong>Release context</strong> — knows if the PR is
+awareness</strong> -- flags when auth, crypto, or permissions files are
+modified - <strong>Release context</strong> -- knows if the PR is
 release-bound and adjusts advice accordingly - <strong>Accessibility
-checklist</strong> — dedicated section for UI change reviews -
-<strong>Community sentiment</strong> — reactions on the PR and on
+checklist</strong> -- dedicated section for UI change reviews -
+<strong>Community sentiment</strong> -- reactions on the PR and on
 individual comments</p>
-<p><strong>What’s in a review document:</strong> - Overview table with
+<p><strong>What's in a review document:</strong> - Overview table with
 PR metadata, reactions, and release context - Changed files summary with
 risk levels - File-by-file analysis with before/after code, diffs, and
 collapsible sections - Developer discussion thread with reactions -
 Related GitHub Discussions - Commit story (chronological commit
 messages) - Review checklist (correctness, security, performance,
 architecture, testing, docs, accessibility) - Verdict and
-recommendations with release context and community sentiment - A “My
-Notes” section for your own annotations</p>
+recommendations with release context and community sentiment - A "My
+Notes" section for your own annotations</p>
 <hr />
 <h3 id="analytics-insights">Analytics &amp; Insights</h3>
-<p>This agent is about understanding your team’s patterns. Not in a
-surveillance way — in a “let’s make sure nobody’s drowning and our
-process is healthy” way.</p>
+<p>This agent is about understanding your team's patterns. Not in a
+surveillance way -- in a "let's make sure nobody's drowning and our
+process is healthy" way.</p>
 <p>It tracks things like how long PRs sit before someone reviews them,
-who’s carrying the heaviest review load, which files keep changing (and
-might need a refactor), and whether your team’s velocity is trending up
-or down. When it spots something off — a teammate with 8 open review
-requests, a PR that’s been waiting 12 days — it names it and suggests
+who's carrying the heaviest review load, which files keep changing (and
+might need a refactor), and whether your team's velocity is trending up
+or down. When it spots something off -- a teammate with 8 open review
+requests, a PR that's been waiting 12 days -- it names it and suggests
 what to do about it.</p>
-<p><strong>When to reach for it:</strong> - “How’s the team doing this
-sprint?” - “What’s my review turnaround time?” - “Who’s overloaded right
-now?” - “Which files change the most?”</p>
+<p><strong>When to reach for it:</strong> - "How's the team doing this
+sprint?" - "What's my review turnaround time?" - "Who's overloaded right
+now?" - "Which files change the most?"</p>
 <p><strong>Here are some ways to talk to it:</strong></p>
 <pre><code>@analytics team dashboard
 @analytics my stats this month
@@ -630,18 +630,18 @@ now?” - “Which files change the most?”</p>
 @analytics code hotspots in owner/repo
 @analytics velocity last 4 weeks</code></pre>
 <p><strong>What it tracks:</strong> - <strong>Review turnaround</strong>
-— time from PR open to first review, to approval, to merge -
-<strong>Issue resolution</strong> — time to close, comments before
-resolution, reopen rates - <strong>Contribution activity</strong> — PRs
+-- time from PR open to first review, to approval, to merge -
+<strong>Issue resolution</strong> -- time to close, comments before
+resolution, reopen rates - <strong>Contribution activity</strong> -- PRs
 authored/reviewed, issues closed per person - <strong>Team
-velocity</strong> — throughput trends, WIP counts, cycle time,
-period-over-period comparison - <strong>Bottleneck detection</strong> —
+velocity</strong> -- throughput trends, WIP counts, cycle time,
+period-over-period comparison - <strong>Bottleneck detection</strong> --
 stuck PRs, overloaded reviewers, unresponded issues - <strong>Code
-churn</strong> — hotspot files, change coupling, frequently modified
-areas - <strong>Health scores</strong> — composite 0-100 scores for
+churn</strong> -- hotspot files, change coupling, frequently modified
+areas - <strong>Health scores</strong> -- composite 0-100 scores for
 review health, issue health, velocity, and team balance - <strong>Load
-balancing</strong> — reviewer capacity recommendations based on your
-team roster - <strong>Anomaly detection</strong> — flags unusual spikes
+balancing</strong> -- reviewer capacity recommendations based on your
+team roster - <strong>Anomaly detection</strong> -- flags unusual spikes
 or drops in activity</p>
 <p><strong>Documents it creates:</strong> Dual-format dashboards at
 <code>.github/reviews/analytics/</code> with health overview, metric
@@ -655,11 +655,11 @@ But it goes beyond just listing closed issues.</p>
 <p>For every accessibility fix, it identifies the specific WCAG success
 criteria being addressed, the ARIA design patterns involved, the impact
 level, and which assistive technologies benefit. Monthly reports give
-you a landscape view of what’s improving and what still needs work.</p>
-<p><strong>When to reach for it:</strong> - “What accessibility changes
-shipped this week?” - “Screen reader improvements in February” - “Give
-me a full accessibility report for this month” - “Track accessibility in
-my own repo” - “What WCAG criteria were addressed this month?”</p>
+you a landscape view of what's improving and what still needs work.</p>
+<p><strong>When to reach for it:</strong> - "What accessibility changes
+shipped this week?" - "Screen reader improvements in February" - "Give
+me a full accessibility report for this month" - "Track accessibility in
+my own repo" - "What WCAG criteria were addressed this month?"</p>
 <p><strong>Here are some ways to talk to it:</strong></p>
 <pre><code>@insiders-a11y-tracker what&#39;s new in accessibility
 @insiders-a11y-tracker screen reader changes this month
@@ -709,15 +709,15 @@ my own repo” - “What WCAG criteria were addressed this month?”</p>
 </tbody>
 </table>
 <p><strong>What makes it special:</strong> - <strong>Configurable
-repos</strong> — track any repository, not just VS Code - <strong>WCAG
-cross-referencing</strong> — every fix mapped to specific success
+repos</strong> -- track any repository, not just VS Code - <strong>WCAG
+cross-referencing</strong> -- every fix mapped to specific success
 criteria with conformance level - <strong>ARIA pattern mapping</strong>
-— identifies which WAI-ARIA design patterns are involved -
-<strong>Impact assessment</strong> — Critical / Major / Minor impact
-levels - <strong>Assistive tech listing</strong> — which screen readers
+-- identifies which WAI-ARIA design patterns are involved -
+<strong>Impact assessment</strong> -- Critical / Major / Minor impact
+levels - <strong>Assistive tech listing</strong> -- which screen readers
 and assistive technologies are affected - <strong>WCAG coverage
-analysis</strong> — shows which principles got the most attention this
-month - <strong>Trends and gaps</strong> — identifies areas that still
+analysis</strong> -- shows which principles got the most attention this
+month - <strong>Trends and gaps</strong> -- identifies areas that still
 need accessibility work</p>
 <p><strong>Documents it creates:</strong> Dual-format monthly reports at
 <code>.github/reviews/accessibility/a11y-report-YYYY-MM.md</code> and
@@ -725,10 +725,10 @@ need accessibility work</p>
 pattern summaries, trend analysis, and useful links.</p>
 <hr />
 <h2 id="workspace-preferences">Workspace Preferences</h2>
-<p>Here’s something that makes the whole system feel personal: a single
+<p>Here's something that makes the whole system feel personal: a single
 configuration file that every agent reads.</p>
 <p>Edit <code>.github/agents/preferences.md</code> and the agents learn
-about your team — who reviews what, how you prefer to merge, what labels
+about your team -- who reviews what, how you prefer to merge, what labels
 matter, which repos to watch closely, and when your working day starts.
 You set it up once, and every agent inherits that knowledge from then
 on.</p>
@@ -804,9 +804,9 @@ on.</p>
 </tbody>
 </table>
 <p><strong>How to get started:</strong> 1. Open
-<code>.github/agents/preferences.md</code> in your editor 2. You’ll see
+<code>.github/agents/preferences.md</code> in your editor 2. You'll see
 sections with YAML code blocks and example values 3. Customize the
-values that matter to your team — you don’t have to fill everything in
+values that matter to your team -- you don't have to fill everything in
 4. The agents read this file at the start of each session, so changes
 take effect next time you talk to them</p>
 <p><strong>Two features worth highlighting:</strong></p>
@@ -821,9 +821,9 @@ common situations and post them with one command:</p>
 @issue-tracker reply to #42 with template duplicate ref:#30
 @issue-tracker reply to #42 with template stale-closing</code></pre>
 <blockquote>
-<p><strong>Don’t feel pressured to set this up right away.</strong> The
-agents work perfectly fine with their defaults. When you’re ready to
-customize — maybe after a week of use, when you notice patterns — come
+<p><strong>Don't feel pressured to set this up right away.</strong> The
+agents work perfectly fine with their defaults. When you're ready to
+customize -- maybe after a week of use, when you notice patterns -- come
 back to this section.</p>
 </blockquote>
 <hr />
@@ -832,7 +832,7 @@ back to this section.</p>
 an agent, you type <code>/</code> followed by a command name, and the
 right agent fires up with the right tools already loaded.</p>
 <p><strong>To use one:</strong> Open Copilot Chat, type <code>/</code>,
-and you’ll see all available commands in a dropdown. Pick one, add any
+and you'll see all available commands in a dropdown. Pick one, add any
 extra details (like a repo name or issue number), and press Enter.</p>
 <h3 id="all-28-commands">All 28 Commands</h3>
 <table>
@@ -953,7 +953,7 @@ context</td>
 <tr>
 <td><code>/ci-status</code></td>
 <td>Daily Briefing</td>
-<td>CI/CD health dashboard — failures, flaky tests, long jobs</td>
+<td>CI/CD health dashboard -- failures, flaky tests, long jobs</td>
 </tr>
 <tr>
 <td><code>/security-dashboard</code></td>
@@ -1005,13 +1005,13 @@ context</td>
 /react thumbs up owner/repo#42</code></pre>
 <hr />
 <h2 id="never-leave-your-editor">Never Leave Your Editor</h2>
-<p>This is the heart of the whole system. Every action you’d normally do
-on github.com — leaving a comment, merging a PR, closing an issue,
-reacting to someone’s work, checking CI results, managing notifications
-— can happen right here in the chat window.</p>
-<p>Let’s walk through each one.</p>
+<p>This is the heart of the whole system. Every action you'd normally do
+on github.com -- leaving a comment, merging a PR, closing an issue,
+reacting to someone's work, checking CI results, managing notifications
+-- can happen right here in the chat window.</p>
+<p>Let's walk through each one.</p>
 <h3 id="pr-commenting-code-review">PR Commenting &amp; Code Review</h3>
-<p>You can leave comments at every level — from general PR discussion
+<p>You can leave comments at every level -- from general PR discussion
 down to specific line ranges with code suggestions.</p>
 <table>
 <colgroup>
@@ -1040,7 +1040,7 @@ down to specific line ranges with code suggestions.</p>
 <tr>
 <td><strong>Suggest a code fix</strong></td>
 <td><code>@pr-review suggest a fix for line 42 of auth.ts in PR #15</code>
-— the PR author gets a one-click “Apply suggestion” button</td>
+-- the PR author gets a one-click "Apply suggestion" button</td>
 </tr>
 <tr>
 <td><strong>Reply to a comment thread</strong></td>
@@ -1058,9 +1058,9 @@ post them all at once</td>
 </tr>
 </tbody>
 </table>
-<p><strong>About code suggestions:</strong> These use GitHub’s built-in
-<code>suggestion</code> syntax, so the PR author sees an “Apply
-suggestion” button right on the comment. One click and your fix is
+<p><strong>About code suggestions:</strong> These use GitHub's built-in
+<code>suggestion</code> syntax, so the PR author sees an "Apply
+suggestion" button right on the comment. One click and your fix is
 committed. No back-and-forth needed.</p>
 <h3 id="code-understanding">Code Understanding</h3>
 <p>Before you critique code, it helps to understand it. The agent can
@@ -1096,10 +1096,10 @@ explain any part of a PR diff in plain language.</p>
 </tbody>
 </table>
 <p>After explaining, the agent offers to comment on those lines, suggest
-a change, or show more context. It’s a natural flow: understand first,
+a change, or show more context. It's a natural flow: understand first,
 then respond.</p>
 <h3 id="issue-interactions">Issue Interactions</h3>
-<p>The full comment system — create, reply, and interact with issues
+<p>The full comment system -- create, reply, and interact with issues
 without opening a browser.</p>
 <table>
 <colgroup>
@@ -1119,12 +1119,12 @@ without opening a browser.</p>
 <code>@issue-tracker comment on #42</code></td>
 </tr>
 <tr>
-<td><strong>Reply to a specific person’s comment</strong></td>
+<td><strong>Reply to a specific person's comment</strong></td>
 <td><code>@issue-tracker reply to Alice's comment on #42: "Thanks, I'll investigate"</code></td>
 </tr>
 <tr>
 <td><strong>Reply to a numbered comment</strong></td>
-<td>The agent numbers all comments — just pick the one you want to reply
+<td>The agent numbers all comments -- just pick the one you want to reply
 to</td>
 </tr>
 <tr>
@@ -1137,21 +1137,21 @@ to</td>
 </tr>
 <tr>
 <td><strong>Create from a repo template</strong></td>
-<td>The agent auto-detects your repo’s issue templates and pre-fills
+<td>The agent auto-detects your repo's issue templates and pre-fills
 them</td>
 </tr>
 </tbody>
 </table>
 <p><strong>Smart issue creation</strong> picks up on your description: -
-Start with “bug:” and it uses a bug template with Steps to Reproduce,
-Expected/Actual Behavior - Start with “feature:” and it uses a feature
+Start with "bug:" and it uses a bug template with Steps to Reproduce,
+Expected/Actual Behavior - Start with "feature:" and it uses a feature
 template with Motivation, Proposed Solution, Alternatives - Start with
-“task:” and it uses a task template with Acceptance Criteria
+"task:" and it uses a task template with Acceptance Criteria
 checklist</p>
 <h3 id="reactions">Reactions</h3>
 <p>Reactions are the lightest way to participate on GitHub. A thumbs up
-says “I see this and I agree.” A rocket says “nice work.” A heart says
-“I appreciate you.” Two seconds, and you’ve made someone’s day.</p>
+says "I see this and I agree." A rocket says "nice work." A heart says
+"I appreciate you." Two seconds, and you've made someone's day.</p>
 <table>
 <thead>
 <tr>
@@ -1161,35 +1161,35 @@ says “I see this and I agree.” A rocket says “nice work.” A heart says
 </thead>
 <tbody>
 <tr>
-<td>“like”, “agree”, “thumbs up”, “+1”</td>
+<td>"like", "agree", "thumbs up", "+1"</td>
 <td>+1</td>
 </tr>
 <tr>
-<td>“disagree”, “thumbs down”, “-1”</td>
+<td>"disagree", "thumbs down", "-1"</td>
 <td>-1</td>
 </tr>
 <tr>
-<td>“love”, “heart”</td>
+<td>"love", "heart"</td>
 <td>heart</td>
 </tr>
 <tr>
-<td>“celebrate”, “hooray”, “tada”</td>
+<td>"celebrate", "hooray", "tada"</td>
 <td>hooray</td>
 </tr>
 <tr>
-<td>“ship it”, “rocket”, “launch”</td>
+<td>"ship it", "rocket", "launch"</td>
 <td>rocket</td>
 </tr>
 <tr>
-<td>“looking”, “eyes”, “watching”</td>
+<td>"looking", "eyes", "watching"</td>
 <td>eyes</td>
 </tr>
 <tr>
-<td>“funny”, “laugh”, “lol”</td>
+<td>"funny", "laugh", "lol"</td>
 <td>laugh</td>
 </tr>
 <tr>
-<td>“confused”, “huh”, “what”</td>
+<td>"confused", "huh", "what"</td>
 <td>confused</td>
 </tr>
 </tbody>
@@ -1218,7 +1218,7 @@ The agent shows you the current reactions before adding yours.</p>
 <tbody>
 <tr>
 <td><strong>Merge a PR</strong></td>
-<td><code>/merge-pr owner/repo#15</code> — checks readiness, picks
+<td><code>/merge-pr owner/repo#15</code> -- checks readiness, picks
 strategy, confirms before merging</td>
 </tr>
 <tr>
@@ -1253,7 +1253,7 @@ strategy, confirms before merging</td>
 </tbody>
 </table>
 <p><strong>How merging works</strong> (the <code>/merge-pr</code> flow):
-1. The agent checks readiness — approvals, CI status, merge conflicts,
+1. The agent checks readiness -- approvals, CI status, merge conflicts,
 branch protection 2. If something is blocking the merge, it tells you
 exactly what and offers to help 3. If everything is green, it shows your
 merge strategy options: Squash and merge, Create merge commit, or Rebase
@@ -1262,7 +1262,7 @@ and merge 4. It shows the merge commit message and lets you customize it
 offers to delete the source branch, close linked issues, and update your
 briefing</p>
 <h3 id="issue-management">Issue Management</h3>
-<p>Full issue administration — everything you’d do on the issue
+<p>Full issue administration -- everything you'd do on the issue
 page.</p>
 <table>
 <colgroup>
@@ -1294,8 +1294,8 @@ page.</p>
 </tr>
 <tr>
 <td><strong>Close</strong></td>
-<td><code>/manage-issue close owner/repo#42 as completed</code> (or “as
-not planned”)</td>
+<td><code>/manage-issue close owner/repo#42 as completed</code> (or "as
+not planned")</td>
 </tr>
 <tr>
 <td><strong>Reopen</strong></td>
@@ -1318,9 +1318,9 @@ too heated, resolved, spam)</td>
 </table>
 <blockquote>
 <p><strong>A note about safety:</strong> Every action that changes state
-— closing, reopening, locking, transferring, merging — requires your
+-- closing, reopening, locking, transferring, merging -- requires your
 explicit confirmation. The agent always shows you exactly what will
-happen before doing it. You’re always in control.</p>
+happen before doing it. You're always in control.</p>
 </blockquote>
 <h3 id="branch-management">Branch Management</h3>
 <p>Keep your branches tidy without leaving the editor.</p>
@@ -1342,22 +1342,22 @@ happen before doing it. You’re always in control.</p>
 </tr>
 <tr>
 <td><strong>Find stale branches</strong></td>
-<td><code>/manage-branches stale</code> — shows branches with no
+<td><code>/manage-branches stale</code> -- shows branches with no
 activity in 30+ days</td>
 </tr>
 <tr>
 <td><strong>Compare two branches</strong></td>
-<td><code>/manage-branches compare main feature/auth</code> —
+<td><code>/manage-branches compare main feature/auth</code> --
 ahead/behind analysis</td>
 </tr>
 <tr>
 <td><strong>Clean up merged branches</strong></td>
-<td><code>/manage-branches cleanup</code> — safely delete branches
+<td><code>/manage-branches cleanup</code> -- safely delete branches
 already merged into the default branch</td>
 </tr>
 <tr>
 <td><strong>Check protection rules</strong></td>
-<td><code>/manage-branches protection</code> — what’s protected and
+<td><code>/manage-branches protection</code> -- what's protected and
 how</td>
 </tr>
 </tbody>
@@ -1365,7 +1365,7 @@ how</td>
 <p><strong>How cleanup works:</strong> 1. The agent lists all branches
 that have been merged into the default branch 2. It excludes any
 protected branches 3. It shows each one with its last activity date 4.
-You confirm before anything gets deleted — no surprises</p>
+You confirm before anything gets deleted -- no surprises</p>
 <h3 id="notifications">Notifications</h3>
 <p>Your GitHub notifications, managed from the editor.</p>
 <table>
@@ -1382,7 +1382,7 @@ You confirm before anything gets deleted — no surprises</p>
 <tbody>
 <tr>
 <td><strong>See unread notifications</strong></td>
-<td><code>/notifications</code> — grouped by repo and type</td>
+<td><code>/notifications</code> -- grouped by repo and type</td>
 </tr>
 <tr>
 <td><strong>Filter by type</strong></td>
@@ -1404,7 +1404,7 @@ You confirm before anything gets deleted — no surprises</p>
 </tbody>
 </table>
 <p>The agent applies your notification preferences from
-<code>preferences.md</code> — priority repos surface first, muted repos
+<code>preferences.md</code> -- priority repos surface first, muted repos
 stay hidden unless you ask for them.</p>
 <h3 id="release-management">Release Management</h3>
 <p>The full release lifecycle, from planning to publishing.</p>
@@ -1422,40 +1422,40 @@ stay hidden unless you ask for them.</p>
 <tbody>
 <tr>
 <td><strong>Draft release notes</strong></td>
-<td><code>/draft-release owner/repo v2.0.0</code> — auto-categorized
+<td><code>/draft-release owner/repo v2.0.0</code> -- auto-categorized
 from merged PRs</td>
 </tr>
 <tr>
 <td><strong>Check release readiness</strong></td>
-<td><code>/release-prep owner/repo v2.0.0</code> — milestone status, CI
+<td><code>/release-prep owner/repo v2.0.0</code> -- milestone status, CI
 health, security, and a readiness checklist</td>
 </tr>
 <tr>
 <td><strong>Check CI health</strong></td>
-<td><code>/ci-status owner/repo</code> — workflow status across
+<td><code>/ci-status owner/repo</code> -- workflow status across
 repos</td>
 </tr>
 <tr>
 <td><strong>Check security</strong></td>
-<td><code>/security-dashboard owner/repo</code> — Dependabot alerts and
+<td><code>/security-dashboard owner/repo</code> -- Dependabot alerts and
 advisories</td>
 </tr>
 </tbody>
 </table>
 <p><strong>How release notes are categorized:</strong> The agent reads
 the labels and titles of every merged PR since the last release and
-organizes them into: - Breaking Changes (from labels or “BREAKING” in
+organizes them into: - Breaking Changes (from labels or "BREAKING" in
 titles) - Features (from <code>feature</code>/<code>enhancement</code>
 labels) - Bug Fixes (from <code>bug</code>/<code>fix</code> labels) -
 Performance, Documentation, Dependencies, Other</p>
 <hr />
 <h2 id="daily-workflows">Daily Workflows</h2>
-<p>Now let’s put it all together. These are repeatable routines —
+<p>Now let's put it all together. These are repeatable routines --
 sequences of commands that flow naturally into each other. After a few
-days, they’ll feel like second nature.</p>
+days, they'll feel like second nature.</p>
 <h3 id="morning-routine">Morning Routine</h3>
-<p><strong>What you’re doing:</strong> Going from “I just sat down” to
-“I know exactly what to focus on today.”</p>
+<p><strong>What you're doing:</strong> Going from "I just sat down" to
+"I know exactly what to focus on today."</p>
 <p><strong>Time:</strong> About 5-10 minutes.</p>
 <pre><code>Step 1: Open Copilot Chat (Ctrl+Shift+I)
 Step 2: Type: @daily-briefing morning briefing
@@ -1463,25 +1463,25 @@ Step 3: Wait about 30 seconds for the briefing to generate
 Step 4: Open the briefing file:
         - .github/reviews/briefings/briefing-{date}.md (in VS Code)
         - .github/reviews/briefings/briefing-{date}.html (in your browser)
-Step 5: Read the &quot;Needs Action&quot; section — these are your top priorities
+Step 5: Read the &quot;Needs Action&quot; section -- these are your top priorities
 Step 6: Check &quot;Releases &amp; Discussions&quot; for anything time-sensitive
 Step 7: Check things off throughout the day as you complete them</code></pre>
 <p><strong>What typically comes next:</strong> - See a PR that needs
-your review? → <code>@pr-review review owner/repo#123</code> - See an
-issue where someone’s waiting on you? →
-<code>/issue-reply owner/repo#42</code> - See a release approaching? →
+your review? --> <code>@pr-review review owner/repo#123</code> - See an
+issue where someone's waiting on you? -->
+<code>/issue-reply owner/repo#42</code> - See a release approaching? -->
 Prioritize the release-bound items first - Want a deeper look at your
-backlog? → <code>/triage</code></p>
+backlog? --> <code>/triage</code></p>
 <hr />
 <h3 id="pr-review-flow">PR Review Flow</h3>
-<p><strong>What you’re doing:</strong> A thorough, structured code
-review — the kind that catches real issues and respects the author’s
+<p><strong>What you're doing:</strong> A thorough, structured code
+review -- the kind that catches real issues and respects the author's
 work.</p>
 <p><strong>Time:</strong> About 10-20 minutes, depending on the PR
 size.</p>
 <pre><code>Step 1:  /review-pr owner/repo#123
 Step 2:  Open the review document (.md or .html)
-Step 3:  Check the release context — is this tied to an upcoming release?
+Step 3:  Check the release context -- is this tied to an upcoming release?
 Step 4:  Work through the checklist, checking off items as you verify them
 Step 5:  Need to understand something? /explain-code lines 40-60 in auth.ts on PR #123
 Step 6:  Add your notes in the &quot;My Notes&quot; section
@@ -1494,13 +1494,13 @@ Step 9:  Submit your review: @pr-review approve owner/repo#123
 Step 10: Ready to merge? /merge-pr owner/repo#123</code></pre>
 <hr />
 <h3 id="issue-triage-flow">Issue Triage Flow</h3>
-<p><strong>What you’re doing:</strong> Taking control of your backlog
+<p><strong>What you're doing:</strong> Taking control of your backlog
 instead of letting it pile up.</p>
 <p><strong>Time:</strong> About 10-15 minutes.</p>
 <pre><code>Step 1:  /triage
 Step 2:  Open the triage document (markdown or HTML)
-Step 3:  Look at community reactions — popular issues might deserve a priority bump
-Step 4:  Check release context — release-bound issues have real deadlines
+Step 3:  Look at community reactions -- popular issues might deserve a priority bump
+Step 4:  Check release context -- release-bound issues have real deadlines
 Step 5:  For each issue, decide: Reply / Close / Reassign / Defer
 Step 6:  Check boxes in the document as you make decisions
 Step 7:  Reply: /issue-reply owner/repo#42
@@ -1511,33 +1511,33 @@ Step 11: Show some appreciation: /react thumbs up owner/repo#42
 Step 12: Need a new issue? /create-issue feature: add dark mode in owner/repo</code></pre>
 <hr />
 <h3 id="afternoon-check-in">Afternoon Check-In</h3>
-<p><strong>What you’re doing:</strong> A quick catch-up on anything that
+<p><strong>What you're doing:</strong> A quick catch-up on anything that
 changed since the morning.</p>
 <p><strong>Time:</strong> 2-3 minutes.</p>
 <pre><code>Step 1: @daily-briefing afternoon update
 Step 2: Check the NEW Update section at the top of today&#39;s briefing
 Step 3: Address anything new that&#39;s urgent</code></pre>
-<p>That’s it. The briefing updates in place — no duplicate files.</p>
+<p>That's it. The briefing updates in place -- no duplicate files.</p>
 <hr />
 <h3 id="weekly-review">Weekly Review</h3>
-<p><strong>What you’re doing:</strong> Stepping back to see the bigger
+<p><strong>What you're doing:</strong> Stepping back to see the bigger
 picture. What went well? What needs attention?</p>
 <p><strong>Time:</strong> About 15-20 minutes.</p>
 <pre><code>Step 1: @daily-briefing weekly report
-Step 2: Review &quot;Recently Completed&quot; — take a moment to appreciate what got done
-Step 3: Check &quot;Community Pulse&quot; — what resonated with people?
+Step 2: Review &quot;Recently Completed&quot; -- take a moment to appreciate what got done
+Step 3: Check &quot;Community Pulse&quot; -- what resonated with people?
 Step 4: Read &quot;Guidance &amp; Patterns&quot; for workflow insights
 Step 5: Think about the reflection prompts at the bottom
 Step 6: Run /triage to clean up stale issues before next week
 Step 7: /a11y-update for this month&#39;s accessibility changes</code></pre>
 <hr />
 <h3 id="addressing-pr-feedback">Addressing PR Feedback</h3>
-<p><strong>What you’re doing:</strong> Working through every review
+<p><strong>What you're doing:</strong> Working through every review
 comment on your PR, one by one, so nothing slips through the cracks.</p>
 <p><strong>Time:</strong> 5-15 minutes, depending on how many comments
 there are.</p>
 <pre><code>Step 1: /address-comments owner/repo#15
-Step 2: Check release context — is this release-bound?
+Step 2: Check release context -- is this release-bound?
 Step 3: Review the organized list of comments with priority levels
 Step 4: If release-bound, handle blocking comments (CRITICAL/IMPORTANT) first
 Step 5: For each comment: see the context, make the fix, draft a reply
@@ -1545,14 +1545,14 @@ Step 6: After all changes are pushed, let the agent post reply comments
 Step 7: The agent drafts a summary comment for the PR thread</code></pre>
 <hr />
 <h3 id="release-prep-flow">Release Prep Flow</h3>
-<p><strong>What you’re doing:</strong> Making sure everything is ready
-to ship — no open items, no failing CI, no security surprises.</p>
+<p><strong>What you're doing:</strong> Making sure everything is ready
+to ship -- no open items, no failing CI, no security surprises.</p>
 <p><strong>Time:</strong> About 15-25 minutes.</p>
 <pre><code>Step 1:  /release-prep owner/repo v2.0.0
-Step 2:  Review the milestone check — any open items that should be deferred?
-Step 3:  Review open PRs — any that need to merge before the release?
+Step 2:  Review the milestone check -- any open items that should be deferred?
+Step 3:  Review open PRs -- any that need to merge before the release?
 Step 4:  Check CI health on the release branch
-Step 5:  Check security — any critical Dependabot alerts?
+Step 5:  Check security -- any critical Dependabot alerts?
 Step 6:  Review the auto-generated release notes
 Step 7:  Edit the notes if needed
 Step 8:  Work through the readiness checklist
@@ -1560,69 +1560,69 @@ Step 9:  Create the GitHub release draft when everything looks good
 Step 10: After publishing, run through the post-release checklist</code></pre>
 <hr />
 <h3 id="sprint-review-flow">Sprint Review Flow</h3>
-<p><strong>What you’re doing:</strong> Turning a sprint’s worth of work
+<p><strong>What you're doing:</strong> Turning a sprint's worth of work
 into a story your team can learn from.</p>
 <p><strong>Time:</strong> About 15-20 minutes.</p>
 <pre><code>Step 1:  /sprint-review for milestone &quot;Sprint 5&quot;
-Step 2:  Review completed items — celebrate what got done
-Step 3:  Look at carryover items — understand why they didn&#39;t finish
-Step 4:  Check velocity metrics — on track, improving, or declining?
-Step 5:  Review team contributions — is anyone overloaded or underutilized?
+Step 2:  Review completed items -- celebrate what got done
+Step 3:  Look at carryover items -- understand why they didn&#39;t finish
+Step 4:  Check velocity metrics -- on track, improving, or declining?
+Step 5:  Review team contributions -- is anyone overloaded or underutilized?
 Step 6:  Note blockers that need systemic fixes
 Step 7:  Use the retrospective prompts for team discussion
 Step 8:  /team-dashboard for the broader metrics context</code></pre>
 <hr />
 <h2 id="workspace-documents">Workspace Documents</h2>
-<p>Everything the agents produce — briefings, reviews, triage
-dashboards, analytics reports — gets saved as real files in your
+<p>Everything the agents produce -- briefings, reviews, triage
+dashboards, analytics reports -- gets saved as real files in your
 workspace. Not just chat messages that scroll away, but files you can
 edit, annotate, commit, and share.</p>
 <h3 id="dual-format-markdown-html">Dual Format: Markdown + HTML</h3>
 <p>Every document comes in two formats:</p>
 <pre><code>.github/
-└── reviews/
-    ├── briefings/
-    │   ├── briefing-2026-02-12.md        ← edit in VS Code
-    │   └── briefing-2026-02-12.html      ← open in browser / screen reader
-    ├── issues/
-    │   ├── vscode-12345-fix-login.md
-    │   ├── vscode-12345-fix-login.html
-    │   ├── triage-2026-02-12.md
-    │   └── triage-2026-02-12.html
-    ├── prs/
-    │   ├── vscode-pr-54321-add-auth.md
-    │   └── vscode-pr-54321-add-auth.html
-    ├── accessibility/
-    │   ├── a11y-report-2026-02.md
-    │   └── a11y-report-2026-02.html
-    ├── analytics/
-    │   ├── analytics-2026-02-12.md
-    │   ├── analytics-2026-02-12.html
-    │   ├── team-dashboard-2026-02-12.md
-    │   ├── team-dashboard-2026-02-12.html
-    │   ├── my-stats-2026-02-12.md
-    │   ├── my-stats-2026-02-12.html
-    │   ├── sprint-review-2026-02-12.md
-    │   └── sprint-review-2026-02-12.html
-    ├── releases/
-    │   ├── release-notes-v2.0.0-2026-02-12.md
-    │   ├── release-notes-v2.0.0-2026-02-12.html
-    │   ├── release-prep-v2.0.0-2026-02-12.md
-    │   └── release-prep-v2.0.0-2026-02-12.html
-    └── onboarding/
-        ├── onboard-vscode-2026-02-12.md
-        └── onboard-vscode-2026-02-12.html</code></pre>
++-- reviews/
+    +-- briefings/
+    |   +-- briefing-2026-02-12.md        <- edit in VS Code
+    |   +-- briefing-2026-02-12.html      <- open in browser / screen reader
+    +-- issues/
+    |   +-- vscode-12345-fix-login.md
+    |   +-- vscode-12345-fix-login.html
+    |   +-- triage-2026-02-12.md
+    |   +-- triage-2026-02-12.html
+    +-- prs/
+    |   +-- vscode-pr-54321-add-auth.md
+    |   +-- vscode-pr-54321-add-auth.html
+    +-- accessibility/
+    |   +-- a11y-report-2026-02.md
+    |   +-- a11y-report-2026-02.html
+    +-- analytics/
+    |   +-- analytics-2026-02-12.md
+    |   +-- analytics-2026-02-12.html
+    |   +-- team-dashboard-2026-02-12.md
+    |   +-- team-dashboard-2026-02-12.html
+    |   +-- my-stats-2026-02-12.md
+    |   +-- my-stats-2026-02-12.html
+    |   +-- sprint-review-2026-02-12.md
+    |   +-- sprint-review-2026-02-12.html
+    +-- releases/
+    |   +-- release-notes-v2.0.0-2026-02-12.md
+    |   +-- release-notes-v2.0.0-2026-02-12.html
+    |   +-- release-prep-v2.0.0-2026-02-12.md
+    |   +-- release-prep-v2.0.0-2026-02-12.html
+    +-- onboarding/
+        +-- onboard-vscode-2026-02-12.md
+        +-- onboard-vscode-2026-02-12.html</code></pre>
 <p><strong>When to use markdown:</strong> - Editing and previewing in VS
 Code (<code>Ctrl+Shift+V</code> for markdown preview) - Quick scanning
 with familiar formatting - Checking off items by changing
 <code>- [ ]</code> to <code>- [x]</code> - Committing to your repo</p>
-<p><strong>When to use HTML:</strong> - Screen reader navigation —
+<p><strong>When to use HTML:</strong> - Screen reader navigation --
 landmarks, skip links, and proper heading hierarchy - Browser viewing
 with automatic light/dark mode - Interactive checkboxes (just click
-them) - Sharing with teammates who don’t have VS Code open - Printing
+them) - Sharing with teammates who don't have VS Code open - Printing
 with proper formatting</p>
 <h3 id="screen-reader-accessibility">Screen Reader Accessibility</h3>
-<p>The HTML documents aren’t a token gesture. They’re built
+<p>The HTML documents aren't a token gesture. They're built
 screen-reader-first, and they follow strict standards throughout.</p>
 <table>
 <colgroup>
@@ -1632,13 +1632,13 @@ screen-reader-first, and they follow strict standards throughout.</p>
 <thead>
 <tr>
 <th>Feature</th>
-<th>How It’s Implemented</th>
+<th>How It's Implemented</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Skip link</td>
-<td>First focusable element on the page — jumps straight to main
+<td>First focusable element on the page -- jumps straight to main
 content</td>
 </tr>
 <tr>
@@ -1649,7 +1649,7 @@ content</td>
 </tr>
 <tr>
 <td>Heading hierarchy</td>
-<td>Strict h1 → h2 → h3, never skipping levels</td>
+<td>Strict h1 --> h2 --> h3, never skipping levels</td>
 </tr>
 <tr>
 <td>Table accessibility</td>
@@ -1658,11 +1658,11 @@ content</td>
 </tr>
 <tr>
 <td>Link text</td>
-<td>Always descriptive — “PR #123: Fix login bug”, never bare URLs</td>
+<td>Always descriptive -- "PR #123: Fix login bug", never bare URLs</td>
 </tr>
 <tr>
 <td>Status indicators</td>
-<td>Text labels alongside any emoji or color — never color-only</td>
+<td>Text labels alongside any emoji or color -- never color-only</td>
 </tr>
 <tr>
 <td>Interactive checklists</td>
@@ -1692,42 +1692,42 @@ content</td>
 </tbody>
 </table>
 <p>The markdown documents are thoughtful too: - Item counts in section
-headings (e.g., “## Needs Action (3 items)”) - Text labels alongside
+headings (e.g., "## Needs Action (3 items)") - Text labels alongside
 emoji - Collapsible <code>&lt;details&gt;</code> blocks for long content
 - Descriptive link text throughout</p>
 <h3 id="working-with-your-documents">Working with Your Documents</h3>
-<p>These documents are meant to be lived in throughout the day. Here’s
+<p>These documents are meant to be lived in throughout the day. Here's
 how to get the most from them:</p>
 <p><strong>Check things off as you go.</strong> In markdown, change
 <code>- [ ]</code> to <code>- [x]</code>. In HTML, click the checkbox.
 By end of day, your briefing becomes a record of everything you
 accomplished.</p>
-<p><strong>Take notes.</strong> Every document ends with a “My Notes”
-section — a comment block in markdown, a <code>&lt;textarea&gt;</code>
+<p><strong>Take notes.</strong> Every document ends with a "My Notes"
+section -- a comment block in markdown, a <code>&lt;textarea&gt;</code>
 in HTML. Use it for decisions, blockers, questions, or anything else you
 want to remember.</p>
 <p><strong>They update, not duplicate.</strong> Run the same agent for
 the same item again and it detects the existing document and adds to it
-— timestamped, with NEW badges — instead of creating a second copy.</p>
+-- timestamped, with NEW badges -- instead of creating a second copy.</p>
 <p><strong>Share them however works for your team.</strong> Both formats
 are plain files: - Commit them so your team can see your review notes -
 Add <code>.github/reviews/</code> to <code>.gitignore</code> to keep
 them private - Drop the HTML file on a shared drive for browser
 viewing</p>
 <h3 id="gitignore-recommendation">Gitignore Recommendation</h3>
-<p>If you’d prefer to keep review documents private (most people do),
+<p>If you'd prefer to keep review documents private (most people do),
 add this to your <code>.gitignore</code>:</p>
 <pre><code># GitHub agent review documents (personal workspace)
 .github/reviews/</code></pre>
 <hr />
 <h2 id="enhanced-activity-signals">Enhanced Activity Signals</h2>
-<p>The agents don’t just fetch raw data from GitHub — they layer on
+<p>The agents don't just fetch raw data from GitHub -- they layer on
 context that helps you understand what matters. Every item comes
 annotated with signals about urgency, community interest, staleness, and
 more.</p>
 <h3 id="reactions-community-sentiment-1">Reactions &amp; Community
 Sentiment</h3>
-<p>When an issue has 15 thumbs-up reactions, that’s not vanity — it’s a
+<p>When an issue has 15 thumbs-up reactions, that's not vanity -- it's a
 prioritization signal. The agents track reactions on everything:</p>
 <table>
 <colgroup>
@@ -1743,23 +1743,23 @@ prioritization signal. The agents track reactions on everything:</p>
 <tbody>
 <tr>
 <td><strong>Popular</strong></td>
-<td>5+ positive reactions — the community cares about this one</td>
+<td>5+ positive reactions -- the community cares about this one</td>
 </tr>
 <tr>
 <td><strong>Controversial</strong></td>
-<td>Mixed positive and negative reactions — might need extra
+<td>Mixed positive and negative reactions -- might need extra
 discussion</td>
 </tr>
 <tr>
 <td><strong>Quiet</strong></td>
-<td>0-1 reactions — standard priority</td>
+<td>0-1 reactions -- standard priority</td>
 </tr>
 </tbody>
 </table>
-<p>You’ll see reactions: - In issue and PR tables as a “Reactions”
+<p>You'll see reactions: - In issue and PR tables as a "Reactions"
 column - On individual comments in deep dives - In HTML documents as
 styled <code>&lt;span&gt;</code> elements with <code>aria-label</code>
-descriptions - In the daily briefing’s “Community Pulse” section</p>
+descriptions - In the daily briefing's "Community Pulse" section</p>
 <h3 id="release-awareness-1">Release Awareness</h3>
 <p>The agents track releases across your active repos and annotate
 everything with release context:</p>
@@ -1789,11 +1789,11 @@ everything with release context:</p>
 </tr>
 </tbody>
 </table>
-<p>You’ll see release context: - In PR reviews — “This PR targets the
-v2.0 release milestone (deadline: Feb 20)” - In triage dashboards —
-release-bound issues get a priority boost - In daily briefings — a
-dedicated “Releases &amp; Deployments” section - In the address-comments
-workflow — helping you distinguish blocking from deferrable feedback</p>
+<p>You'll see release context: - In PR reviews -- "This PR targets the
+v2.0 release milestone (deadline: Feb 20)" - In triage dashboards --
+release-bound issues get a priority boost - In daily briefings -- a
+dedicated "Releases &amp; Deployments" section - In the address-comments
+workflow -- helping you distinguish blocking from deferrable feedback</p>
 <h3 id="github-discussions-1">GitHub Discussions</h3>
 <p>The agents monitor GitHub Discussions alongside issues and PRs:</p>
 <table>
@@ -1803,14 +1803,14 @@ workflow — helping you distinguish blocking from deferrable feedback</p>
 </colgroup>
 <thead>
 <tr>
-<th>What’s Tracked</th>
-<th>Where You’ll See It</th>
+<th>What's Tracked</th>
+<th>Where You'll See It</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Discussions mentioning you</td>
-<td>Daily briefing “Active Discussions” section</td>
+<td>Daily briefing "Active Discussions" section</td>
 </tr>
 <tr>
 <td>Discussions linked to your issues</td>
@@ -1831,23 +1831,23 @@ workflow — helping you distinguish blocking from deferrable feedback</p>
 </tbody>
 </table>
 <h3 id="cicd-awareness">CI/CD Awareness</h3>
-<p>The agents surface GitHub Actions workflow status so you don’t have
+<p>The agents surface GitHub Actions workflow status so you don't have
 to go looking for it:</p>
 <table>
 <thead>
 <tr>
-<th>What’s Tracked</th>
-<th>Where You’ll See It</th>
+<th>What's Tracked</th>
+<th>Where You'll See It</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Failing workflows</td>
-<td>Daily briefing “CI/CD Health” section</td>
+<td>Daily briefing "CI/CD Health" section</td>
 </tr>
 <tr>
 <td>Check run results</td>
-<td>PR reviews — inline pass/fail with links to logs</td>
+<td>PR reviews -- inline pass/fail with links to logs</td>
 </tr>
 <tr>
 <td>Flaky tests</td>
@@ -1859,11 +1859,11 @@ to go looking for it:</p>
 </tr>
 <tr>
 <td>Your PRs with failing CI</td>
-<td>Daily briefing “Needs Action” section</td>
+<td>Daily briefing "Needs Action" section</td>
 </tr>
 </tbody>
 </table>
-<p>You can configure monitoring in <code>preferences.md</code> — set
+<p>You can configure monitoring in <code>preferences.md</code> -- set
 which workflows to watch, flaky test thresholds, and how long is too
 long for a job.</p>
 <h3 id="security-dependencies">Security &amp; Dependencies</h3>
@@ -1876,14 +1876,14 @@ repos:</p>
 </colgroup>
 <thead>
 <tr>
-<th>What’s Tracked</th>
-<th>Where You’ll See It</th>
+<th>What's Tracked</th>
+<th>Where You'll See It</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Dependabot alerts (critical/high)</td>
-<td>Daily briefing “Security Alerts” section</td>
+<td>Daily briefing "Security Alerts" section</td>
 </tr>
 <tr>
 <td>Security advisories</td>
@@ -1895,12 +1895,12 @@ repos:</p>
 </tr>
 <tr>
 <td>Security-sensitive file changes</td>
-<td>PR reviews — flagged when auth, crypto, or permissions files are
+<td>PR reviews -- flagged when auth, crypto, or permissions files are
 modified</td>
 </tr>
 </tbody>
 </table>
-<p>Configure in <code>preferences.md</code> — set which severity levels
+<p>Configure in <code>preferences.md</code> -- set which severity levels
 to surface and which repos to monitor.</p>
 <h3 id="project-boards">Project Boards</h3>
 <p>The agents integrate with GitHub Projects to show your sprint and
@@ -1912,18 +1912,18 @@ board context:</p>
 </colgroup>
 <thead>
 <tr>
-<th>What’s Tracked</th>
-<th>Where You’ll See It</th>
+<th>What's Tracked</th>
+<th>Where You'll See It</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Sprint/iteration items</td>
-<td>Daily briefing “Project Board” section</td>
+<td>Daily briefing "Project Board" section</td>
 </tr>
 <tr>
 <td>Item column status</td>
-<td>Issue tracker — “Board” column in tables</td>
+<td>Issue tracker -- "Board" column in tables</td>
 </tr>
 <tr>
 <td>Stale items (7+ days in same column)</td>
@@ -1939,30 +1939,30 @@ board context:</p>
 </tr>
 </tbody>
 </table>
-<p>Configure in <code>preferences.md</code> — set active project numbers
+<p>Configure in <code>preferences.md</code> -- set active project numbers
 and whether to include project data in briefings.</p>
 <hr />
 <h2 id="wcag-aria-cross-referencing-1">WCAG &amp; ARIA
 Cross-Referencing</h2>
-<p>The accessibility tracker doesn’t just tell you what changed — it
+<p>The accessibility tracker doesn't just tell you what changed -- it
 tells you <em>why it matters</em> and <em>who it helps</em>.</p>
 <h3 id="wcag-coverage">WCAG Coverage</h3>
 <p>Every accessibility fix is mapped to the specific WCAG 2.1/2.2
-success criteria it addresses: - <strong>Principle</strong> —
+success criteria it addresses: - <strong>Principle</strong> --
 Perceivable, Operable, Understandable, or Robust -
-<strong>Criterion</strong> — the specific success criterion number and
-name - <strong>Level</strong> — A, AA, or AAA conformance level -
-Monthly reports include a “WCAG Coverage” section showing which criteria
+<strong>Criterion</strong> -- the specific success criterion number and
+name - <strong>Level</strong> -- A, AA, or AAA conformance level -
+Monthly reports include a "WCAG Coverage" section showing which criteria
 got attention</p>
 <h3 id="aria-design-patterns">ARIA Design Patterns</h3>
 <p>When a fix involves ARIA, the tracker identifies the relevant
 WAI-ARIA Authoring Practices pattern: - Pattern name (e.g., Dialog,
 Combobox, Tree) - Key requirements of the pattern - Monthly reports
-include an “ARIA Patterns Improved” summary</p>
+include an "ARIA Patterns Improved" summary</p>
 <h3 id="impact-assessment">Impact Assessment</h3>
-<p>Each fix includes: - <strong>Impact level</strong> — Critical (blocks
+<p>Each fix includes: - <strong>Impact level</strong> -- Critical (blocks
 access entirely), Major (significantly degrades the experience), Minor
-(an inconvenience) - <strong>Assistive technologies affected</strong> —
+(an inconvenience) - <strong>Assistive technologies affected</strong> --
 NVDA, JAWS, VoiceOver, TalkBack, and others</p>
 <h3 id="configurable-repos">Configurable Repos</h3>
 <p>You can track accessibility in any repository:</p>
@@ -1972,55 +1972,55 @@ NVDA, JAWS, VoiceOver, TalkBack, and others</p>
 <h2 id="agent-handoffs">Agent Handoffs</h2>
 <p>One of the nicest things about this system is that the agents talk to
 each other. When one agent finishes its work, it offers to hand you off
-to another agent that might be helpful next — with full context carried
+to another agent that might be helpful next -- with full context carried
 over.</p>
 <p>For example: you finish reviewing a PR, and the agent offers to check
 its linked issues. Or you triage an issue, and it offers to review the
 PR that fixes it. Or your morning briefing highlights a priority item,
 and it offers to deep dive into it.</p>
-<p>These handoffs appear as clickable buttons below the agent’s response
-in chat. One click and you’re in the next agent’s hands.</p>
+<p>These handoffs appear as clickable buttons below the agent's response
+in chat. One click and you're in the next agent's hands.</p>
 <h3 id="how-the-agents-connect">How the Agents Connect</h3>
 <pre><code>Daily Briefing
-├── → Issue Tracker (deep dive, reply, create, manage issues)
-├── → PR Review (review, comment, explain, merge PRs)
-├── → A11y Tracker (more detail on accessibility changes)
-└── → Analytics (team metrics and insights)
++-- --> Issue Tracker (deep dive, reply, create, manage issues)
++-- --> PR Review (review, comment, explain, merge PRs)
++-- --> A11y Tracker (more detail on accessibility changes)
++-- --> Analytics (team metrics and insights)
 
 Issue Tracker
-├── → PR Review (review linked PRs, comment, merge)
-└── → Daily Briefing (include issues in next briefing)
++-- --> PR Review (review linked PRs, comment, merge)
++-- --> Daily Briefing (include issues in next briefing)
 
 PR Review
-├── → Issue Tracker (check linked issues, create issues, close resolved)
-└── → Daily Briefing (include PR review in briefing)
++-- --> Issue Tracker (check linked issues, create issues, close resolved)
++-- --> Daily Briefing (include PR review in briefing)
 
 Analytics
-├── → Daily Briefing (include analytics in briefing)
-├── → PR Review (review bottleneck PRs)
-└── → Issue Tracker (explore stuck issues)
++-- --> Daily Briefing (include analytics in briefing)
++-- --> PR Review (review bottleneck PRs)
++-- --> Issue Tracker (explore stuck issues)
 
 A11y Tracker
-└── → Daily Briefing (include a11y updates in briefing)</code></pre>
++-- --> Daily Briefing (include a11y updates in briefing)</code></pre>
 <hr />
 <h2 id="tips-tricks">Tips &amp; Tricks</h2>
 <p>Here are some things that will make the agents feel even more natural
-to use. You’ll discover your own favorites over time — these are just a
+to use. You'll discover your own favorites over time -- these are just a
 starting point.</p>
 <h3 id="talk-like-a-human">1. Talk Like a Human</h3>
-<p>You don’t need exact syntax. The agents understand what you mean: -
-“Show me my stuff” → lists your issues - “What PRs are waiting for me” →
-lists PRs needing your review - “Anything urgent?” → prioritized list of
-action items - “What’s popular?” → items with high community reactions -
-“Release status” → PRs and issues tied to upcoming releases</p>
+<p>You don't need exact syntax. The agents understand what you mean: -
+"Show me my stuff" --> lists your issues - "What PRs are waiting for me" -->
+lists PRs needing your review - "Anything urgent?" --> prioritized list of
+action items - "What's popular?" --> items with high community reactions -
+"Release status" --> PRs and issues tied to upcoming releases</p>
 <h3 id="you-probably-dont-need-to-type-the-repo-name">2. You Probably
-Don’t Need to Type the Repo Name</h3>
-<p>If you’re in a workspace with a git repo, the agents already know
+Don't Need to Type the Repo Name</h3>
+<p>If you're in a workspace with a git repo, the agents already know
 which repo you mean. Just ask <code>@issue-tracker show my issues</code>
-— no need for <code>owner/repo</code>.</p>
+-- no need for <code>owner/repo</code>.</p>
 <h3 id="dates-are-flexible">3. Dates Are Flexible</h3>
-<p>“Last week”, “since Monday”, “this month”, “between Jan 1 and Feb 15”
-— the agents understand all of these. No special date format
+<p>"Last week", "since Monday", "this month", "between Jan 1 and Feb 15"
+-- the agents understand all of these. No special date format
 required.</p>
 <h3 id="the-html-files-are-worth-opening">4. The HTML Files Are Worth
 Opening</h3>
@@ -2035,8 +2035,8 @@ Repo</h3>
 <h3 id="release-aware-reviews-save-time">6. Release-Aware Reviews Save
 Time</h3>
 <p>When a PR is tied to a release milestone, the review document
-separates “this blocks the release” from “nice to have.” That way you
-don’t hold up a ship date debating variable names.</p>
+separates "this blocks the release" from "nice to have." That way you
+don't hold up a ship date debating variable names.</p>
 <h3 id="community-reactions-are-prioritization-data">7. Community
 Reactions Are Prioritization Data</h3>
 <p>Five thumbs-up on a feature request means real people want it. The
@@ -2044,27 +2044,27 @@ agents surface this so you can make informed decisions about what to
 work on next.</p>
 <h3 id="run-briefings-more-than-once-a-day">8. Run Briefings More Than
 Once a Day</h3>
-<p>The daily briefing isn’t limited to once per day. Run it again at 2pm
-and it <em>updates</em> the existing document — marking new items with
+<p>The daily briefing isn't limited to once per day. Run it again at 2pm
+and it <em>updates</em> the existing document -- marking new items with
 NEW badges instead of creating a duplicate.</p>
 <h3 id="bulk-operations-work">9. Bulk Operations Work</h3>
-<p>The agents handle batch requests gracefully: - “Reply to all issues
-where someone asked me a question” - “Review all PRs waiting for me,
-smallest first” - “Close all my stale issues labeled ‘wontfix’”</p>
+<p>The agents handle batch requests gracefully: - "Reply to all issues
+where someone asked me a question" - "Review all PRs waiting for me,
+smallest first" - "Close all my stale issues labeled 'wontfix'"</p>
 <h3 id="code-suggestions-are-powerful">10. Code Suggestions Are
 Powerful</h3>
 <pre><code>@pr-review suggest a fix for line 42 of auth.ts in PR #15</code></pre>
-<p>The PR author gets an “Apply suggestion” button. One click and your
-fix is committed. No back-and-forth, no “I made the change, please
-re-review.”</p>
+<p>The PR author gets an "Apply suggestion" button. One click and your
+fix is committed. No back-and-forth, no "I made the change, please
+re-review."</p>
 <h3 id="understand-before-you-critique">11. Understand Before You
 Critique</h3>
 <p>Use <code>/explain-code</code> before <code>/pr-comment</code>. First
-understand what the code does and why it’s there. Then your comment has
+understand what the code does and why it's there. Then your comment has
 context, and the author knows you read their work thoughtfully.</p>
 <h3 id="a-quick-reaction-goes-a-long-way">12. A Quick Reaction Goes a
 Long Way</h3>
-<p><code>/react</code> takes two seconds. A rocket on someone’s merged
+<p><code>/react</code> takes two seconds. A rocket on someone's merged
 PR. A heart on a thoughtful comment. It costs you nothing and it means
 something to the person who receives it.</p>
 <h3 id="set-up-preferences-once-benefit-forever">13. Set Up Preferences
@@ -2078,19 +2078,19 @@ team roster, and notification preferences. It compounds over time.</p>
 @issue-tracker search needs-triage</code></pre>
 <h3 id="response-templates-kill-repetition">15. Response Templates Kill
 Repetition</h3>
-<p>Instead of typing “Thanks for reporting! Could you provide steps to
-reproduce…” for the hundredth time:</p>
+<p>Instead of typing "Thanks for reporting! Could you provide steps to
+reproduce..." for the hundredth time:</p>
 <pre><code>@issue-tracker reply to #42 with template needs-info</code></pre>
 <p>Consistent, professional, and done in seconds.</p>
-<h3 id="youll-know-when-ci-breaks">16. You’ll Know When CI Breaks</h3>
+<h3 id="youll-know-when-ci-breaks">16. You'll Know When CI Breaks</h3>
 <p><code>/ci-status</code> gives you the picture across all repos. Or
-just let the daily briefing tell you — failing workflows show up
+just let the daily briefing tell you -- failing workflows show up
 automatically in the CI/CD Health section.</p>
 <h3 id="security-monitoring-is-built-in">17. Security Monitoring Is
 Built In</h3>
 <p><code>/security-dashboard</code> pulls every Dependabot alert, every
 advisory, every pending dependency update into one view. Across all your
-repos. No more visiting each repo’s security tab individually.</p>
+repos. No more visiting each repo's security tab individually.</p>
 <h3 id="sprint-reviews-write-themselves">18. Sprint Reviews Write
 Themselves</h3>
 <p><code>/sprint-review</code> generates a complete summary with
@@ -2099,12 +2099,12 @@ into your team standup prepared.</p>
 <h3 id="onboard-to-new-repos-in-minutes">19. Onboard to New Repos in
 Minutes</h3>
 <p>Joining a new project? <code>/onboard-repo owner/repo</code> scans
-everything — issues, PRs, releases, CI health, CODEOWNERS, security
-alerts — and tells you what needs attention first.</p>
+everything -- issues, PRs, releases, CI health, CODEOWNERS, security
+alerts -- and tells you what needs attention first.</p>
 <h3 id="self-review-before-requesting-reviews">20. Self-Review Before
 Requesting Reviews</h3>
 <p><code>/pr-author-checklist</code> catches the things that would
-embarrass you — leftover debug logging, missing tests, a vague PR title,
+embarrass you -- leftover debug logging, missing tests, a vague PR title,
 hardcoded secrets. Run it before anyone else sees your PR.</p>
 <h3 id="ask-about-specific-wcag-criteria">21. Ask About Specific WCAG
 Criteria</h3>
@@ -2112,57 +2112,57 @@ Criteria</h3>
 @insiders-a11y-tracker keyboard navigation improvements</code></pre>
 <hr />
 <h2 id="troubleshooting">Troubleshooting</h2>
-<p>If something isn’t working, it’s almost always one of these five
-things. Let’s walk through each one.</p>
-<h3 id="i-dont-see-the-agents-in-chat-autocomplete">“I don’t see the
-agents in chat autocomplete”</h3>
-<p><strong>What’s happening:</strong> The agents need to be in the
+<p>If something isn't working, it's almost always one of these five
+things. Let's walk through each one.</p>
+<h3 id="i-dont-see-the-agents-in-chat-autocomplete">"I don't see the
+agents in chat autocomplete"</h3>
+<p><strong>What's happening:</strong> The agents need to be in the
 <code>.github/agents/</code> folder of your currently open workspace,
 and VS Code needs to discover them.</p>
 <p><strong>How to fix it:</strong> 1. Make sure you opened the
-<em>folder</em> that contains <code>.github/agents/</code> — not just a
+<em>folder</em> that contains <code>.github/agents/</code> -- not just a
 single file 2. Check that the agent files end in <code>.agent.md</code>
-3. Try reloading VS Code: <code>Ctrl+Shift+P</code> → “Developer: Reload
-Window”</p>
+3. Try reloading VS Code: <code>Ctrl+Shift+P</code> --> "Developer: Reload
+Window"</p>
 <hr />
-<h3 id="the-agent-says-it-cant-authenticate">“The agent says it can’t
-authenticate”</h3>
-<p><strong>What’s happening:</strong> You’re not signed in to GitHub in
+<h3 id="the-agent-says-it-cant-authenticate">"The agent says it can't
+authenticate"</h3>
+<p><strong>What's happening:</strong> You're not signed in to GitHub in
 VS Code, or your session expired.</p>
-<p><strong>How to fix it:</strong> 1. Press <code>Ctrl+Shift+P</code> →
-type “GitHub: Sign In” 2. Follow the browser authentication flow 3. Come
+<p><strong>How to fix it:</strong> 1. Press <code>Ctrl+Shift+P</code> -->
+type "GitHub: Sign In" 2. Follow the browser authentication flow 3. Come
 back to VS Code and try again</p>
 <hr />
-<h3 id="the-agent-returns-0-results">“The agent returns 0 results”</h3>
-<p><strong>What’s happening:</strong> The search scope might be too
+<h3 id="the-agent-returns-0-results">"The agent returns 0 results"</h3>
+<p><strong>What's happening:</strong> The search scope might be too
 narrow, or you might not have any matching items right now.</p>
 <p><strong>What agents do automatically:</strong> They broaden the
 search and tell you what they tried.</p>
-<p><strong>If you want to fix it manually:</strong> Be more explicit —
+<p><strong>If you want to fix it manually:</strong> Be more explicit --
 <code>@issue-tracker show all my open issues with no date filter</code></p>
 <hr />
-<h3 id="rate-limited-403-error">“Rate limited / 403 error”</h3>
-<p><strong>What’s happening:</strong> You’ve hit GitHub’s API rate limit
+<h3 id="rate-limited-403-error">"Rate limited / 403 error"</h3>
+<p><strong>What's happening:</strong> You've hit GitHub's API rate limit
 (5,000 requests per hour).</p>
 <p><strong>How to fix it:</strong> Wait a few minutes and try again. The
 agent tells you when the rate limit resets.</p>
 <hr />
-<h3 id="the-html-file-looks-broken">“The HTML file looks broken”</h3>
-<p><strong>What’s happening:</strong> It was probably opened in VS
-Code’s text editor instead of a browser.</p>
+<h3 id="the-html-file-looks-broken">"The HTML file looks broken"</h3>
+<p><strong>What's happening:</strong> It was probably opened in VS
+Code's text editor instead of a browser.</p>
 <p><strong>How to fix it:</strong> Right-click the <code>.html</code>
-file → “Open with” → your browser. Or use VS Code’s built-in Simple
-Browser (<code>Ctrl+Shift+P</code> → “Simple Browser: Open”).</p>
+file --> "Open with" --> your browser. Or use VS Code's built-in Simple
+Browser (<code>Ctrl+Shift+P</code> --> "Simple Browser: Open").</p>
 <hr />
-<h3 id="prompt-commands-dont-appear-when-i-type">“Prompt commands don’t
-appear when I type <code>/</code>”</h3>
+<h3 id="prompt-commands-dont-appear-when-i-type">"Prompt commands don't
+appear when I type <code>/</code>"</h3>
 <p><strong>How to fix it:</strong> 1. Verify files exist in
 <code>.github/prompts/</code> and end in <code>.prompt.md</code> 2.
 Check that each file has valid YAML frontmatter 3. Reload VS Code:
-<code>Ctrl+Shift+P</code> → “Developer: Reload Window”</p>
+<code>Ctrl+Shift+P</code> --> "Developer: Reload Window"</p>
 <hr />
 <h2 id="file-reference">File Reference</h2>
-<p>Here’s every file in the system, what it does, and where it lives.
+<p>Here's every file in the system, what it does, and where it lives.
 Use this as a reference when you need to find or modify something.</p>
 <h3 id="agents-.githubagents">Agents (<code>.github/agents/</code>)</h3>
 <table>
@@ -2225,7 +2225,7 @@ release context</td>
 <tr>
 <td><code>preferences.md</code></td>
 <td>Workspace preferences</td>
-<td>Your team’s configuration — merge strategy, reviewers, labels,
+<td>Your team's configuration -- merge strategy, reviewers, labels,
 templates, searches, team roster, schedule, CI, security, and project
 settings</td>
 </tr>
@@ -2432,7 +2432,7 @@ settings</td>
 <tr>
 <th>Folder</th>
 <th>Formats</th>
-<th>What’s Inside</th>
+<th>What's Inside</th>
 <th>Created By</th>
 </tr>
 </thead>
@@ -2483,59 +2483,59 @@ settings</td>
 </table>
 <hr />
 <h2 id="architecture">Architecture</h2>
-<p>Here’s how everything connects. The Daily Briefing agent sits at the
+<p>Here's how everything connects. The Daily Briefing agent sits at the
 top, orchestrating the other four agents. Shared instructions and
 preferences flow through everything. The GitHub API feeds it all.</p>
-<pre><code>┌──────────────────────────────────────────────────────────────────┐
-│                    Daily Briefing Agent                           │
-│   Orchestrates all agents into one report                        │
-│   + Releases + Discussions + Reactions + CI/CD + Security        │
-│   + Project Board + Notifications                                │
-├──────────┬───────────┬──────────────┬────────────────────────────┤
-│          │           │              │                             │
-▼          ▼           ▼              ▼                             │
-┌────────┐ ┌────────┐ ┌────────────┐ ┌──────────────────────┐     │
-│Issue   │ │PR      │ │Analytics &amp; │ │A11y Tracker          │     │
-│Tracker │ │Review  │ │Insights    │ │+ WCAG + ARIA         │     │
-│+Search │ │+Checks │ │+Velocity   │ │+ Configurable Repos  │     │
-│+Templat│ │+Securi │ │+Turnaround │ │                      │     │
-│+Project│ │+Project│ │+Bottleneck │ │                      │     │
-│+Manage │ │+Merge  │ │+Churn      │ │                      │     │
-│+React  │ │+Sugges │ │+Team Stats │ │                      │     │
-└────┬───┘ └────┬───┘ └─────┬──────┘ └──────────────────────┘     │
-     │          │            │                                     │
-     └──────────┼────────────┼─────────────────────────────────────┤
-                │            │                                     │
-                ▼ (Handoffs between agents)                        │
-         ┌──────────────────────────┐                              │
-         │   Shared Instructions    │                              │
-         │ + Dual Output (MD+HTML)  │                              │
-         │ + HTML A11y Standards    │                              │
-         │ + CI/CD Awareness        │                              │
-         │ + Security Awareness     │                              │
-         │ + Project Boards         │                              │
-         │ + Preferences Loading    │                              │
-         │   Code Review Standards  │                              │
-         └──────────┬───────────────┘                              │
-                    │                                              │
-         ┌──────────▼───────────────┐                              │
-         │   Workspace Preferences  │                              │
-         │   (preferences.md)       │                              │
-         │ + Merge / Reviewers      │                              │
-         │ + Templates / Searches   │                              │
-         │ + Team / Schedule        │                              │
-         │ + CI / Security / Boards │                              │
-         └──────────────────────────┘                              │
-                                                                   │
-  28 Prompt Commands (/my-issues, /team-dashboard, /ci-status, ..) │
-  Dual-Format Workspace Documents                                  │
-  (.md + .html in .github/reviews/)                                │
-└──────────────────────────────────────────────────────────────────┘
+<pre><code>+------------------------------------------------------------------+
+|                    Daily Briefing Agent                           |
+|   Orchestrates all agents into one report                        |
+|   + Releases + Discussions + Reactions + CI/CD + Security        |
+|   + Project Board + Notifications                                |
++------------------------------------------------------------------|
+|          |           |              |                             |
+v          v           v              v                             |
++--------+ +--------+ +------------+ +----------------------+     |
+|Issue   | |PR      | |Analytics &amp; | |A11y Tracker          |     |
+|Tracker | |Review  | |Insights    | |+ WCAG + ARIA         |     |
+|+Search | |+Checks | |+Velocity   | |+ Configurable Repos  |     |
+|+Templat| |+Securi | |+Turnaround | |                      |     |
+|+Project| |+Project| |+Bottleneck | |                      |     |
+|+Manage | |+Merge  | |+Churn      | |                      |     |
+|+React  | |+Sugges | |+Team Stats | |                      |     |
++--------+ +--------+ +------------+ +----------------------+     |
+     |          |            |                                     |
+     +----------+------------+-------------------------------------|
+                |            |                                     |
+                v (Handoffs between agents)                        |
+         +--------------------------+                              |
+         |   Shared Instructions    |                              |
+         | + Dual Output (MD+HTML)  |                              |
+         | + HTML A11y Standards    |                              |
+         | + CI/CD Awareness        |                              |
+         | + Security Awareness     |                              |
+         | + Project Boards         |                              |
+         | + Preferences Loading    |                              |
+         |   Code Review Standards  |                              |
+         +--------------------------+                              |
+                    |                                              |
+         +----------v---------------+                              |
+         |   Workspace Preferences  |                              |
+         |   (preferences.md)       |                              |
+         | + Merge / Reviewers      |                              |
+         | + Templates / Searches   |                              |
+         | + Team / Schedule        |                              |
+         | + CI / Security / Boards |                              |
+         +--------------------------+                              |
+                                                                   |
+  28 Prompt Commands (/my-issues, /team-dashboard, /ci-status, ..) |
+  Dual-Format Workspace Documents                                  |
+  (.md + .html in .github/reviews/)                                |
++------------------------------------------------------------------+
 
                     GitHub API
                     (via MCP)
-                       │
-                       ▼
+                       |
+                       v
             Issues, PRs, Releases,
             Discussions, Reactions,
             Comments, Reviews, Labels,
@@ -2544,10 +2544,10 @@ preferences flow through everything. The GitHub API feeds it all.</p>
             Dependabot, Projects,
             Notifications, Branches</code></pre>
 <hr />
-<p><em>That’s the complete picture. 5 agents, 28 commands, and zero
+<p><em>That's the complete picture. 5 agents, 28 commands, and zero
 browser tabs between you and your entire GitHub world.</em></p>
 <p><em>Take your time with it. Try one new thing each day. And when you
-discover a workflow that clicks — that moment where you realize you
-haven’t opened GitHub in your browser all morning — you’ll know the
+discover a workflow that clicks -- that moment where you realize you
+haven't opened GitHub in your browser all morning -- you'll know the
 system is working.</em></p>
-<p><em>You’ve got this.</em></p>
+<p><em>You've got this.</em></p>
