@@ -25,7 +25,7 @@ A curated collection of GitHub Copilot agents and prompt templates that turn you
 
 ## What Is Agent Forge?
 
-**Agent Forge** is a collection of **5 specialized AI agents** and **28 prompt commands** that live inside VS Code's Copilot Chat. They interact with GitHub on your behalf -- finding issues, reviewing code, tracking team progress, managing releases, and monitoring accessibility -- all without leaving your editor.
+**Agent Forge** is a collection of **5 specialized AI agents** and **28 prompt commands** that live inside VS Code's Copilot Chat. They interact with GitHub on your behalf — finding issues, reviewing code, tracking team progress, managing releases, and monitoring accessibility — all without leaving your editor.
 
 Type a question in plain English. Get back organized, prioritized, actionable answers.
 
@@ -33,10 +33,10 @@ Type a question in plain English. Get back organized, prioritized, actionable an
 
 | Capability | Description |
 |---|---|
-| **Morning Briefings** | Sweeps every repo you have access to -- issues, PRs, releases, CI, security alerts, community reactions -- and builds a prioritized dashboard |
-| **Code Reviews** | Line-numbered diffs with Change Maps, risk assessment, before/after snapshots, CI results, interactive L-number commenting, and full review documents |
-| **Issue Triage** | Cross-repo priority scoring with community sentiment, release awareness, batch replies, and saved searches |
-| **Team Analytics** | Velocity trends, review turnaround, bottleneck detection, code hotspots, and workload balancing across all repos |
+| **Morning Briefings** | Sweeps every repo you touch — issues, PRs, releases, CI, security alerts, community reactions — and builds a prioritized dashboard |
+| **Code Reviews** | Full diff analysis with risk assessment, before/after snapshots, CI results, and inline commenting |
+| **Issue Triage** | Priority scoring with community sentiment, release awareness, batch replies, and saved searches |
+| **Team Analytics** | Velocity trends, review turnaround, bottleneck detection, code hotspots, and workload balancing |
 | **Release Management** | Auto-categorized release notes, readiness checklists, and complete release workflows |
 | **Accessibility Tracking** | WCAG/ARIA cross-referenced change monitoring across any configured repos (VS Code by default) |
 | **Security Monitoring** | Dependabot alerts, security advisories, and dependency tracking across all repos |
@@ -47,8 +47,8 @@ Type a question in plain English. Get back organized, prioritized, actionable an
 
 | Agent | Invoke With | Description |
 |---|---|---|
-| **Daily Briefing** | `@daily-briefing` | Prioritized overview of everything happening across all your repos |
-| **Issue Tracker** | `@issue-tracker` | Find, triage, reply to, and manage issues across all repos with smart search |
+| **Daily Briefing** | `@daily-briefing` | Prioritized overview of everything happening across all repos |
+| **Issue Tracker** | `@issue-tracker` | Find, triage, reply to, and manage issues with smart search |
 | **PR Review** | `@pr-review` | Full code reviews with risk assessment, comments, and merge |
 | **Analytics** | `@analytics` | Team metrics, velocity, bottlenecks, and workload insights across all repos |
 | **Accessibility Tracker** | `@insiders-a11y-tracker` | Accessibility change tracking with WCAG cross-references across configured repos |
@@ -110,34 +110,34 @@ Type `/` in Copilot Chat and pick from the full menu:
 
 ```
 agent-forge/
-+-- .github/
-|   +-- agents/                    # The 5 AI agents + shared config
-|   |   +-- daily-briefing.agent.md
-|   |   +-- issue-tracker.agent.md
-|   |   +-- pr-review.agent.md
-|   |   +-- analytics.agent.md
-|   |   +-- insiders-a11y-tracker.agent.md
-|   |   +-- shared-instructions.md
-|   |   +-- code-review-standards.md
-|   |   +-- preferences.example.md  # Copy to preferences.md and customize
-|   +-- prompts/                   # 28 slash command templates
-|   +-- ISSUE_TEMPLATE/            # Issue templates for contributions
-|   +-- pull_request_template.md   # PR template
-+-- Documentation/
-|   +-- GETTING-STARTED.md         # Your first hour with the agents
-|   +-- GETTING-STARTED.html
-|   +-- GUIDE.md                   # The complete reference guide
-|   +-- guide.html
-+-- ai-instructions/               # Integration guides for AI platforms
-|   +-- copilot-integration.md
-|   +-- claude-instructions.md
-|   +-- openai-integration.md
-+-- CONTRIBUTING.md                # How to contribute (PR workflow)
-+-- SETUP.md                       # Setup and configuration
-+-- SECURITY.md                    # Security policy
-+-- LICENSE                        # MIT License
-+-- CODEOWNERS                     # Code ownership rules
-+-- README.md
+├── .github/
+│   ├── agents/                    # The 5 AI agents + shared config
+│   │   ├── daily-briefing.agent.md
+│   │   ├── issue-tracker.agent.md
+│   │   ├── pr-review.agent.md
+│   │   ├── analytics.agent.md
+│   │   ├── insiders-a11y-tracker.agent.md
+│   │   ├── shared-instructions.md
+│   │   ├── code-review-standards.md
+│   │   └── preferences.example.md  # Copy to preferences.md and customize
+│   ├── prompts/                   # 28 slash command templates
+│   ├── ISSUE_TEMPLATE/            # Issue templates for contributions
+│   └── pull_request_template.md   # PR template
+├── Documentation/
+│   ├── GETTING-STARTED.md         # Your first hour with the agents
+│   ├── GETTING-STARTED.html
+│   ├── GUIDE.md                   # The complete reference guide
+│   └── guide.html
+├── ai-instructions/               # Integration guides for AI platforms
+│   ├── copilot-integration.md
+│   ├── claude-instructions.md
+│   └── openai-integration.md
+├── CONTRIBUTING.md                # How to contribute (PR workflow)
+├── SETUP.md                       # Setup and configuration
+├── SECURITY.md                    # Security policy
+├── LICENSE                        # MIT License
+├── CODEOWNERS                     # Code ownership rules
+└── README.md
 ```
 
 ## Why Agent Forge?
@@ -161,7 +161,7 @@ agent-forge/
 - `@daily-briefing morning briefing`
 - Everything in one document
 - Prioritized and actionable
-- Reply, review, merge -- from chat
+- Reply, review, merge — from chat
 - Zero browser tabs required
 
 </td>

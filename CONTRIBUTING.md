@@ -27,7 +27,7 @@ Be kind, be constructive, be welcoming. We're building tools that help developer
 Agent Forge uses a **fork-and-pull-request** workflow. The `main` branch is protected -- no one pushes directly to it (not even the maintainer). Every change goes through a pull request.
 
 ```
-Fork --> Branch --> Commit --> Push --> Pull Request --> Review --> Merge
+Fork → Branch → Commit → Push → Pull Request → Review → Merge
 ```
 
 **Why?** Because the agents in this repo are used by real people in their daily workflows. A broken agent or malformed prompt can disrupt someone's morning. PRs with review keep the forge reliable.
@@ -97,8 +97,8 @@ Every PR must:
 
 | PR Size | Files Changed | Guidance |
 |---|---|---|
-| Small | 1--3 files | Ideal -- fast to review |
-| Medium | 4--8 files | Acceptable for related changes |
+| Small | 1–3 files | Ideal — fast to review |
+| Medium | 4–8 files | Acceptable for related changes |
 | Large | 9+ files | Split into smaller PRs when possible |
 
 ### What Happens After You Submit
@@ -289,4 +289,4 @@ Your first merged PR? Welcome to the forge.
 
 ---
 
-*Thank you for helping make Agent Forge better for everyone. Every contribution -- from a one-line typo fix to a whole new agent -- makes the forge stronger. Let's build something great together.*
+*Thank you for helping make Agent Forge better for everyone. Every contribution — from a one-line typo fix to a whole new agent — makes the forge stronger. Let's build something great together.*
